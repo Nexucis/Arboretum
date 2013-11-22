@@ -12,8 +12,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Toast.makeText(this, "Oh, un toast",Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "Oh, un autre toast",Toast.LENGTH_LONG).show();
 	}
-	//wILLIAM NOOB Z	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
