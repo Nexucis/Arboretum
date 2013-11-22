@@ -13,7 +13,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Toast.makeText(this, "Oh, un toast",Toast.LENGTH_LONG).show();
 	}
-	//wILLIAM NOOB
+	//wILLIAM NOOB Z	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
