@@ -12,18 +12,20 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
-	
+
 	private Button btnArboretum;
-	
+	private Button btnLocalisation;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		Toast.makeText(this, "Oh, un toast",Toast.LENGTH_LONG).show();
 		Toast.makeText(this, "Oh, un autre toast",Toast.LENGTH_LONG).show();
-		
+
 		btnArboretum = (Button) findViewById(R.id.btnArboretum);
 		btnArboretum.setOnClickListener(this);
+		btnLocalisation = (Button) findViewById(R.id.btnLocalisation);
+		btnLocalisation.setOnClickListener(this);
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -32,44 +34,50 @@ public class MainActivity extends Activity implements OnClickListener {
 		return true;
 	}
 	@Override
-	  protected void onRestart() {
-	    super.onRestart();
-	  }
-
-	  @Override
-	  protected void onStart() {
-	    super.onStart();
-	  }
-
-	  @Override
-	  protected void onResume() {
-	    super.onResume();
-	  }
-
-	  @Override
-	  protected void onPause() {
-	    super.onPause();
-	  }
-
-	  @Override
-	  protected void onStop() {
-	    super.onStop();
-	  }
-
-	  @Override
-	  protected void onDestroy() {
-	    super.onDestroy();
-	  }
-
-	
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		Intent intent = new Intent(this, Visite.class);
-		startActivity(intent);
+	protected void onRestart() {
+		super.onRestart();
 	}
-	
 
-	
+	@Override
+	protected void onStart() {
+		super.onStart();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+	}
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+	}
+
+
+
+	public void onClick(View v){
+		if(v.getId() == R.id.btnArboretum){
+			Intent intentV = new Intent(this, Visite.class);
+			startActivity(intentV);
+			//Toast.makeText(this, "Arboretum",Toast.LENGTH_LONG).show();
+		}else if(v.getId() == R.id.btnLocalisation){
+			Intent intentD = new Intent(this, Direction.class);
+			startActivity(intentD);
+			//Toast.makeText(this, "Localsiation",Toast.LENGTH_LONG).show();
+		}
+	}
+
+
+
 
 }
