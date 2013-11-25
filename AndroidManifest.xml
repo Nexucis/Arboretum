@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name="Visite" android:label="@string/app_name"></activity>
+        <activity android:name="Direction" android:label="@string/app_name"></activity>
     </application>
 
 </manifest>
