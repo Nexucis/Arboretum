@@ -16,6 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"
         android:text="Visitons l'Arboretum !" />
 
     <Button
@@ -25,16 +26,7 @@
         android:layout_above="@+id/btnArboretum"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"
         android:text="Direction l'Arboretum !" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
-        android:text="Arboricom"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
