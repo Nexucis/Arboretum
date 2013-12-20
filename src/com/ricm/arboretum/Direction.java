@@ -28,7 +28,8 @@ public class Direction extends MapActivity implements LocationListener{
 	 MapView mapView;
 	 SensorManager sm;
 	 Sensor my_sensor;
-	 Marker m;
+	 Marker mMe;
+	 Marker mArbo;
 
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -45,22 +46,23 @@ public class Direction extends MapActivity implements LocationListener{
 
 		  
 		  //on récupère la position actuelle : 0,0 permet de ne pas "fausser" l'affichage
-		  GeoPoint p = new GeoPoint(0,0);
+		  GeoPoint myPos = new GeoPoint(0,0);
+		  GeoPoint locArbo = new GeoPoint(45.193626,5.7783196);
 		  //on définie notre image sur la map qui correspond à notre emplacement
-		  m = new Marker(p,getResources().getDrawable(R.drawable.location_oriented));
-		  
+		  mMe = new Marker(myPos,getResources().getDrawable(R.drawable.location_oriented));
+		  mArbo = new Marker (locArbo,getResources().getDrawable(R.drawable.location));
 		  ListOverlay mOverlayList = new ListOverlay(); 
 		  List<OverlayItem> overlayItems = mOverlayList.getOverlayItems();
 		  mapView.getOverlays().add(mOverlayList);
 
-		  overlayItems.add(m);
-
+		  overlayItems.add(mMe);
+		  overlayItems.add(mArbo);
 		  //on rend la map cliquable
 		  mapView.setClickable(true);
 		  //on rend la map zoomable
 		  mapView.setBuiltInZoomControls(true);
 		  //on centre la map sur notre position
-		  mapView.getMapViewPosition().setCenter(p);
+		  mapView.getMapViewPosition().setCenter(myPos);
 		  
 		  locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		  locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
@@ -97,7 +99,7 @@ public class Direction extends MapActivity implements LocationListener{
 	  
 	  //je récupère ma position actuel
 	  GeoPoint my_pos=new GeoPoint(arg0.getLatitude(),arg0.getLongitude());
-	  m.setGeoPoint(my_pos);
+	  mMe.setGeoPoint(my_pos);
 	  //je l'ajoute à ma map
 	  mapView.getMapViewPosition().setCenter(my_pos);
 	  //refresh
