@@ -39,7 +39,7 @@ public class Direction extends MapActivity implements LocationListener{
 		   mapView = new MapView(this);
 
 		  //Toast.makeText(this,map.exists()+"", Toast.LENGTH_LONG).show();
-		  Toast.makeText(this,"Welcome to my application", Toast.LENGTH_LONG).show();
+		  //Toast.makeText(this,"Welcome to my application", Toast.LENGTH_LONG).show();
 		  
 		  mapView.setMapFile(map);
 
