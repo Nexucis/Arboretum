@@ -31,12 +31,13 @@ public class Direction extends MapActivity implements LocationListener{
 		super.onCreate(savedInstanceState);
 
 		File map = new File(Environment.getExternalStorageDirectory().toString() + "/grenoble.map");
-		mapView = new MapView(this);
-		mapView.setClickable(true);
-		mapView.setBuiltInZoomControls(true);
+		
 		
 
 		if(map.exists()){
+			mapView = new MapView(this);
+			mapView.setClickable(true);
+			mapView.setBuiltInZoomControls(true);
 			Toast.makeText(this,"la map existe", Toast.LENGTH_SHORT).show();
 			mapView.setMapFile(map);
 			setContentView(mapView);
