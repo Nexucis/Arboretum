@@ -24,12 +24,12 @@ import android.widget.Toast;
 
 public class Direction extends MapActivity implements LocationListener{
 
-	 LocationManager locationManager;
-	 MapView mapView;
-	 SensorManager sm;
-	 Sensor my_sensor;
-	 Marker mMe;
-	 Marker mArbo;
+	 private LocationManager locationManager;
+	 private MapView mapView;
+	 private SensorManager sm;
+	 private Sensor my_sensor;
+	 private Marker mMe;
+	 private Marker mArbo;
 
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
