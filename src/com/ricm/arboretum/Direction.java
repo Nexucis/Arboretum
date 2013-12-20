@@ -26,40 +26,49 @@ public class Direction extends MapActivity implements LocationListener{
 
 	LocationManager locationManager;
 	MapView mapView;
-	
+
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		
-		File map = new File(Environment.getExternalStorageDirectory().toString() + "/campus.map");
+
+		File map = new File(Environment.getExternalStorageDirectory().toString() + "/grenoble.map");
 		mapView = new MapView(this);
-		mapView.setMapFile(map);
-		setContentView(mapView);
+		mapView.setClickable(true);
+		mapView.setBuiltInZoomControls(true);
+		
+
+		if(map.exists()){
+			Toast.makeText(this,"la map existe", Toast.LENGTH_SHORT).show();
+			mapView.setMapFile(map);
+			setContentView(mapView);
+		}else{
+			Toast.makeText(this,"la map n'existe pas", Toast.LENGTH_SHORT).show();
+		}
 	}
-	
+
 	@Override
 	public void onLocationChanged(Location arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onProviderDisabled(String arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onProviderEnabled(String arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
-	
+
+
+
 }
