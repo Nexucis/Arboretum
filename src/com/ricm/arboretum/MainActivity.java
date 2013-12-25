@@ -15,6 +15,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	private Button btnArboretum;
 	private Button btnLocalisation;
+	private Button btnHorsLigne;
 	@Override
 	//test de mon push
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnArboretum.setOnClickListener(this);
 		btnLocalisation = (Button) findViewById(R.id.btnLocalisation);
 		btnLocalisation.setOnClickListener(this);
+		btnHorsLigne = (Button) findViewById(R.id.btnHorsLigne);
+		btnHorsLigne.setOnClickListener(this);
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,6 +78,9 @@ public class MainActivity extends Activity implements OnClickListener {
 			Intent intentD = new Intent(this, Direction.class);
 			startActivity(intentD);
 			//Toast.makeText(this, "Localsiation",Toast.LENGTH_LONG).show();
+		}else if(v.getId() == R.id.btnHorsLigne){
+			Intent intentH = new Intent(this,HorsLigne.class);
+			startActivity(intentH);
 		}
 	}
 

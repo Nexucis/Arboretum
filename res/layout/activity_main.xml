@@ -29,4 +29,14 @@
         android:textColor="#FFFFFF"
         android:text="Direction l'Arboretum !" />
 
+    <Button
+        android:id="@+id/btnHorsLigne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnLocalisation"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#FFFFFF"
+        android:text="Mode hors ligne" />
+
 </RelativeLayout>
