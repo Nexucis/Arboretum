@@ -8,10 +8,14 @@ import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
 import org.mapsforge.android.maps.overlay.ListOverlay;
 import org.mapsforge.android.maps.overlay.Marker;
+import org.mapsforge.android.maps.overlay.Overlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
+import org.mapsforge.core.model.BoundingBox;
 import org.mapsforge.core.model.GeoPoint;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Canvas;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
@@ -20,6 +24,9 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+
 import android.widget.Toast;
 
 public class Direction extends MapActivity implements LocationListener{
@@ -30,6 +37,12 @@ public class Direction extends MapActivity implements LocationListener{
 	private Sensor my_sensor;
 	private Marker mMe;
 	private Marker mArbo;
+
+	/*
+	 * Methode de test pour quand on appuye sur des boutons
+	 * 
+	 */
+
 
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -57,6 +70,10 @@ public class Direction extends MapActivity implements LocationListener{
 
 		overlayItems.add(mMe);
 		overlayItems.add(mArbo);
+		
+		
+
+		
 		//on rend la map cliquable
 		mapView.setClickable(true);
 		//on rend la map zoomable
@@ -67,7 +84,6 @@ public class Direction extends MapActivity implements LocationListener{
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
 
-
 		sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
 		if (sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null){
@@ -75,9 +91,11 @@ public class Direction extends MapActivity implements LocationListener{
 		}
 
 		else Toast.makeText(this,"Noob accélérometer", Toast.LENGTH_LONG).show();
+		
 
+		
+		setContentView(mapView);	
 
-		setContentView(mapView);
 	}
 	@Override
 	protected void onResume() {
@@ -106,25 +124,24 @@ public class Direction extends MapActivity implements LocationListener{
 		mapView.redraw();
 
 	}
-
 	@Override
-	public void onProviderDisabled(String arg0) {
-		// TODO Auto-generated method stub
-		//Log.v("Location", locationManager.toString()); 
-
-	}
-
-	@Override
-	public void onProviderEnabled(String arg0) {
+	public void onProviderDisabled(String provider) {
 		// TODO Auto-generated method stub
 
 	}
-
 	@Override
-	public void onStatusChanged(String arg0, int arg1, Bundle arg2) {
+	public void onProviderEnabled(String provider) {
 		// TODO Auto-generated method stub
 
 	}
+	@Override
+	public void onStatusChanged(String provider, int status, Bundle extras) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+
 
 
 }
