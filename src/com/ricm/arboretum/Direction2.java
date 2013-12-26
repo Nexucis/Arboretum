@@ -43,22 +43,12 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private OverlayItem item2;
 	private OverlayItem item3;
 	private GeoPoint arbo;
-	private WebView webview;
 	//private GeoPoint test;
-	
-	public boolean onKeyDown(int keyCode, KeyEvent evt) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-                finish();
-            return true;
-        }
-
-        return false;
-    }
 
 	private class MyItemizedOverlay extends ArrayItemizedOverlay {
-		
-		
-		
+
+
+
 		private final Context context;
 
 		/**
@@ -73,8 +63,8 @@ public class Direction2 extends MapActivity implements LocationListener{
 			super(defaultMarker);
 			this.context = context;
 		}
-		
-		
+
+
 
 		/**
 		 * Handles a tap event on the given item.
@@ -92,29 +82,18 @@ public class Direction2 extends MapActivity implements LocationListener{
                          builder.setPositiveButton("OK", null);
                          builder.show();
 				 */
-				//Ici je tente de créer la webView, le soucis c'est que le constructeur nécessite un contexte, on 
-				//en a bien un passer en parametre, mais est-il bon, je sais pas. Au pire, on devra faire venir un contexte
-				// d'avant? (par exemple le contexte du menu principal?)
-				//marche seulement avec l'HTML pur apparement
+
 				if(item.getPoint() == arbo){
-					webview = new WebView(context);
-					setContentView(webview);
-					WebSettings webSettings = webview.getSettings(); 
-					webSettings.setBuiltInZoomControls(true);
+
+					Intent v = new Intent(context, DescriptionArbo.class);
+					startActivity(v);
 					
-					webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
 				}//else if(item.getPoint() == test){
 				//	WebView webview = new WebView(context);
-					//setContentView(webview);
-					//webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu2.html");
-			//	}
+				//setContentView(webview);
+				//webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu2.html");
+				//	}
 
-				//Je ne sais pas pourquoi, mais la webview me demande un navigateur, pourtant on ne devrait pas en avoir besoins?
-				//Je tente par un fichier HTML simule
-				// Ce test la marche, c'est chelou quand même
-				// NB il faut une page en HTML pure en fait, faudrait trouver ça...
-				//String summary = "<html><body>You scored <b>192</b> points.</body></html>";
-				//webview.loadData(summary, "text/html", null);
 			}
 			return true;
 		}
