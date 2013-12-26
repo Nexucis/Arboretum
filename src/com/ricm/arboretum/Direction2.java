@@ -76,9 +76,11 @@ public class Direction2 extends MapActivity implements LocationListener{
 				//en a bien un passer en parametre, mais est-il bon, je sais pas. Au pire, on devra faire venir un contexte
 				// d'avant? (par exemple le contexte du menu principal?)
 				//marche seulement avec l'HTML pur apparement
+
 				WebView webview = new WebView(context);
 				setContentView(webview);
 				webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
+				
 				//Je ne sais pas pourquoi, mais la webview me demande un navigateur, pourtant on ne devrait pas en avoir besoins?
 				//Je tente par un fichier HTML simule
 				// Ce test la marche, c'est chelou quand même
