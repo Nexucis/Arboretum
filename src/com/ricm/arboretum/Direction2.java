@@ -17,6 +17,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -42,8 +43,17 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private OverlayItem item2;
 	private OverlayItem item3;
 	private GeoPoint arbo;
+	private WebView webview;
 	//private GeoPoint test;
 	
+	public boolean onKeyDown(int keyCode, KeyEvent evt) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+                finish();
+            return true;
+        }
+
+        return false;
+    }
 
 	private class MyItemizedOverlay extends ArrayItemizedOverlay {
 		
@@ -58,10 +68,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		 *            the default marker (may be null).
 		 * @param context
 		 *            the reference to the application context.
-		 */
-		
-		
-		
+		 */		
 		MyItemizedOverlay(Drawable defaultMarker, Context context) {
 			super(defaultMarker);
 			this.context = context;
@@ -90,7 +97,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 				// d'avant? (par exemple le contexte du menu principal?)
 				//marche seulement avec l'HTML pur apparement
 				if(item.getPoint() == arbo){
-					WebView webview = new WebView(context);
+					webview = new WebView(context);
 					setContentView(webview);
 					WebSettings webSettings = webview.getSettings(); 
 					webSettings.setBuiltInZoomControls(true);
