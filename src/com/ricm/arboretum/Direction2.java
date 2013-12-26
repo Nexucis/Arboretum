@@ -14,11 +14,14 @@ import org.mapsforge.map.reader.header.FileOpenResult;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.webkit.WebView;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
@@ -37,7 +40,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private OverlayItem item2;
 	
 	
-	 private static class MyItemizedOverlay extends ArrayItemizedOverlay {
+	 private class MyItemizedOverlay extends ArrayItemizedOverlay {
          private final Context context;
 
          /**
@@ -60,12 +63,26 @@ public class Direction2 extends MapActivity implements LocationListener{
          protected boolean onTap(int index) {
                  OverlayItem item = createItem(index);
                  if (item != null) {
+                	 	// le Builder permet d'afficher une pop-up
                          Builder builder = new AlertDialog.Builder(this.context);
                          builder.setIcon(android.R.drawable.ic_menu_info_details);
                          builder.setTitle(item.getTitle());
                          builder.setMessage(item.getSnippet());
                          builder.setPositiveButton("OK", null);
                          builder.show();
+                         //Ici je tente de créer la webView, le soucis c'est que le constructeur nécessite un contexte, on 
+                         //en a bien un passer en parametre, mais est-il bon, je sais pas. Au pire, on devra faire venir un contexte
+                         // d'avant? (par exemple le contexte du menu principal?)
+                         //marche seulement avec l'HTML pur apparement
+                         WebView webview = new WebView(context);
+                         setContentView(webview);
+                         webview.loadUrl("http://www.perdu.com/");
+                         //Je ne sais pas pourquoi, mais la webview me demande un navigateur, pourtant on ne devrait pas en avoir besoins?
+                         //Je tente par un fichier HTML simule
+                         // Ce test la marche, c'est chelou quand même
+                         // NB il faut une page en HTML pure en fait, faudrait trouver ça...
+                         //String summary = "<html><body>You scored <b>192</b> points.</body></html>";
+                         //webview.loadData(summary, "text/html", null);
                  }
                  return true;
          }
