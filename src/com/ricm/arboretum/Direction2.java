@@ -76,7 +76,7 @@ public class Direction2 extends MapActivity implements LocationListener{
                          //marche seulement avec l'HTML pur apparement
                          WebView webview = new WebView(context);
                          setContentView(webview);
-                         webview.loadUrl("http://www.perdu.com/");
+                         webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
                          //Je ne sais pas pourquoi, mais la webview me demande un navigateur, pourtant on ne devrait pas en avoir besoins?
                          //Je tente par un fichier HTML simule
                          // Ce test la marche, c'est chelou quand même
