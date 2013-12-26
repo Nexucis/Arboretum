@@ -112,8 +112,12 @@ public class Direction2 extends MapActivity implements LocationListener{
 	public void onLocationChanged(Location arg0) {
 		GeoPoint my_pos=new GeoPoint(arg0.getLatitude(),arg0.getLongitude());
 		item2.setPoint(my_pos);
-		mapView.refreshDrawableState();
-		// TODO Auto-generated method stub
+		
+		//pour raffraichir en touchant l'écran
+		//mapView.refreshDrawableState();
+		
+		//pour recentrer à chaque changement de position
+		mapView.setCenter(my_pos);
 
 
 	}
