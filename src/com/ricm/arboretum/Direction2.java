@@ -17,6 +17,8 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.view.Window;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
 import android.app.Activity;
@@ -38,9 +40,15 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private Sensor my_sensor;
 	private OverlayItem item;
 	private OverlayItem item2;
-
+	private OverlayItem item3;
+	private GeoPoint arbo;
+	//private GeoPoint test;
+	
 
 	private class MyItemizedOverlay extends ArrayItemizedOverlay {
+		
+		
+		
 		private final Context context;
 
 		/**
@@ -51,10 +59,15 @@ public class Direction2 extends MapActivity implements LocationListener{
 		 * @param context
 		 *            the reference to the application context.
 		 */
+		
+		
+		
 		MyItemizedOverlay(Drawable defaultMarker, Context context) {
 			super(defaultMarker);
 			this.context = context;
 		}
+		
+		
 
 		/**
 		 * Handles a tap event on the given item.
@@ -76,11 +89,19 @@ public class Direction2 extends MapActivity implements LocationListener{
 				//en a bien un passer en parametre, mais est-il bon, je sais pas. Au pire, on devra faire venir un contexte
 				// d'avant? (par exemple le contexte du menu principal?)
 				//marche seulement avec l'HTML pur apparement
+				if(item.getPoint() == arbo){
+					WebView webview = new WebView(context);
+					setContentView(webview);
+					WebSettings webSettings = webview.getSettings(); 
+					webSettings.setBuiltInZoomControls(true);
+					
+					webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
+				}//else if(item.getPoint() == test){
+				//	WebView webview = new WebView(context);
+					//setContentView(webview);
+					//webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu2.html");
+			//	}
 
-				WebView webview = new WebView(context);
-				setContentView(webview);
-				webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
-				
 				//Je ne sais pas pourquoi, mais la webview me demande un navigateur, pourtant on ne devrait pas en avoir besoins?
 				//Je tente par un fichier HTML simule
 				// Ce test la marche, c'est chelou quand même
@@ -122,10 +143,12 @@ public class Direction2 extends MapActivity implements LocationListener{
 
 		// create a GeoPoint with the latitude and longitude coordinates
 		GeoPoint myPos = new GeoPoint(0,0);
-		GeoPoint arbo = new GeoPoint(45.193626,5.7783196);
+		arbo = new GeoPoint(45.193626,5.7783196);
+		//test = new GeoPoint(45.1938761,5.7682984);
 
 		// create an OverlayItem with title and description
 		item = new OverlayItem(arbo, "Arboretum", "Localisation de l'arboretum.");
+		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item2 = new OverlayItem(myPos, "Moi", "Ma position.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		item2.setMarker(ItemizedOverlay.boundCenter(location));
@@ -133,6 +156,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		itemizedOverlay2.addItem(item2);
+		itemizedOverlay.addItem(item3);
 
 
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
