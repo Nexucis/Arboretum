@@ -75,7 +75,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(intentV);
 			//Toast.makeText(this, "Arboretum",Toast.LENGTH_LONG).show();
 		}else if(v.getId() == R.id.btnLocalisation){
-			Intent intentD = new Intent(this, Direction.class);
+			Intent intentD = new Intent(this, Direction2.class);
 			startActivity(intentD);
 			//Toast.makeText(this, "Localsiation",Toast.LENGTH_LONG).show();
 		}else if(v.getId() == R.id.btnHorsLigne){

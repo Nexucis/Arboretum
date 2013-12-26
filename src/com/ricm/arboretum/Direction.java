@@ -6,12 +6,13 @@ import java.util.List;
 
 import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
-import org.mapsforge.android.maps.overlay.ListOverlay;
-import org.mapsforge.android.maps.overlay.Marker;
+//import org.mapsforge.android.maps.overlay.ListOverlay;
+//import org.mapsforge.android.maps.overlay.Marker;
 import org.mapsforge.android.maps.overlay.Overlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
-import org.mapsforge.core.model.BoundingBox;
-import org.mapsforge.core.model.GeoPoint;
+import org.mapsforge.core.GeoPoint;
+//import org.mapsforge.core.model.BoundingBox;
+//import org.mapsforge.core.model.GeoPoint;
 
 import android.content.Context;
 import android.content.Intent;
@@ -29,14 +30,14 @@ import android.view.View;
 
 import android.widget.Toast;
 
-public class Direction extends MapActivity implements LocationListener{
+public class Direction extends MapActivity{
 
-	private LocationManager locationManager;
+	//private LocationManager locationManager;
 	private MapView mapView;
-	private SensorManager sm;
-	private Sensor my_sensor;
-	private Marker mMe;
-	private Marker mArbo;
+	//private SensorManager sm;
+	//private Sensor my_sensor;
+	//private Marker mMe;
+	//private Marker mArbo;
 
 	/*
 	 * Methode de test pour quand on appuye sur des boutons
@@ -62,6 +63,9 @@ public class Direction extends MapActivity implements LocationListener{
 		GeoPoint myPos = new GeoPoint(0,0);
 		GeoPoint locArbo = new GeoPoint(45.193626,5.7783196);
 		//on définie notre image sur la map qui correspond à notre emplacement
+		
+		
+		/*
 		mMe = new Marker(myPos,getResources().getDrawable(R.drawable.location_oriented));
 		mArbo = new Marker (locArbo,getResources().getDrawable(R.drawable.location));
 		ListOverlay mOverlayList = new ListOverlay(); 
@@ -71,7 +75,7 @@ public class Direction extends MapActivity implements LocationListener{
 		overlayItems.add(mMe);
 		overlayItems.add(mArbo);
 		
-		
+		*/
 
 		
 		//on rend la map cliquable
@@ -79,13 +83,16 @@ public class Direction extends MapActivity implements LocationListener{
 		//on rend la map zoomable
 		mapView.setBuiltInZoomControls(true);
 		//on centre la map sur notre position
-		mapView.getMapViewPosition().setCenter(myPos);
+		
+		//mapView.getMapViewPosition().setCenter(myPos);
 
+		
+		/*
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
 
 		sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-
+		
 		if (sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null){
 			//success! there's a magnetometer
 		}
@@ -93,23 +100,23 @@ public class Direction extends MapActivity implements LocationListener{
 		else Toast.makeText(this,"Noob accélérometer", Toast.LENGTH_LONG).show();
 		
 
-		
+		*/
 		setContentView(mapView);	
 
 	}
 	@Override
 	protected void onResume() {
 		super.onResume();
-		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this); 
-		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this); 
+		//locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this); 
+		//locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this); 
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		locationManager.removeUpdates(this); 
+		//locationManager.removeUpdates(this); 
 	}
-
+	/*
 	@Override
 	public void onLocationChanged(Location arg0) {
 		// TODO Auto-generated method stub
@@ -139,6 +146,7 @@ public class Direction extends MapActivity implements LocationListener{
 		// TODO Auto-generated method stub
 
 	}
+	*/
 
 
 
