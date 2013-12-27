@@ -104,7 +104,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 
 
 		//chargement du fichier map
-		File map = new File(Environment.getExternalStorageDirectory().toString() + "/grenoble.map");
+		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum/Map/grenoble.map");
 		//ajout de la map proprement
 		mapView = new MapView(this);
 		mapView.setMapFile(map);

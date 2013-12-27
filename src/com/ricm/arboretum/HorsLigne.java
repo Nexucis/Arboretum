@@ -133,7 +133,7 @@ public class HorsLigne extends MapActivity{
 
 
 		//chargement du fichier map
-		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum.map");
+		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum/Map/Arboretum.map");
 		//ajout de la map proprement
 		mapView = new MapView(this);
 		mapView.setMapFile(map);

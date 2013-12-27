@@ -21,7 +21,7 @@ public class DescriptionArbo extends Activity {
 		WebSettings webSettings = webview.getSettings(); 
 		webSettings.setBuiltInZoomControls(true);
 		//chargement depuis la racine de l'appareil
-		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/void.html");
+		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/Arboretum/Webview/void.html");
 
 	}
 
