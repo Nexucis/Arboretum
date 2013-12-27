@@ -145,7 +145,7 @@ public class HorsLigne extends MapActivity{
 
 		//affichage de la map
 		setContentView(mapView);	
-
+		
 
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_i); 
 
