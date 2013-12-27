@@ -121,7 +121,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		setContentView(mapView);	
 
 
-		Drawable defaultMarker = getResources().getDrawable(R.drawable.location); 
+		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_a); 
 		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
 
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
@@ -142,7 +142,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		itemizedOverlay2.addItem(item2);
-		itemizedOverlay.addItem(item3);
+		//itemizedOverlay.addItem(item3);
 
 
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 

@@ -10,23 +10,23 @@
     tools:context=".MainActivity" >
 
     <Button
-        android:id="@+id/btnArboretum"
+        android:id="@+id/btnOffline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:textColor="#FFFFFF"
-        android:text="Visitons l'Arboretum !" />
+        android:text="Mode Offline !"
+        android:textColor="#FFFFFF" />
 
     <Button
-        android:id="@+id/btnLocalisation"
+        android:id="@+id/btnOnline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btnArboretum"
+        android:layout_above="@+id/btnOffline"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:textColor="#FFFFFF"
-        android:text="Direction l'Arboretum !" />
+        android:text="Mode Online !"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>

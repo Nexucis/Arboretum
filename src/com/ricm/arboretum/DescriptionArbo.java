@@ -18,7 +18,7 @@ public class DescriptionArbo extends Activity {
 		setContentView(webview);
 		WebSettings webSettings = webview.getSettings(); 
 		webSettings.setBuiltInZoomControls(true);
-		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu.html");
+		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/void.html");
 
 	}
 

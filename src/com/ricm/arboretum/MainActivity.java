@@ -28,8 +28,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		btnArboretum.setOnClickListener(this);
 		btnLocalisation = (Button) findViewById(R.id.btnLocalisation);
 		btnLocalisation.setOnClickListener(this);
-		btnHorsLigne = (Button) findViewById(R.id.btnHorsLigne);
-		btnHorsLigne.setOnClickListener(this);
 	}
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -71,15 +69,10 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	public void onClick(View v){
 		if(v.getId() == R.id.btnArboretum){
-			Intent intentV = new Intent(this, Visite.class);
+			Intent intentV = new Intent(this, SousMenuVisite.class);
 			startActivity(intentV);
-			//Toast.makeText(this, "Arboretum",Toast.LENGTH_LONG).show();
 		}else if(v.getId() == R.id.btnLocalisation){
-			Intent intentD = new Intent(this, Direction2.class);
-			startActivity(intentD);
-			//Toast.makeText(this, "Localsiation",Toast.LENGTH_LONG).show();
-		}else if(v.getId() == R.id.btnHorsLigne){
-			Intent intentH = new Intent(this,HorsLigne.class);
+			Intent intentH = new Intent(this, Direction2.class);
 			startActivity(intentH);
 		}
 	}
