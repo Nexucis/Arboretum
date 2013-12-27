@@ -1,12 +1,16 @@
 package com.ricm.arboretum;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 
+@SuppressLint("JavascriptInterface")
 public class DescriptionArbo extends Activity {
 
 	private WebView webview;
@@ -20,8 +24,12 @@ public class DescriptionArbo extends Activity {
 		//pour autoriser le zoom
 		WebSettings webSettings = webview.getSettings(); 
 		webSettings.setBuiltInZoomControls(true);
+		//permet l'utilisation de javascript
+		webSettings.setJavaScriptEnabled(true);
+		//rajoute l'interface javascript pour utiliser ses méthodes
+		webview.addJavascriptInterface(new WebAppInterface(this), "Android");
 		//chargement depuis la racine de l'appareil
-		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/Arboretum/Webview/void.html");
+		webview.loadUrl("file:///android_asset/webview/void.html");
 
 	}
 
@@ -54,6 +62,5 @@ public class DescriptionArbo extends Activity {
 	protected void onDestroy() {
 		super.onDestroy();
 	}
-
-
+	
 }
