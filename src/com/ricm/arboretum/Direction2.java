@@ -10,6 +10,7 @@ import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.android.maps.overlay.OverlayList;
 import org.mapsforge.core.GeoPoint;
 import org.mapsforge.map.reader.header.FileOpenResult;
+
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -34,6 +35,7 @@ import android.app.AlertDialog.Builder;
 public class Direction2 extends MapActivity implements LocationListener{
 
 	private MapView mapView;
+	
 	private LocationManager locationManager;
 	private SensorManager sm;
 	private Sensor my_sensor;
@@ -41,6 +43,8 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private OverlayItem item2;
 	private OverlayItem item3;
 	private GeoPoint arbo;
+
+	
 	//private GeoPoint test;
 
 	/**
@@ -189,6 +193,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 
 		//pour recentrer à chaque changement de position
 		mapView.setCenter(my_pos);
+
 
 
 	}

@@ -42,6 +42,16 @@ public class Visite extends MapActivity implements LocationListener {
 	private GeoPoint uranus;
 	private GeoPoint mercure;
 
+	private boolean sSoleil = true;
+	private boolean sCeinture = true;
+	private boolean sJupiter = true;
+	private boolean sSaturne = true;
+	private boolean sUranus = true;
+	private boolean sMercure = true;
+
+	private int mSoundNotif;
+	private SoundManager mSoundManager;
+
 
 	/*
 	 * Inner Class
@@ -136,7 +146,8 @@ public class Visite extends MapActivity implements LocationListener {
 		super.onCreate(savedInstanceState);
 
 
-
+		mSoundManager= new SoundManager(this,5);
+		mSoundNotif = mSoundManager.add(this, R.raw.notif);
 		//chargement du fichier map
 		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum/Map/Arboretum.map");
 		//ajout de la map proprement
@@ -246,6 +257,16 @@ public class Visite extends MapActivity implements LocationListener {
 		super.onPause();
 	}
 
+	public boolean estDansZone(GeoPoint ptsInt, GeoPoint pos){
+
+		// +- 0.0002 zone de 2 metres, je verifie donc si notre position se situe dans une zone de 2 metres autour de nous.
+		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.0002) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.0002) 
+				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.0002) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.0002) ){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	@Override
 	public void onLocationChanged(Location arg0) {
 		GeoPoint my_pos=new GeoPoint(arg0.getLatitude(),arg0.getLongitude());
@@ -256,6 +277,33 @@ public class Visite extends MapActivity implements LocationListener {
 
 		//pour recentrer à chaque changement de position
 		mapView.setCenter(my_pos);
+
+
+		if(sSoleil && estDansZone(soleil, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sSoleil = false;
+		}
+		if(sCeinture && estDansZone(ceinture, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sCeinture = false;
+		}
+		if(sMercure && estDansZone(mercure, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sMercure = false;
+		}
+		if(sSaturne && estDansZone(saturne, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sSaturne = false;
+		}
+		if(sJupiter && estDansZone(jupiter, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sJupiter = false;
+		}
+		if(sUranus && estDansZone(uranus, my_pos)){
+			mSoundManager.play(mSoundNotif);
+			sUranus = false;
+		}
+		
 
 
 	}
