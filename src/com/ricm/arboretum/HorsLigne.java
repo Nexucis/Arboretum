@@ -37,6 +37,16 @@ public class HorsLigne extends MapActivity{
 	private GeoPoint uranus;
 	private GeoPoint mercure;
 	
+	
+	/*
+	 * Inner Class
+	 * Elle sert pour la gestion des listes d'items, concretement, les markers jumele a une geolocalisation
+	 * elle est obligatoire afin de redefinir ontap. En fait, quand l'utilisateur appuyera sur un marqueur,
+	 * si celui-ci a ete stocke dans l'arraylist de type MyItemizedOverlay, le code va aller verifier si le doigt 
+	 * a toucher un des items de la liste et verifier ontap.
+	 * C'est la la grande difference avec mapsforge 0.3.1, ici on cree les markers de tout pieces, et on les stock apres 
+	 * leur avoir assigner un geopoint
+	 */
 	private class MyItemizedOverlay extends ArrayItemizedOverlay{
 
 
@@ -108,16 +118,6 @@ public class HorsLigne extends MapActivity{
                     builder.setPositiveButton("OK", null);
                     builder.show();
 				}
-				// le Builder permet d'afficher une pop-up
-				/*
-                         Builder builder = new AlertDialog.Builder(this.context);
-                         builder.setIcon(android.R.drawable.ic_menu_info_details);
-                         builder.setTitle(item.getTitle());
-                         builder.setMessage(item.getSnippet());
-                         builder.setPositiveButton("OK", null);
-                         builder.show();
-				 */
-
 
 			}
 			return true;

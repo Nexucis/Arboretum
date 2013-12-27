@@ -45,10 +45,19 @@ public class Direction2 extends MapActivity implements LocationListener{
 	private GeoPoint arbo;
 	//private GeoPoint test;
 
+	/**
+	 * Inner Class
+	 * Elle sert pour la gestion des listes d'items, concretement, les markers jumele a une geolocalisation
+	 * elle est obligatoire afin de redefinir ontap. En fait, quand l'utilisateur appuyera sur un marqueur,
+	 * si celui-ci a ete stocke dans l'arraylist de type MyItemizedOverlay, le code va aller verifier si le doigt 
+	 * a toucher un des items de la liste et verifier ontap.
+	 * C'est la la grande difference avec mapsforge 0.3.1, ici on cree les markers de tout pieces, et on les stock apres 
+	 * leur avoir assigner un geopoint
+	 */
 	private class MyItemizedOverlay extends ArrayItemizedOverlay {
 
 
-
+		//Obligation de sauvegarde notre contexte
 		private final Context context;
 
 		/**
@@ -59,6 +68,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		 * @param context
 		 *            the reference to the application context.
 		 */		
+		//constructeur de l'innerclass
 		MyItemizedOverlay(Drawable defaultMarker, Context context) {
 			super(defaultMarker);
 			this.context = context;
@@ -68,31 +78,18 @@ public class Direction2 extends MapActivity implements LocationListener{
 
 		/**
 		 * Handles a tap event on the given item.
+		 * le mafeux ontap
 		 */
 		@Override
 		protected boolean onTap(int index) {
 			OverlayItem item = createItem(index);
 			if (item != null) {
-				// le Builder permet d'afficher une pop-up
-				/*
-                         Builder builder = new AlertDialog.Builder(this.context);
-                         builder.setIcon(android.R.drawable.ic_menu_info_details);
-                         builder.setTitle(item.getTitle());
-                         builder.setMessage(item.getSnippet());
-                         builder.setPositiveButton("OK", null);
-                         builder.show();
-				 */
-
 				if(item.getPoint() == arbo){
 
 					Intent v = new Intent(context, DescriptionArbo.class);
 					startActivity(v);
-					
-				}//else if(item.getPoint() == test){
-				//	WebView webview = new WebView(context);
-				//setContentView(webview);
-				//webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/perdu2.html");
-				//	}
+
+				}
 
 			}
 			return true;
@@ -120,10 +117,13 @@ public class Direction2 extends MapActivity implements LocationListener{
 		//affichage de la map
 		setContentView(mapView);	
 
-
+		//Creation d'un marker, un objet Drawable
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_a); 
 		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
 
+		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
+		//la simple raison qu'elle va stocker notre curseur de position
+		//dont on ne souhaite pas qu'il y ai de reaction si on tap dessus
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
 		ArrayItemizedOverlay itemizedOverlay2 = new ArrayItemizedOverlay(location);
 
@@ -144,7 +144,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		itemizedOverlay2.addItem(item2);
 		//itemizedOverlay.addItem(item3);
 
-
+		//Le GPS
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
 		sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -164,6 +164,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 	@Override
 	protected void onResume() {
 		super.onResume();
+		//mise à jour du GPS
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this); 
 		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this); 
 	}
@@ -171,6 +172,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 	@Override
 	protected void onPause() {
 		super.onPause();
+		//pause du GPS
 		locationManager.removeUpdates(this); 
 	}
 

@@ -41,7 +41,17 @@ public class Visite extends MapActivity implements LocationListener {
 	private GeoPoint saturne;
 	private GeoPoint uranus;
 	private GeoPoint mercure;
-	
+
+
+	/*
+	 * Inner Class
+	 * Elle sert pour la gestion des listes d'items, concretement, les markers jumele a une geolocalisation
+	 * elle est obligatoire afin de redefinir ontap. En fait, quand l'utilisateur appuyera sur un marqueur,
+	 * si celui-ci a ete stocke dans l'arraylist de type MyItemizedOverlay, le code va aller verifier si le doigt 
+	 * a toucher un des items de la liste et verifier ontap.
+	 * C'est la la grande difference avec mapsforge 0.3.1, ici on cree les markers de tout pieces, et on les stock apres 
+	 * leur avoir assigner un geopoint
+	 */
 	private class MyItemizedOverlay extends ArrayItemizedOverlay{
 
 
@@ -71,58 +81,48 @@ public class Visite extends MapActivity implements LocationListener {
 			OverlayItem item = createItem(index);
 			if (item != null) {
 				if(item.getPoint() == soleil){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}else if(item.getPoint() == ceinture){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}else if(item.getPoint() == jupiter){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}else if(item.getPoint() == mercure){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}else if(item.getPoint() == uranus){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}else if(item.getPoint() == saturne){
-                    Builder builder = new AlertDialog.Builder(this.context2);
-                    builder.setIcon(android.R.drawable.ic_menu_info_details);
-                    builder.setTitle(item.getTitle());
-                    builder.setMessage(item.getSnippet());
-                    builder.setPositiveButton("OK", null);
-                    builder.show();
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
 				}
-				// le Builder permet d'afficher une pop-up
-				/*
-                         Builder builder = new AlertDialog.Builder(this.context);
-                         builder.setIcon(android.R.drawable.ic_menu_info_details);
-                         builder.setTitle(item.getTitle());
-                         builder.setMessage(item.getSnippet());
-                         builder.setPositiveButton("OK", null);
-                         builder.show();
-				 */
-
 
 			}
 			return true;
@@ -155,6 +155,9 @@ public class Visite extends MapActivity implements LocationListener {
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_i); 
 		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
 
+		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
+		//la simple raison qu'elle va stocker notre curseur de position
+		//dont on ne souhaite pas qu'il y ai de reaction si on tap dessus
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
 		ArrayItemizedOverlay itemizedOverlay2 = new ArrayItemizedOverlay(location);
 
@@ -169,7 +172,7 @@ public class Visite extends MapActivity implements LocationListener {
 
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay2.addItem(item2);
-		
+
 		// create a GeoPoint with the latitude and longitude coordinates
 		soleil = new GeoPoint(45.1942296,5.7772561);
 		//test = new GeoPoint(45.1938761,5.7682984);
@@ -181,17 +184,17 @@ public class Visite extends MapActivity implements LocationListener {
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		//itemizedOverlay.addItem(item3);
-		
+
 		ceinture = new GeoPoint(45.1943799, 5.7778569);
 		item = new OverlayItem(ceinture, "Ceinture d'asteroides", "la ceinture d'asteroides");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
-		
+
 		jupiter = new GeoPoint(45.1944986, 5.7782611);
 		item = new OverlayItem(jupiter, "Jupiter", "Localisation de Jupiter");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
-		
+
 		saturne = new GeoPoint(45.1943126, 5.7790359);
 		item = new OverlayItem(saturne, "Saturne", "Localisation de Saturne");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
@@ -202,7 +205,7 @@ public class Visite extends MapActivity implements LocationListener {
 		item = new OverlayItem(uranus, "Uranus", "Localisation d'Uranus");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
-		
+
 		mercure = new GeoPoint(45.1942652, 5.7774021);
 		item = new OverlayItem(mercure, "Mercure", "Localisation de Mercure");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));

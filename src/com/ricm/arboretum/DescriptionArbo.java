@@ -14,10 +14,13 @@ public class DescriptionArbo extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		//Creation de la webview
 		webview = new WebView(this);
 		setContentView(webview);
+		//pour autoriser le zoom
 		WebSettings webSettings = webview.getSettings(); 
 		webSettings.setBuiltInZoomControls(true);
+		//chargement depuis la racine de l'appareil
 		webview.loadUrl("file:///" + Environment.getExternalStorageDirectory().toString() + "/void.html");
 
 	}
