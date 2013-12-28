@@ -6,7 +6,6 @@ import android.widget.Toast;
 
 public class WebAppInterface {
     Context mContext;
-
     /** Instantiate the interface and set the context */
     WebAppInterface(Context c) {
         mContext = c;
@@ -16,5 +15,7 @@ public class WebAppInterface {
     @JavascriptInterface
     public void showToast(String toast) {
         Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        DescriptionArbo.speakOut();
     }
+    
 }
