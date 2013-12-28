@@ -147,7 +147,7 @@ public class HorsLigne extends MapActivity{
 		setContentView(mapView);	
 		
 
-		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_i); 
+		Drawable defaultMarker = getResources().getDrawable(R.drawable.planetarium); 
 
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
 

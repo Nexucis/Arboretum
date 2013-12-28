@@ -432,7 +432,7 @@ public class Visite extends MapActivity implements LocationListener {
 		setContentView(mapView);	
 
 
-		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_i); 
+		Drawable defaultMarker = getResources().getDrawable(R.drawable.planetarium); 
 		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
 		Drawable markerPlante = getResources().getDrawable(R.drawable.plante); 
 
