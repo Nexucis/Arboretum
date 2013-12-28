@@ -722,7 +722,7 @@ public class Visite extends MapActivity implements LocationListener {
 		//mapView.refreshDrawableState();
 
 		//pour recentrer à chaque changement de position
-		mapView.setCenter(my_pos);
+		//mapView.setCenter(my_pos);
 
 
 		if(sSoleil && estDansZone(soleil, my_pos)){

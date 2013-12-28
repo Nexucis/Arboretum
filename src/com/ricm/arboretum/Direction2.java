@@ -8,7 +8,8 @@ import org.mapsforge.android.maps.overlay.ArrayItemizedOverlay;
 import org.mapsforge.android.maps.overlay.ItemizedOverlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.android.maps.overlay.OverlayList;
-import org.mapsforge.core.GeoPoint;
+//import org.mapsforge.core.GeoPoint;
+import org.mapsforge.core.*;
 import org.mapsforge.map.reader.header.FileOpenResult;
 
 import android.location.Location;
@@ -116,8 +117,11 @@ public class Direction2 extends MapActivity implements LocationListener{
 		//on rend la map zoomable
 		mapView.setBuiltInZoomControls(true);
 
+		//zoom *2
+		mapView.zoom((byte) 2, 2);
 		//affichage de la map
 		setContentView(mapView);	
+
 
 		//Creation d'un marker, un objet Drawable
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_a); 
@@ -192,7 +196,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		//mapView.refreshDrawableState();
 
 		//pour recentrer à chaque changement de position
-		mapView.setCenter(my_pos);
+		//mapView.setCenter(my_pos);
 
 
 
