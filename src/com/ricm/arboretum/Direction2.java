@@ -117,8 +117,6 @@ public class Direction2 extends MapActivity implements LocationListener{
 		//on rend la map zoomable
 		mapView.setBuiltInZoomControls(true);
 
-		//zoom *2
-		mapView.zoom((byte) 2, 2);
 		//affichage de la map
 		setContentView(mapView);	
 
@@ -164,6 +162,12 @@ public class Direction2 extends MapActivity implements LocationListener{
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
 		mapView.getOverlays().add(itemizedOverlay2);
+		
+
+		//je me centre sur moi
+		mapView.setCenter(item2.getPoint());
+		//puis je zoom *2
+		mapView.zoom((byte) 2, 2);
 
 	}
 
@@ -196,7 +200,7 @@ public class Direction2 extends MapActivity implements LocationListener{
 		//mapView.refreshDrawableState();
 
 		//pour recentrer à chaque changement de position
-		//mapView.setCenter(my_pos);
+		mapView.setCenter(my_pos);
 
 
 

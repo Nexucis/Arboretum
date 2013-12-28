@@ -31,9 +31,11 @@ public class Visite extends MapActivity implements LocationListener {
 	private LocationManager locationManager;
 	private SensorManager sm;
 	private Sensor my_sensor;
+	private GeoPoint arbo;
 
 	//marker de notre position
 	private OverlayItem item;
+	private OverlayItem my_item;
 	//marker des planetes
 	private OverlayItem item2;
 	//marker des plantes
@@ -89,7 +91,7 @@ public class Visite extends MapActivity implements LocationListener {
 	private boolean sMars = true;
 	private boolean sNeptune = true;
 	private boolean sObjNeptune = true;
-	
+
 	private boolean sGroupeA0 = true;
 	private boolean sGroupeA1 = true;
 	private boolean sGroupeA2 = true;
@@ -447,6 +449,15 @@ public class Visite extends MapActivity implements LocationListener {
 		GeoPoint myPos = new GeoPoint(0,0);
 		//test = new GeoPoint(45.1938761,5.7682984);
 
+		
+		arbo = new GeoPoint(45.193626,5.7783196);
+		my_item = new OverlayItem(arbo, "Arboretum", "Localisation de l'arboretum.");
+		//je me centre sur moi
+		mapView.setCenter(my_item.getPoint());
+		//puis je zoom *2
+		mapView.zoom((byte) 6, 6);
+		
+		
 		// create an OverlayItem with title and description
 		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item2 = new OverlayItem(myPos, "Moi", "Ma position.");
@@ -649,7 +660,7 @@ public class Visite extends MapActivity implements LocationListener {
 		item = new OverlayItem(groupeA20, "Vingt et unieme groupe de plante", "Localisation du vingt et unieme groupe de plantes");
 		item.setMarker(markerPlante);
 		itemizedOverlay.addItem(item);
-		
+
 		//A21 Véglier du Japon / Troëne de Californie / Troëne de Chine / Peuplier d'Italie
 		groupeA21 = new GeoPoint(45.193668,5.777579);
 		item = new OverlayItem(groupeA21, "Vingt deuxieme groupe de plante", "Localisation du vingt deuxieme groupe de plantes");
@@ -661,7 +672,7 @@ public class Visite extends MapActivity implements LocationListener {
 		item = new OverlayItem(groupeA22, "Vingt troisieme groupe de plante", "Localisation du vingt troisieme groupe de plantes");
 		item.setMarker(markerPlante);
 		itemizedOverlay.addItem(item);
-		
+
 		//A23 Cyprès toujours vert / Charme 
 		groupeA23 = new GeoPoint(45.194160,5.777865);
 		item = new OverlayItem(groupeA23, "Vingt quatrieme groupe de plante", "Localisation du vingt quatrieme groupe de plantes");
@@ -682,6 +693,7 @@ public class Visite extends MapActivity implements LocationListener {
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
 		mapView.getOverlays().add(itemizedOverlay2);
+
 
 	}
 
@@ -722,7 +734,7 @@ public class Visite extends MapActivity implements LocationListener {
 		//mapView.refreshDrawableState();
 
 		//pour recentrer à chaque changement de position
-		//mapView.setCenter(my_pos);
+		mapView.setCenter(my_pos);
 
 
 		if(sSoleil && estDansZone(soleil, my_pos)){
