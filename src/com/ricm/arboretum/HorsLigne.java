@@ -108,6 +108,7 @@ public class HorsLigne extends MapActivity{
 		CharSequence tUranus[] = {"Uranus"};
 		CharSequence tSaturne[] = {"Saturne"};
 		CharSequence tNeptune[] = {"Neptune"};
+		CharSequence tTransNeptu[] = {"Ceinture de Kuiper", "Objets épars", "Objets détachés"};
 
 		/**
 		 * Handles a tap event on the given item.
@@ -269,10 +270,24 @@ public class HorsLigne extends MapActivity{
 					builder.show();
 				}else if(item.getPoint() == objNeptune){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tTransNeptu, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "ceinture_kuiper.html";
+			            		   startActivity(intent);
+			            	   }else if(which == 1){
+			            		   Global.nomFichier = "Objets_epars.html";
+			            		   startActivity(intent);
+			            	   }else if(which == 2){
+			            		   Global.nomFichier = "Objets_detaches.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == groupeA1){
 					Builder builder = new AlertDialog.Builder(this.context2);
