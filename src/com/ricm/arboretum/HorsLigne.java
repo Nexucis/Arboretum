@@ -98,7 +98,16 @@ public class HorsLigne extends MapActivity{
 			this.context2 = context;
 		}
 
-		CharSequence cs[] = { "soleil1", "soleil2" };
+		CharSequence tSoleil[] = { "Soleil"};
+		CharSequence tTerre[] = {"Terre"};
+		CharSequence tMars[] = {"Mars"};
+		CharSequence tVenus[] = {"Venus"};
+		CharSequence tCeinture[] = {"Ceinture d'astéroïdes"};
+		CharSequence tJupiter[] = {"Jupiter"};
+		CharSequence tMercure[] = {"Mercure"};
+		CharSequence tUranus[] = {"Uranus"};
+		CharSequence tSaturne[] = {"Saturne"};
+		CharSequence tNeptune[] = {"Neptune"};
 
 		/**
 		 * Handles a tap event on the given item.
@@ -110,17 +119,12 @@ public class HorsLigne extends MapActivity{
 			if (item != null) {
 				if(item.getPoint() == soleil){
 					Builder builder = new AlertDialog.Builder(this.context2);
-					builder.setItems(cs, new DialogInterface.OnClickListener() {
+					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
 			               public void onClick(DialogInterface dialog, int which) {
-			                   if(which == 0){
-			                	   Global.nomFichier = "soleil1.html";
-			                	   startActivity(intent);
-			                	   //Toast.makeText(context2, "vous avez choisi soleil 1", Toast.LENGTH_SHORT).show();
-			                   }else if(which == 1){
-			                	   Global.nomFichier = "soleil2.html";
-			                	   startActivity(intent);
-			                	  // Toast.makeText(context2, "vous avez choisi soleil 2", Toast.LENGTH_SHORT).show();
-			                   }
+			            	   if(which == 0){
+			            		   Global.nomFichier = "soleil.html";
+			            		   startActivity(intent);
+			            	   }
 			               }
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
@@ -130,66 +134,138 @@ public class HorsLigne extends MapActivity{
 					builder.show();
 				}else if(item.getPoint() == ceinture){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "ceinture.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == jupiter){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "jupiter.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+				//	builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == mercure){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "mercure.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == uranus){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "uranus.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+				//	builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == saturne){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "saturne.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == venus){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tVenus, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "venus.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == terre){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tTerre, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "terre.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == mars){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tMars, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "mars.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == neptune){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			            	   if(which == 0){
+			            		   Global.nomFichier = "neptune.html";
+			            		   startActivity(intent);
+			            	   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == objNeptune){
 					Builder builder = new AlertDialog.Builder(this.context2);
