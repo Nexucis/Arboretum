@@ -8,12 +8,18 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.app.DownloadManager;
+import android.app.DownloadManager.Request;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener {
 
@@ -24,6 +30,10 @@ public class MainActivity extends Activity implements OnClickListener {
 	private static final int TAKE_PICTURE=1;
 	ActionBar actionBar;
 	static final private int MENU_ITEM = Menu.FIRST;
+	
+	long ref1;
+	long ref2;
+	
 	
 	@Override
 	//test de mon push
@@ -43,6 +53,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		actionBar.show();
 		actionBar.setTitle("Arboricom");
 		
+		initAppli();
+		
 	}
 	//rajoute un menu
 	@Override
@@ -53,7 +65,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		int groupId = 0;
 		int menuItemId = MENU_ITEM;
 		int menuItemOrder = Menu.NONE;
-		int menuItemText = 1;
 		MenuItem menuItem = menu.add(groupId, menuItemId, menuItemOrder, "Appareil Photo");
 		
 		return true;
@@ -118,5 +129,74 @@ public class MainActivity extends Activity implements OnClickListener {
 			startActivity(intentH);
 		}
 	}
+	
+	private void initAppli()
+	{
+		//Permet de créer le dossier pour la photo, a voir pour créer le dossier map et arboretum et permettre de ddl les maps
+		File photo = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"photo");
+		File map = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map");
+		File arbo = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map","Arboretum.map");
+		File gre = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map","grenoble.map");
+		
+		String serviceString = Context.DOWNLOAD_SERVICE;
+		DownloadManager downloadManager = (DownloadManager)getSystemService(serviceString);
+		Uri mapGre = Uri.parse("https://www.dropbox.com/s/qyikoj5ledht2ya/grenoble.map");
+		Uri mapArbo = Uri.parse("https://www.dropbox.com/s/3f7i75y13klhz6f/Arboretum.map");		
+		
+		
+		IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
+		BroadcastReceiver receiver = new BroadcastReceiver(){
+
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				long ref = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
+				if(ref1 == ref)
+				{
+					Toast.makeText(context, "Carte de Grenoble téléchargée.", Toast.LENGTH_SHORT).show();
+				}
+				if(ref2 == ref)
+				{
+					Toast.makeText(context, "Carte de l'arboretum téléchargée.", Toast.LENGTH_SHORT).show();
+				}
+				
+			}
+			
+		};
+		registerReceiver(receiver,filter);
+		
+		//Creer les dossiers
+		if(!photo.exists())
+		{
+			photo.mkdirs();
+		}
+
+		if(!map.exists())
+		{
+			map.mkdir();
+		}
+		
+		//si les map n'existent pas
+		/*if(!arbo.exists())
+		{
+			Toast.makeText(this, "La carte de Grenoble est en cours de téléchargement.", Toast.LENGTH_SHORT).show();
+			DownloadManager.Request request1 = new Request(mapGre);
+			request1.setDestinationUri(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map"+File.separator,"grenoble.map")));
+			request1.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
+			ref1 = downloadManager.enqueue(request1);
+		}
+		if(!gre.exists())
+		{
+			Toast.makeText(this, "La carte de l'arboretum est en cours de téléchargement.", Toast.LENGTH_SHORT).show();
+			DownloadManager.Request request2 = new Request(mapArbo);
+			request2.setDestinationUri(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map"+File.separator,"Arboretum.map")));
+			request2.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
+			ref2 = downloadManager.enqueue(request2);
+		}*/
+
+		
+		unregisterReceiver(receiver);
+	}
+	
+	
 
 }
