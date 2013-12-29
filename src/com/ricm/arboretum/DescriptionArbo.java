@@ -21,6 +21,8 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
+		Toast.makeText(this, Global.nomFichier, Toast.LENGTH_SHORT).show();
+		
 		//Creation de la webview
 		webview = new WebView(this);
 		setContentView(webview);
@@ -39,8 +41,8 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 		webview.addJavascriptInterface(new WebAppInterface(this), "Android");
 		
 		//chargement depuis le dossier assets de l'application
+
 		webview.loadUrl("file:///android_asset/webview/arboretum.html");		
-		
 	}
 
 	@Override

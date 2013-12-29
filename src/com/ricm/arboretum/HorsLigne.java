@@ -106,15 +106,20 @@ public class HorsLigne extends MapActivity{
 		@Override
 		protected boolean onTap(int index) {
 			OverlayItem item = createItem(index);
+			final Intent intent = new Intent(context2, DescriptionArbo.class);
 			if (item != null) {
 				if(item.getPoint() == soleil){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(cs, new DialogInterface.OnClickListener() {
 			               public void onClick(DialogInterface dialog, int which) {
 			                   if(which == 0){
-			                	   Toast.makeText(context2, "vous avez choisi soleil 1", Toast.LENGTH_SHORT).show();
+			                	   Global.nomFichier = "soleil1.html";
+			                	   startActivity(intent);
+			                	   //Toast.makeText(context2, "vous avez choisi soleil 1", Toast.LENGTH_SHORT).show();
 			                   }else if(which == 1){
-			                	   Toast.makeText(context2, "vous avez choisi soleil 2", Toast.LENGTH_SHORT).show();
+			                	   Global.nomFichier = "soleil2.html";
+			                	   startActivity(intent);
+			                	  // Toast.makeText(context2, "vous avez choisi soleil 2", Toast.LENGTH_SHORT).show();
 			                   }
 			               }
 					});
