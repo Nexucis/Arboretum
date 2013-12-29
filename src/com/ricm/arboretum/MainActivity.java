@@ -140,8 +140,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		String serviceString = Context.DOWNLOAD_SERVICE;
 		DownloadManager downloadManager = (DownloadManager)getSystemService(serviceString);
-		Uri mapGre = Uri.parse("https://www.dropbox.com/s/qyikoj5ledht2ya/grenoble.map");
-		Uri mapArbo = Uri.parse("https://www.dropbox.com/s/3f7i75y13klhz6f/Arboretum.map");		
+		Uri mapGre = Uri.parse("http://paul.labat.free.fr/Arboretum/grenoble.map");
+		Uri mapArbo = Uri.parse("http://paul.labat.free.fr/Arboretum/Arboretum.map");		
 		
 		
 		IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
@@ -176,13 +176,17 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		
 		//si les map n'existent pas
-		/*if(!arbo.exists())
+		if(!arbo.exists())
 		{
 			Toast.makeText(this, "La carte de Grenoble est en cours de téléchargement.", Toast.LENGTH_SHORT).show();
 			DownloadManager.Request request1 = new Request(mapGre);
 			request1.setDestinationUri(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map"+File.separator,"grenoble.map")));
 			request1.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
 			ref1 = downloadManager.enqueue(request1);
+		}
+		else
+		{
+			Toast.makeText(this, "La carte de Grenoble existe.", Toast.LENGTH_SHORT).show();
 		}
 		if(!gre.exists())
 		{
@@ -191,7 +195,11 @@ public class MainActivity extends Activity implements OnClickListener {
 			request2.setDestinationUri(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map"+File.separator,"Arboretum.map")));
 			request2.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
 			ref2 = downloadManager.enqueue(request2);
-		}*/
+		}
+		else
+		{
+			Toast.makeText(this, "La carte de l'arboretum existe.", Toast.LENGTH_SHORT).show();
+		}
 
 		
 		unregisterReceiver(receiver);
