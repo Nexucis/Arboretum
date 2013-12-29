@@ -138,7 +138,7 @@ public class HorsLigne extends MapActivity{
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
 			               public void onClick(DialogInterface dialog, int which) {
 			            	   if(which == 0){
-			            		   Global.nomFichier = "ceinture.html";
+			            		   Global.nomFichier = "ceinture_kuiper.html";
 			            		   startActivity(intent);
 			            	   }
 			               }
