@@ -26,14 +26,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btnArboretum;
 	private Button btnLocalisation;
 	private Button btnHorsLigne;
+	//code pour le menu photo
 	private int idPhoto = 0;
 	private static final int TAKE_PICTURE=1;
 	ActionBar actionBar;
 	static final private int MENU_ITEM = Menu.FIRST;
-	
+	//code du download manager
 	long ref1;
 	long ref2;
-	
+	BroadcastReceiver receiver;
 	
 	@Override
 	//test de mon push
@@ -115,6 +116,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onDestroy() {
+		unregisterReceiver(receiver);
 		super.onDestroy();
 	}
 
@@ -145,7 +147,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 		
 		IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-		BroadcastReceiver receiver = new BroadcastReceiver(){
+		receiver = new BroadcastReceiver(){
 
 			@Override
 			public void onReceive(Context context, Intent intent) {
@@ -202,7 +204,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 
 		
-		unregisterReceiver(receiver);
+		
 	}
 	
 	
