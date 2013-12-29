@@ -20,6 +20,7 @@ import android.os.Environment;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.app.AlertDialog;
@@ -36,6 +37,11 @@ public class HorsLigne extends MapActivity{
 	private GeoPoint saturne;
 	private GeoPoint uranus;
 	private GeoPoint mercure;
+	private GeoPoint venus;
+	private GeoPoint terre;
+	private GeoPoint mars;
+	private GeoPoint neptune;
+	private GeoPoint objNeptune;
 	private GeoPoint arbo;
 	private OverlayItem my_item;
 	
@@ -92,7 +98,7 @@ public class HorsLigne extends MapActivity{
 			this.context2 = context;
 		}
 
-
+		CharSequence cs[] = { "soleil1", "soleil2" };
 
 		/**
 		 * Handles a tap event on the given item.
@@ -103,10 +109,19 @@ public class HorsLigne extends MapActivity{
 			if (item != null) {
 				if(item.getPoint() == soleil){
 					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setItems(cs, new DialogInterface.OnClickListener() {
+			               public void onClick(DialogInterface dialog, int which) {
+			                   if(which == 0){
+			                	   Toast.makeText(context2, "vous avez choisi soleil 1", Toast.LENGTH_SHORT).show();
+			                   }else if(which == 1){
+			                	   Toast.makeText(context2, "vous avez choisi soleil 2", Toast.LENGTH_SHORT).show();
+			                   }
+			               }
+					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					//builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == ceinture){
 					Builder builder = new AlertDialog.Builder(this.context2);
@@ -137,6 +152,41 @@ public class HorsLigne extends MapActivity{
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == saturne){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == venus){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == terre){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == mars){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == neptune){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == objNeptune){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
@@ -393,6 +443,31 @@ public class HorsLigne extends MapActivity{
 		item = new OverlayItem(mercure, "Mercure", "Localisation de Mercure");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
+		
+		terre = new GeoPoint(45.1943019, 5.7775252);
+		item = new OverlayItem(terre, "Terre", "Localisation de la Terre");
+		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
+		itemizedOverlay.addItem(item);
+
+		venus = new GeoPoint(45.1942954, 5.7774607);
+		item = new OverlayItem(venus, "Venus", "Localisation de Venus");
+		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
+		itemizedOverlay.addItem(item);
+
+		mars = new GeoPoint(45.19433, 5.7776101);
+		item = new OverlayItem(mars, "Mars", "Localisation de Mars");
+		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
+		itemizedOverlay.addItem(item);
+
+		neptune = new GeoPoint(45.1927963, 5.777998);
+		item = new OverlayItem(neptune, "Neptune", "Localisation de Neptune");
+		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
+		itemizedOverlay.addItem(item);
+
+		objNeptune = new GeoPoint(45.1942652, 5.7774021);
+		item = new OverlayItem(objNeptune, "Objet de Neptunes", "Localisation des Objets de Neptune");
+		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
+		itemizedOverlay.addItem(item);
 
 		//Ajout des arbres 
 
@@ -476,7 +551,7 @@ public class HorsLigne extends MapActivity{
 
 		//A13 Erable de montpellier / Cade Oxycèdre / Saule des îles Sakhalines / Magnolia à fleur de lis 
 		//Magnolia de soulange / Viome de Burkwood
-		groupeA13 = new GeoPoint(45.193271,5.776999);
+		groupeA13 = new GeoPoint(45.193181,5.777499);
 		item = new OverlayItem(groupeA13, "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
 		item.setMarker(markerPlante);
 		itemizedOverlay.addItem(item);
