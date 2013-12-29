@@ -20,6 +20,7 @@ import android.os.Environment;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.app.AlertDialog;
@@ -450,13 +451,6 @@ public class Visite extends MapActivity implements LocationListener {
 		//test = new GeoPoint(45.1938761,5.7682984);
 
 		
-		arbo = new GeoPoint(45.193626,5.7783196);
-		my_item = new OverlayItem(arbo, "Arboretum", "Localisation de l'arboretum.");
-		//je me centre sur moi
-		mapView.setCenter(my_item.getPoint());
-		//puis je zoom *2
-		mapView.zoom((byte) 6, 6);
-		
 		
 		// create an OverlayItem with title and description
 		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
@@ -465,6 +459,11 @@ public class Visite extends MapActivity implements LocationListener {
 
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay2.addItem(item2);
+		
+		//je me centre sur moi
+		mapView.setCenter(item2.getPoint());
+		//puis je zoom *2
+		mapView.zoom((byte) 6, 6);
 
 		// create a GeoPoint with the latitude and longitude coordinates
 		soleil = new GeoPoint(45.1942296,5.7772561);
@@ -614,7 +613,7 @@ public class Visite extends MapActivity implements LocationListener {
 
 		//A13 Erable de montpellier / Cade Oxycèdre / Saule des îles Sakhalines / Magnolia à fleur de lis 
 		//Magnolia de soulange / Viome de Burkwood
-		groupeA13 = new GeoPoint(45.193271,5.776999);
+		groupeA13 = new GeoPoint(45.193181,5.777499);
 		item = new OverlayItem(groupeA13, "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
 		item.setMarker(markerPlante);
 		itemizedOverlay.addItem(item);
@@ -693,6 +692,7 @@ public class Visite extends MapActivity implements LocationListener {
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
 		mapView.getOverlays().add(itemizedOverlay2);
+		mapView.getOverlays().add(itemizedOverlay3);
 
 
 	}
