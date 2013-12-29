@@ -3,7 +3,6 @@ package com.ricm.arboretum;
 import java.util.Locale;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
@@ -32,8 +31,7 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 		
 		//Init du TTS
 		tts = new TextToSpeech(this, this);
-		
-		
+			
 		//permet l'utilisation de javascript
 		webSettings.setJavaScriptEnabled(true);
 		
@@ -41,10 +39,7 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 		webview.addJavascriptInterface(new WebAppInterface(this), "Android");
 		
 		//chargement depuis le dossier assets de l'application
-		webview.loadUrl("file:///android_asset/webview/void.html");
-
-		
-		
+		webview.loadUrl("file:///android_asset/webview/arboretum.html");		
 		
 	}
 
@@ -65,11 +60,19 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 
 	@Override
 	protected void onPause() {
+		if(tts!=null)
+		{
+			tts.stop();
+		}
 		super.onPause();
 	}
 
 	@Override
 	protected void onStop() {
+		if(tts!=null)
+		{
+			tts.stop();
+		}
 		super.onStop();
 	}
 
@@ -111,9 +114,8 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 		
 	}
 	
-	  public static void speakOut() {
-		  String text = new String("Bonjour. Le ciel est bleu");
-	        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+	  public static void speakOut(String s) {
+	        tts.speak(s, TextToSpeech.QUEUE_ADD, null);
 	    }
 	
 	
