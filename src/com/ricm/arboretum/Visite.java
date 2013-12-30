@@ -20,7 +20,6 @@ import android.os.Environment;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.app.AlertDialog;
@@ -613,7 +612,7 @@ public class Visite extends MapActivity implements LocationListener {
 
 		//A13 Erable de montpellier / Cade Oxycèdre / Saule des îles Sakhalines / Magnolia à fleur de lis 
 		//Magnolia de soulange / Viome de Burkwood
-		groupeA13 = new GeoPoint(45.193181,5.777499);
+		groupeA13 = new GeoPoint(45.193271,5.776999);
 		item = new OverlayItem(groupeA13, "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
 		item.setMarker(markerPlante);
 		itemizedOverlay.addItem(item);
