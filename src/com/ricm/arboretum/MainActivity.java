@@ -26,14 +26,15 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button btnArboretum;
 	private Button btnLocalisation;
 	private Button btnHorsLigne;
+	//code pour le menu photo
 	private int idPhoto = 0;
 	private static final int TAKE_PICTURE=1;
 	ActionBar actionBar;
 	static final private int MENU_ITEM = Menu.FIRST;
-	
+	//code du download manager
 	long ref1;
 	long ref2;
-	
+	BroadcastReceiver receiver;
 	
 	@Override
 	//test de mon push
@@ -115,6 +116,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onDestroy() {
+		unregisterReceiver(receiver);
 		super.onDestroy();
 	}
 
@@ -138,14 +140,16 @@ public class MainActivity extends Activity implements OnClickListener {
 		File arbo = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map","Arboretum.map");
 		File gre = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map","grenoble.map");
 		
+		//Init du downloadmanager
 		String serviceString = Context.DOWNLOAD_SERVICE;
 		DownloadManager downloadManager = (DownloadManager)getSystemService(serviceString);
-		Uri mapGre = Uri.parse("https://www.dropbox.com/s/qyikoj5ledht2ya/grenoble.map");
-		Uri mapArbo = Uri.parse("https://www.dropbox.com/s/3f7i75y13klhz6f/Arboretum.map");		
+		//fichiers a telecharger
+		Uri mapGre = Uri.parse("http://paul.labat.free.fr/Arboretum/grenoble.map");
+		Uri mapArbo = Uri.parse("http://paul.labat.free.fr/Arboretum/Arboretum.map");		
 		
-		
+		//Permet de recevoir que les telechargement sont fini.
 		IntentFilter filter = new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE);
-		BroadcastReceiver receiver = new BroadcastReceiver(){
+		receiver = new BroadcastReceiver(){
 
 			@Override
 			public void onReceive(Context context, Intent intent) {
@@ -164,7 +168,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		};
 		registerReceiver(receiver,filter);
 		
-		//Creer les dossiers
+		//Creer les dossiers, s'ils n'existe pas
 		if(!photo.exists())
 		{
 			photo.mkdirs();
@@ -175,8 +179,8 @@ public class MainActivity extends Activity implements OnClickListener {
 			map.mkdir();
 		}
 		
-		//si les map n'existent pas
-		/*if(!arbo.exists())
+		//si les map n'existent pas, on les download
+		if(!arbo.exists())
 		{
 			Toast.makeText(this, "La carte de Grenoble est en cours de téléchargement.", Toast.LENGTH_SHORT).show();
 			DownloadManager.Request request1 = new Request(mapGre);
@@ -191,10 +195,10 @@ public class MainActivity extends Activity implements OnClickListener {
 			request2.setDestinationUri(Uri.fromFile(new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"Map"+File.separator,"Arboretum.map")));
 			request2.setNotificationVisibility(Request.VISIBILITY_VISIBLE);
 			ref2 = downloadManager.enqueue(request2);
-		}*/
+		}
 
 		
-		unregisterReceiver(receiver);
+		
 	}
 	
 	

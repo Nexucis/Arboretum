@@ -13,9 +13,9 @@ public class WebAppInterface {
 
     /** Show a toast from the web page */
     @JavascriptInterface
-    public void showToast(String toast) {
-        Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
-        DescriptionArbo.speakOut();
+    public void readText(String text) {
+        //Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
+        DescriptionArbo.speakOut(text);
     }
     
 }
