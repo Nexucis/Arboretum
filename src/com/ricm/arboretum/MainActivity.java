@@ -21,7 +21,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Nfc_Activity implements OnClickListener {
 
 	private Button btnArboretum;
 	private Button btnLocalisation;

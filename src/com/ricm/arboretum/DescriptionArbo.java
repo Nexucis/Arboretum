@@ -3,6 +3,7 @@ package com.ricm.arboretum;
 import java.util.Locale;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
@@ -12,17 +13,17 @@ import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 
 @SuppressLint({ "JavascriptInterface", "SetJavaScriptEnabled" })
-public class DescriptionArbo extends Activity implements TextToSpeech.OnInitListener {
+public class DescriptionArbo extends Nfc_Activity implements TextToSpeech.OnInitListener {
 
+	private static String TAG = "DescriptionArbo";
+	
 	private WebView webview;
 	public static TextToSpeech tts;
 	 
 	 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-
-		
+		Intent intent = getIntent();
 		//Creation de la webview
 		webview = new WebView(this);
 		setContentView(webview);
@@ -41,7 +42,16 @@ public class DescriptionArbo extends Activity implements TextToSpeech.OnInitList
 		webview.addJavascriptInterface(new WebAppInterface(this), "Android");
 		
 		//chargement depuis le dossier assets de l'application
-		webview.loadUrl("file:///android_asset/webview/" + Global.nomFichier);
+		if (!intent.hasExtra(Nfc_Activity.EXTRA_MESSAGE)){
+			Log.v(TAG,"Pas de extra message");
+			webview.loadUrl("file:///android_asset/webview/" + Global.nomFichier);
+		} 
+		else
+		{ 
+			String message = intent.getStringExtra(Nfc_Activity.EXTRA_MESSAGE);
+			Log.v(TAG,"ExtraMessage trouvé : "+message);
+			webview.loadUrl("file:///android_asset/webview/" + message+".html");
+		}
 
 	}
 
