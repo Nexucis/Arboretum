@@ -25,7 +25,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
-public class Visite extends MapActivity implements LocationListener {
+public class Visite extends Nfc_MapActivity implements LocationListener {
 
 	private MapView mapView;
 	private LocationManager locationManager;
@@ -709,10 +709,6 @@ public class Visite extends MapActivity implements LocationListener {
 		locationManager.removeUpdates(this); 
 	}
 
-	@Override
-	protected void onDestroy() {
-		super.onPause();
-	}
 
 	public boolean estDansZone(GeoPoint ptsInt, GeoPoint pos){
 

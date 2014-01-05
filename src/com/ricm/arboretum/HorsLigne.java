@@ -26,7 +26,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
-public class HorsLigne extends MapActivity{
+public class HorsLigne extends Nfc_MapActivity{
 
 	private MapView mapView;
 	private OverlayItem item;
@@ -728,10 +728,6 @@ public class HorsLigne extends MapActivity{
 		super.onPause();
 	}
 
-	@Override
-	protected void onDestroy() {
-		super.onPause();
-	}
 
 
 

@@ -16,7 +16,7 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.widget.Toast;
 
-public class Nfc_Activity extends Activity {
+public class Nfc_MapActivity extends MapActivity {
 
 	public final static String EXTRA_MESSAGE = "com.ricm.arboretum.PLANETE";
 	private static final String TAG = "NFC_Activity";
@@ -58,7 +58,7 @@ public class Nfc_Activity extends Activity {
 				String message = nfcData.toString();
 			    intentWeb.putExtra(EXTRA_MESSAGE, message);
 				startActivity(intentWeb);
-
+				
 				
 			} else {
 				Log.e(TAG, "Type du NFC inconnu");
@@ -74,7 +74,6 @@ public class Nfc_Activity extends Activity {
 	
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		Intent intent = new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -99,7 +98,7 @@ public class Nfc_Activity extends Activity {
 		super.onPause();
 		mNfcAdapter.disableForegroundDispatch(this);
 	}
-	
+
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);

@@ -34,7 +34,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-public class Direction2 extends MapActivity implements LocationListener, OnClickListener{
+public class Direction2 extends Nfc_MapActivity implements LocationListener, OnClickListener{
 	private MapView mapView;
 	private LocationManager locationManager;
 	private SensorManager sm;
@@ -162,10 +162,7 @@ public class Direction2 extends MapActivity implements LocationListener, OnClick
 		//pause du GPS
 		locationManager.removeUpdates(this); 
 	}
-	@Override
-	protected void onDestroy() {
-		super.onPause();
-	}
+
 	@Override
 	public void onLocationChanged(Location arg0) {
 		GeoPoint my_pos=new GeoPoint(arg0.getLatitude(),arg0.getLongitude());
