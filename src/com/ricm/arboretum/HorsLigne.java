@@ -79,7 +79,7 @@ public class HorsLigne extends Nfc_MapActivity{
 		protected boolean onTap(int index) {
 			OverlayItem item = createItem(index);
 			final Intent intent = new Intent(context2, DescriptionArbo.class);
-			if (item != null) {
+			if (item != null) {			
 				if(item.getPoint() == Global.getSoleil()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
@@ -99,7 +99,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.nomFichier = "ceinture_kuiper.html";
+								Global.setNomFichier("ceinture_kuiper.html");
 								startActivity(intent);
 							}
 						}
@@ -113,7 +113,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.nomFichier = "jupiter.html";
+								Global.setNomFichier("jupiter.html");
 								startActivity(intent);
 							}
 						}
@@ -127,7 +127,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.nomFichier = "mercure.html";
+								Global.setNomFichier("mercure.html");
 								startActivity(intent);
 							}
 						}
@@ -141,7 +141,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.nomFichier = "uranus.html";
+								Global.setNomFichier("uranus.html");
 								startActivity(intent);
 							}
 						}
@@ -155,7 +155,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.nomFichier = "saturne.html";
+								Global.setNomFichier("saturne.html");
 								startActivity(intent);
 							}
 						}

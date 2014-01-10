@@ -44,12 +44,12 @@ public class DescriptionArbo extends Nfc_Activity implements TextToSpeech.OnInit
 		//chargement depuis le dossier assets de l'application
 		if (!intent.hasExtra(Nfc_Activity.EXTRA_MESSAGE)){
 			Log.v(TAG,"Pas de extra message");
-			webview.loadUrl("file:///android_asset/webview/" + Global.nomFichier);
+			webview.loadUrl("file:///android_asset/webview/" + Global.getNomFichier());
 		} 
 		else
 		{ 
 			String message = intent.getStringExtra(Nfc_Activity.EXTRA_MESSAGE);
-			Log.v(TAG,"ExtraMessage trouvé : "+message);
+			Log.v(TAG,"ExtraMessage trouvï¿½ : "+message);
 			webview.loadUrl("file:///android_asset/webview/" + message+".html");
 		}
 

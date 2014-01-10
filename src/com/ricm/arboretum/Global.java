@@ -5,7 +5,7 @@ import org.mapsforge.core.GeoPoint;
 
 public class Global {
 
-	public static String nomFichier="arboretum.html";
+	private static String nomFichier="arboretum.html";
 	private static GeoPoint venus = new GeoPoint(45.1942954, 5.7774607);
 	private static GeoPoint terre = new GeoPoint(45.1943019, 5.7775252);
 	private static GeoPoint mars = new GeoPoint(45.19433, 5.7776101);
