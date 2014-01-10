@@ -30,45 +30,7 @@ public class HorsLigne extends Nfc_MapActivity{
 
 	private MapView mapView;
 	private OverlayItem item;
-	private GeoPoint interet;
-	private GeoPoint soleil;
-	private GeoPoint ceinture;
-	private GeoPoint jupiter;
-	private GeoPoint saturne;
-	private GeoPoint uranus;
-	private GeoPoint mercure;
-	private GeoPoint venus;
-	private GeoPoint terre;
-	private GeoPoint mars;
-	private GeoPoint neptune;
-	private GeoPoint objNeptune;
-	private GeoPoint arbo;
 	private OverlayItem my_item;
-	
-	private GeoPoint groupeA1;
-	private GeoPoint groupeA2;
-	private GeoPoint groupeA3;
-	private GeoPoint groupeA0;
-	private GeoPoint groupeA4;
-	private GeoPoint groupeA5;
-	private GeoPoint groupeA6;
-	private GeoPoint groupeA7;
-	private GeoPoint groupeA8;
-	private GeoPoint groupeA9;
-	private GeoPoint groupeA10;
-	private GeoPoint groupeA11;
-	private GeoPoint groupeA12;
-	private GeoPoint groupeA13;
-	private GeoPoint groupeA14;
-	private GeoPoint groupeA15;
-	private GeoPoint groupeA16;
-	private GeoPoint groupeA17;
-	private GeoPoint groupeA18;
-	private GeoPoint groupeA19;
-	private GeoPoint groupeA20;
-	private GeoPoint groupeA21;
-	private GeoPoint groupeA22;
-	private GeoPoint groupeA23;
 
 	/*
 	 * Inner Class
@@ -118,255 +80,263 @@ public class HorsLigne extends Nfc_MapActivity{
 			OverlayItem item = createItem(index);
 			final Intent intent = new Intent(context2, DescriptionArbo.class);
 			if (item != null) {
-				if(item.getPoint() == soleil){
+				if(item.getPoint() == Global.getSoleil()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "soleil.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "soleil.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == ceinture){
+				}else if(item.getPoint() == Global.getCeinture()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "ceinture_kuiper.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "ceinture_kuiper.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == jupiter){
+				}else if(item.getPoint() == Global.getJupiter()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "jupiter.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "jupiter.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-				//	builder.setMessage(item.getSnippet());
+					//	builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == mercure){
+				}else if(item.getPoint() == Global.getMercure()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "mercure.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "mercure.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == uranus){
+				}else if(item.getPoint() == Global.getUranus()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "uranus.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "uranus.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
-				//	builder.setMessage(item.getSnippet());
+					//	builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == saturne){
+				}else if(item.getPoint() == Global.getSaturne()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "saturne.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "saturne.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == venus){
+				}else if(item.getPoint() == Global.getVenus()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tVenus, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "venus.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "venus.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == terre){
+				}else if(item.getPoint() == Global.getTerre()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tTerre, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "terre.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "terre.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == mars){
+				}else if(item.getPoint() == Global.getMars()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tMars, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "mars.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "mars.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == neptune){
+				}else if(item.getPoint() == Global.getNeptune()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "neptune.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "neptune.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == objNeptune){
+				}else if(item.getPoint() == Global.getObjNeptune()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setItems(tTransNeptu, new DialogInterface.OnClickListener() {
-			               public void onClick(DialogInterface dialog, int which) {
-			            	   if(which == 0){
-			            		   Global.nomFichier = "ceinture_kuiper.html";
-			            		   startActivity(intent);
-			            	   }else if(which == 1){
-			            		   Global.nomFichier = "Objets_epars.html";
-			            		   startActivity(intent);
-			            	   }else if(which == 2){
-			            		   Global.nomFichier = "Objets_detaches.html";
-			            		   startActivity(intent);
-			            	   }
-			               }
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.nomFichier = "ceinture_kuiper.html";
+								startActivity(intent);
+							}else if(which == 1){
+								Global.nomFichier = "Objets_epars.html";
+								startActivity(intent);
+							}else if(which == 2){
+								Global.nomFichier = "Objets_detaches.html";
+								startActivity(intent);
+							}
+						}
 					});
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA1){
+				}
+				else if(item.getPoint() == Global.getGroupeA0()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA2){
+				}else if(item.getPoint() == Global.getGroupeA1()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA3){
+				}else if(item.getPoint() == Global.getGroupeA2()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA4){
+				}else if(item.getPoint() == Global.getGroupeA3()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA5){
+				}else if(item.getPoint() == Global.getGroupeA4()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA6){
+				}else if(item.getPoint() == Global.getGroupeA5()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA7){
+				}else if(item.getPoint() == Global.getGroupeA6()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA8){
+				}else if(item.getPoint() == Global.getGroupeA7()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA9){
+				}else if(item.getPoint() == Global.getGroupeA8()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA10){
+				}else if(item.getPoint() == Global.getGroupeA9()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA11){
+				}else if(item.getPoint() == Global.getGroupeA10()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
-				}else if(item.getPoint() == groupeA12){
+				}else if(item.getPoint() == Global.getGroupeA11()){
+					Builder builder = new AlertDialog.Builder(this.context2);
+					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setTitle(item.getTitle());
+					builder.setMessage(item.getSnippet());
+					builder.setPositiveButton("OK", null);
+					builder.show();
+				}else if(item.getPoint() == Global.getGroupeA12()){
 					Builder builder = new AlertDialog.Builder(this.context2);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
@@ -492,20 +462,19 @@ public class HorsLigne extends Nfc_MapActivity{
 
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
 		ArrayItemizedOverlay itemizedOverlay2 = new MyItemizedOverlay(ItemizedOverlay.boundCenter(markerPlante), this);
-		
-		arbo = new GeoPoint(45.193626,5.7783196);
-		my_item = new OverlayItem(arbo, "Arboretum", "Localisation de l'arboretum.");
+
+		my_item = new OverlayItem(Global.getArbo(), "Arboretum", "Localisation de l'arboretum.");
 		//je me centre sur moi
 		mapView.setCenter(my_item.getPoint());
 		//puis je zoom *2
 		mapView.zoom((byte) 6, 6);
 
 		// create a GeoPoint with the latitude and longitude coordinates
-		soleil = new GeoPoint(45.1942296,5.7772561);
+		//soleil = new GeoPoint(45.1942296,5.7772561);
 		//test = new GeoPoint(45.1938761,5.7682984);
 
 		// create an OverlayItem with title and description
-		item = new OverlayItem(soleil, "Soleil", "Localisation du soleil");
+		item = new OverlayItem(Global.soleil, "Soleil", "Localisation du soleil");
 		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		// add the OverlayItem to the ArrayItemizedOverlay
@@ -539,7 +508,7 @@ public class HorsLigne extends Nfc_MapActivity{
 		item = new OverlayItem(mercure, "Mercure", "Localisation de Mercure");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
-		
+
 		terre = new GeoPoint(45.1943019, 5.7775252);
 		item = new OverlayItem(terre, "Terre", "Localisation de la Terre");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));

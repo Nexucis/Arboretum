@@ -118,6 +118,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 	private boolean sGroupeA23 = true;
 
 	private int mSoundNotif;
+	private int mSoundPlanete;
 	private SoundManager mSoundManager;
 
 
@@ -712,9 +713,9 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 
 	public boolean estDansZone(GeoPoint ptsInt, GeoPoint pos){
 
-		// +- 0.0002 zone de 2 metres, je verifie donc si notre position se situe dans une zone de 2 metres autour de nous.
-		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.0002) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.0002) 
-				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.0002) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.0002) ){
+		// +- 0.00005 zone de 0.5 metres, je verifie donc si notre position se situe dans une zone de 2 metres autour de nous.
+		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.00005) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.00005) 
+				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.00005) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.00005) ){
 			return true;
 		}else{
 			return false;
@@ -810,7 +811,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 		}
 		if(sGroupeA8 && estDansZone(groupeA8, my_pos)){
 			mSoundManager.play(mSoundNotif);
-			sGroupeA0 = false;
+			sGroupeA8 = false;
 		}
 		if(sGroupeA9 && estDansZone(groupeA9, my_pos)){
 			mSoundManager.play(mSoundNotif);
