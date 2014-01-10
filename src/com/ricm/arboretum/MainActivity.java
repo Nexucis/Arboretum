@@ -40,6 +40,7 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 	//test de mon push
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		if (no_nfc) Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
 		setContentView(R.layout.activity_main);
 		//Toast.makeText(this, "Oh, un toast",Toast.LENGTH_LONG).show();
 		//Toast.makeText(this, "Oh, un autre toast",Toast.LENGTH_LONG).show();

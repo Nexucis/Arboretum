@@ -19,18 +19,17 @@ public class Nfc_Activity extends Activity {
 
 	public final static String EXTRA_MESSAGE = "com.ricm.arboretum.PLANETE";
 	private static final String TAG = "NFC_Activity";
-	private static boolean no_nfc=false;
+	protected static boolean no_nfc=false;
 	
 	protected NfcAdapter mNfcAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		//Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
 		this.mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (mNfcAdapter == null || !mNfcAdapter.isEnabled()) {
-			Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
+			//Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
 			no_nfc= true;
 		}
 //		Intent intent = getIntent();
