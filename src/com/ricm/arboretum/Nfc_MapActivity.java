@@ -1,6 +1,7 @@
 package com.ricm.arboretum;
 
 
+
 import org.mapsforge.android.maps.MapActivity;
 
 import android.app.Activity;
@@ -20,16 +21,19 @@ public class Nfc_MapActivity extends MapActivity {
 
 	public final static String EXTRA_MESSAGE = "com.ricm.arboretum.PLANETE";
 	private static final String TAG = "NFC_Activity";
+	private static boolean no_nfc=false;
 	
 	protected NfcAdapter mNfcAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		//Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
 		this.mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (mNfcAdapter == null || !mNfcAdapter.isEnabled()) {
 			Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
+			no_nfc= true;
 		}
 //		Intent intent = getIntent();
 //		resolveIntent(intent);
@@ -57,7 +61,7 @@ public class Nfc_MapActivity extends MapActivity {
 				String message = nfcData.toString();
 			    intentWeb.putExtra(EXTRA_MESSAGE, message);
 				startActivity(intentWeb);
-				
+
 				
 			} else {
 				Log.e(TAG, "Type du NFC inconnu");
@@ -73,6 +77,7 @@ public class Nfc_MapActivity extends MapActivity {
 	
 	@Override
 	protected void onResume() {
+		// TODO Auto-generated method stub
 		super.onResume();
 		Intent intent = new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
@@ -88,16 +93,16 @@ public class Nfc_MapActivity extends MapActivity {
 		
 		IntentFilter[] filters = {ndef,};
 		String[][] techListArray = null;
-		mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
+		if (!no_nfc)mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
 	}
 	
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		mNfcAdapter.disableForegroundDispatch(this);
+		if (!no_nfc)mNfcAdapter.disableForegroundDispatch(this);
 	}
-
+	
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);

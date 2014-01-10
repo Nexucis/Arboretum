@@ -11,7 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class SousMenuVisite extends /*Nfc_*/Activity implements OnClickListener {
+public class SousMenuVisite extends Nfc_Activity implements OnClickListener {
 
 	private Button btnOnline;
 	private Button btnOffline;

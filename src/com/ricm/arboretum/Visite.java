@@ -25,7 +25,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
-public class Visite extends /*Nfc_*/MapActivity implements LocationListener {
+public class Visite extends Nfc_MapActivity implements LocationListener {
 
 	private MapView mapView;
 	private LocationManager locationManager;

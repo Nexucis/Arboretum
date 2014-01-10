@@ -19,6 +19,7 @@ public class Nfc_Activity extends Activity {
 
 	public final static String EXTRA_MESSAGE = "com.ricm.arboretum.PLANETE";
 	private static final String TAG = "NFC_Activity";
+	private static boolean no_nfc=false;
 	
 	protected NfcAdapter mNfcAdapter;
 	
@@ -30,6 +31,7 @@ public class Nfc_Activity extends Activity {
 		this.mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
 		if (mNfcAdapter == null || !mNfcAdapter.isEnabled()) {
 			Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
+			no_nfc= true;
 		}
 //		Intent intent = getIntent();
 //		resolveIntent(intent);
@@ -89,14 +91,14 @@ public class Nfc_Activity extends Activity {
 		
 		IntentFilter[] filters = {ndef,};
 		String[][] techListArray = null;
-		mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
+		if (!no_nfc)mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
 	}
 	
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		mNfcAdapter.disableForegroundDispatch(this);
+		if (!no_nfc)mNfcAdapter.disableForegroundDispatch(this);
 	}
 	
 	@Override
