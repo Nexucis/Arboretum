@@ -45,6 +45,9 @@ public class Global {
 	private static GeoPoint groupeA22 = new GeoPoint(45.193929,5.777770);
 	private static GeoPoint groupeA23 = new GeoPoint(45.194160,5.777865);
 	
+	
+	private static boolean sonActive = true;
+	
 	protected static String getNomFichier() {
 		return nomFichier;
 	}
@@ -431,6 +434,16 @@ public class Global {
 	public Global() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
+
+	public static boolean getSonActive() {
+		return sonActive;
+	}
+
+
+	public static void setSonActive(boolean sonActive) {
+		Global.sonActive = sonActive;
+	}
+
 
 }

@@ -475,10 +475,13 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		if(Global.getSonActive())
+		{
+			mSoundManager= new SoundManager(this,5);
+			mSoundNotif = mSoundManager.add(this, R.raw.notif);
+			mSoundPlanete = mSoundManager.add(this, R.raw.planetenotif);
+		}
 
-		mSoundManager= new SoundManager(this,5);
-		mSoundNotif = mSoundManager.add(this, R.raw.notif);
-		mSoundPlanete = mSoundManager.add(this, R.raw.planetenotif);
 		//chargement du fichier map
 		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum/Map/Arboretum.map");
 		//ajout de la map proprement
@@ -789,147 +792,150 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 		//pour recentrer à chaque changement de position
 		mapView.setCenter(my_pos);
 
-
-		if(sSoleil && estDansZone(Global.getSoleil(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sSoleil = false;
+		if(Global.getSonActive())
+		{
+			if(sSoleil && estDansZone(Global.getSoleil(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sSoleil = false;
+			}
+			if(sCeinture && estDansZone(Global.getCeinture(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sCeinture = false;
+			}
+			if(sMercure && estDansZone(Global.getMercure(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sMercure = false;
+			}
+			if(sSaturne && estDansZone(Global.getSaturne(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sSaturne = false;
+			}
+			if(sJupiter && estDansZone(Global.getJupiter(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sJupiter = false;
+			}
+			if(sTerre && estDansZone(Global.getTerre(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sTerre = false;
+			}
+			if(sUranus && estDansZone(Global.getUranus(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sUranus = false;
+			}
+			if(sNeptune && estDansZone(Global.getNeptune(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sNeptune = false;
+			}
+			if(sVenus && estDansZone(Global.getVenus(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sVenus = false;
+			}
+			if(sObjNeptune && estDansZone(Global.getObjNeptune(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sObjNeptune = false;
+			}
+			if(sMars && estDansZone(Global.getMars(), my_pos)){
+				mSoundManager.play(mSoundPlanete);
+				sMars = false;
+			}
+			if(sGroupeA0 && estDansZone(Global.getGroupeA0(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA0 = false;
+			}
+			if(sGroupeA1 && estDansZone(Global.getGroupeA1(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA1 = false;
+			}
+			if(sGroupeA2 && estDansZone(Global.getGroupeA2(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA2 = false;
+			}
+			if(sGroupeA3 && estDansZone(Global.getGroupeA3(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA3 = false;
+			}
+			if(sGroupeA4 && estDansZone(Global.getGroupeA4(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA4 = false;
+			}
+			if(sGroupeA5 && estDansZone(Global.getGroupeA5(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA5 = false;
+			}
+			if(sGroupeA6 && estDansZone(Global.getGroupeA6(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA6 = false;
+			}
+			if(sGroupeA7 && estDansZone(Global.getGroupeA7(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA7 = false;
+			}
+			if(sGroupeA8 && estDansZone(Global.getGroupeA8(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA8 = false;
+			}
+			if(sGroupeA9 && estDansZone(Global.getGroupeA9(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA9 = false;
+			}
+			if(sGroupeA10 && estDansZone(Global.getGroupeA10(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA10 = false;
+			}
+			if(sGroupeA11 && estDansZone(Global.getGroupeA11(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA11 = false;
+			}
+			if(sGroupeA12 && estDansZone(Global.getGroupeA12(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA12 = false;
+			}
+			if(sGroupeA13 && estDansZone(Global.getGroupeA13(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA13 = false;
+			}
+			if(sGroupeA14 && estDansZone(Global.getGroupeA14(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA14 = false;
+			}
+			if(sGroupeA15 && estDansZone(Global.getGroupeA15(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA15 = false;
+			}
+			if(sGroupeA16 && estDansZone(Global.getGroupeA16(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA16 = false;
+			}
+			if(sGroupeA17 && estDansZone(Global.getGroupeA17(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA17 = false;
+			}
+			if(sGroupeA18 && estDansZone(Global.getGroupeA18(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA18 = false;
+			}
+			if(sGroupeA19 && estDansZone(Global.getGroupeA19(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA19 = false;
+			}
+			if(sGroupeA20 && estDansZone(Global.getGroupeA20(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA20 = false;
+			}
+			if(sGroupeA21 && estDansZone(Global.getGroupeA21(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA21 = false;
+			}
+			if(sGroupeA22 && estDansZone(Global.getGroupeA22(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA22 = false;
+			}
+			if(sGroupeA23 && estDansZone(Global.getGroupeA23(), my_pos)){
+				mSoundManager.play(mSoundNotif);
+				sGroupeA23 = false;
+			}
 		}
-		if(sCeinture && estDansZone(Global.getCeinture(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sCeinture = false;
-		}
-		if(sMercure && estDansZone(Global.getMercure(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sMercure = false;
-		}
-		if(sSaturne && estDansZone(Global.getSaturne(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sSaturne = false;
-		}
-		if(sJupiter && estDansZone(Global.getJupiter(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sJupiter = false;
-		}
-		if(sTerre && estDansZone(Global.getTerre(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sTerre = false;
-		}
-		if(sUranus && estDansZone(Global.getUranus(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sUranus = false;
-		}
-		if(sNeptune && estDansZone(Global.getNeptune(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sNeptune = false;
-		}
-		if(sVenus && estDansZone(Global.getVenus(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sVenus = false;
-		}
-		if(sObjNeptune && estDansZone(Global.getObjNeptune(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sObjNeptune = false;
-		}
-		if(sMars && estDansZone(Global.getMars(), my_pos)){
-			mSoundManager.play(mSoundPlanete);
-			sMars = false;
-		}
-		if(sGroupeA0 && estDansZone(Global.getGroupeA0(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA0 = false;
-		}
-		if(sGroupeA1 && estDansZone(Global.getGroupeA1(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA1 = false;
-		}
-		if(sGroupeA2 && estDansZone(Global.getGroupeA2(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA2 = false;
-		}
-		if(sGroupeA3 && estDansZone(Global.getGroupeA3(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA3 = false;
-		}
-		if(sGroupeA4 && estDansZone(Global.getGroupeA4(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA4 = false;
-		}
-		if(sGroupeA5 && estDansZone(Global.getGroupeA5(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA5 = false;
-		}
-		if(sGroupeA6 && estDansZone(Global.getGroupeA6(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA6 = false;
-		}
-		if(sGroupeA7 && estDansZone(Global.getGroupeA7(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA7 = false;
-		}
-		if(sGroupeA8 && estDansZone(Global.getGroupeA8(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA8 = false;
-		}
-		if(sGroupeA9 && estDansZone(Global.getGroupeA9(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA9 = false;
-		}
-		if(sGroupeA10 && estDansZone(Global.getGroupeA10(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA10 = false;
-		}
-		if(sGroupeA11 && estDansZone(Global.getGroupeA11(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA11 = false;
-		}
-		if(sGroupeA12 && estDansZone(Global.getGroupeA12(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA12 = false;
-		}
-		if(sGroupeA13 && estDansZone(Global.getGroupeA13(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA13 = false;
-		}
-		if(sGroupeA14 && estDansZone(Global.getGroupeA14(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA14 = false;
-		}
-		if(sGroupeA15 && estDansZone(Global.getGroupeA15(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA15 = false;
-		}
-		if(sGroupeA16 && estDansZone(Global.getGroupeA16(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA16 = false;
-		}
-		if(sGroupeA17 && estDansZone(Global.getGroupeA17(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA17 = false;
-		}
-		if(sGroupeA18 && estDansZone(Global.getGroupeA18(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA18 = false;
-		}
-		if(sGroupeA19 && estDansZone(Global.getGroupeA19(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA19 = false;
-		}
-		if(sGroupeA20 && estDansZone(Global.getGroupeA20(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA20 = false;
-		}
-		if(sGroupeA21 && estDansZone(Global.getGroupeA21(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA21 = false;
-		}
-		if(sGroupeA22 && estDansZone(Global.getGroupeA22(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA22 = false;
-		}
-		if(sGroupeA23 && estDansZone(Global.getGroupeA23(), my_pos)){
-			mSoundManager.play(mSoundNotif);
-			sGroupeA23 = false;
-		}
+		
 
 
 	}
