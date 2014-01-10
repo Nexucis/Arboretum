@@ -58,8 +58,7 @@ public class Nfc_Activity extends Activity {
 				String message = nfcData.toString();
 			    intentWeb.putExtra(EXTRA_MESSAGE, message);
 				startActivity(intentWeb);
-
-				
+			
 			} else {
 				Log.e(TAG, "Type du NFC inconnu");
 				Parcelable[] rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
@@ -76,21 +75,23 @@ public class Nfc_Activity extends Activity {
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		Intent intent = new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-		PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
-		
-		IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
-	    try {
-	        ndef.addDataType("application/"+getPackageName());    /* Handles all MIME based dispatches.
+		if (!no_nfc){
+			Intent intent = new Intent(this, this.getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+			PendingIntent pIntent = PendingIntent.getActivity(this, 0, intent, 0);
+
+			IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_NDEF_DISCOVERED);
+			try {
+				ndef.addDataType("application/"+getPackageName());    /* Handles all MIME based dispatches.
 	                                       You should specify only the ones that you need. */
-	    }
-	    catch (MalformedMimeTypeException e) {
-	        throw new RuntimeException("fail", e);
-	    }
-		
-		IntentFilter[] filters = {ndef,};
-		String[][] techListArray = null;
-		if (!no_nfc)mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
+			}
+			catch (MalformedMimeTypeException e) {
+				throw new RuntimeException("fail", e);
+			}
+
+			IntentFilter[] filters = {ndef,};
+			String[][] techListArray = null;
+			mNfcAdapter.enableForegroundDispatch(this, pIntent, filters, techListArray);
+		}
 	}
 	
 	@Override
@@ -104,6 +105,6 @@ public class Nfc_Activity extends Activity {
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
 		Log.v(TAG, "onNewIntent");
-		resolveIntent(intent);
+		if(!no_nfc)resolveIntent(intent);
 	}
 }
