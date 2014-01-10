@@ -1,7 +1,6 @@
 package com.ricm.arboretum;
 
 
-import org.mapsforge.android.maps.MapActivity;
 
 import android.app.Activity;
 import android.app.PendingIntent;

@@ -30,7 +30,7 @@ import android.view.View;
 
 import android.widget.Toast;
 
-public class Direction extends Nfc_MapActivity{
+public class Direction extends /*Nfc_*/MapActivity{
 
 	//private LocationManager locationManager;
 	private MapView mapView;

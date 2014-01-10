@@ -13,7 +13,7 @@ import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 
 @SuppressLint({ "JavascriptInterface", "SetJavaScriptEnabled" })
-public class DescriptionArbo extends Nfc_Activity implements TextToSpeech.OnInitListener {
+public class DescriptionArbo extends /*Nfc_*/Activity implements TextToSpeech.OnInitListener {
 
 	private static String TAG = "DescriptionArbo";
 	

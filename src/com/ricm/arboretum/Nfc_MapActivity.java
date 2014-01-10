@@ -25,7 +25,6 @@ public class Nfc_MapActivity extends MapActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		//Toast.makeText(this, getPackageName(), Toast.LENGTH_SHORT).show();
 		this.mNfcAdapter = NfcAdapter.getDefaultAdapter(this);

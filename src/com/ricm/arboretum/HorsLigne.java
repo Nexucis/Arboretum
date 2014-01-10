@@ -26,7 +26,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
-public class HorsLigne extends Nfc_MapActivity{
+public class HorsLigne extends /*Nfc_*/MapActivity{
 
 	private MapView mapView;
 	private OverlayItem item;
