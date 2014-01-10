@@ -420,6 +420,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 
 		mSoundManager= new SoundManager(this,5);
 		mSoundNotif = mSoundManager.add(this, R.raw.notif);
+		mSoundPlanete = mSoundManager.add(this, R.raw.planetenotif);
 		//chargement du fichier map
 		File map = new File(Environment.getExternalStorageDirectory().toString() + "/Arboretum/Map/Arboretum.map");
 		//ajout de la map proprement
@@ -734,47 +735,47 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 
 
 		if(sSoleil && estDansZone(soleil, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sSoleil = false;
 		}
 		if(sCeinture && estDansZone(ceinture, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sCeinture = false;
 		}
 		if(sMercure && estDansZone(mercure, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sMercure = false;
 		}
 		if(sSaturne && estDansZone(saturne, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sSaturne = false;
 		}
 		if(sJupiter && estDansZone(jupiter, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sJupiter = false;
 		}
 		if(sTerre && estDansZone(terre, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sTerre = false;
 		}
 		if(sUranus && estDansZone(uranus, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sUranus = false;
 		}
 		if(sNeptune && estDansZone(neptune, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sNeptune = false;
 		}
 		if(sVenus && estDansZone(venus, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sVenus = false;
 		}
 		if(sObjNeptune && estDansZone(objNeptune, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sObjNeptune = false;
 		}
 		if(sMars && estDansZone(mars, my_pos)){
-			mSoundManager.play(mSoundNotif);
+			mSoundManager.play(mSoundPlanete);
 			sMars = false;
 		}
 		if(sGroupeA0 && estDansZone(groupeA0, my_pos)){
