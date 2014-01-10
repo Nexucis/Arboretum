@@ -42,7 +42,6 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 	private OverlayItem item;
 	private OverlayItem item2;
 	private OverlayItem item3;
-	private GeoPoint arbo;
 	private int clique=0;
 	public Button myButton;
 	//private GeoPoint test;
@@ -79,7 +78,7 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		protected boolean onTap(int index) {
 			OverlayItem item = createItem(index);
 			if (item != null) {
-				if(item.getPoint() == arbo){
+				if(item.getPoint() == Global.getArbo()){
 					Intent v = new Intent(context, DescriptionArbo.class);
 					startActivity(v);
 				}
@@ -111,10 +110,10 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		ArrayItemizedOverlay itemizedOverlay2 = new ArrayItemizedOverlay(location);
 		// create a GeoPoint with the latitude and longitude coordinates
 		GeoPoint myPos = new GeoPoint(0,0);
-		arbo = new GeoPoint(45.193626,5.7783196);
+
 		//test = new GeoPoint(45.1938761,5.7682984);
 		// create an OverlayItem with title and description
-		item = new OverlayItem(arbo, "Arboretum", "Localisation de l'arboretum.");
+		item = new OverlayItem(Global.getArbo(), "Arboretum", "Localisation de l'arboretum.");
 		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item2 = new OverlayItem(myPos, "Moi", "Ma position.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
