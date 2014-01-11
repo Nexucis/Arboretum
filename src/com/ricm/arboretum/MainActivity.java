@@ -87,6 +87,14 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 		//Menu son
 		if(item.getGroupId() == groupIdSon)
 		{
+			if(!Global.getSonActive())
+			{
+				Toast.makeText(this, "Son activé", Toast.LENGTH_SHORT).show();	
+			}
+			else
+			{
+				Toast.makeText(this, "Son désactivé", Toast.LENGTH_SHORT).show();	
+			}
 			Global.setSonActive(!Global.getSonActive());
 			item.setChecked(!Global.getSonActive());	
 		}
