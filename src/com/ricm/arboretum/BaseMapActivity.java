@@ -38,6 +38,8 @@ public class BaseMapActivity extends Nfc_MapActivity{
 			menu.getItem(1).setChecked(true);
 		}else{
 			menu.getItem(1).setChecked(false);
+		}if(Global.isCredit()){
+			menu.getItem(2).setVisible(false);
 		}
 		return true;
 	}
@@ -55,7 +57,10 @@ public class BaseMapActivity extends Nfc_MapActivity{
 			menu.getItem(1).setChecked(true);
 		}else{
 			menu.getItem(1).setChecked(false);
+		}if(Global.isCredit()){
+			menu.getItem(2).setVisible(false);
 		}
+		
 		menu.getItem(3).setVisible(false);
 
 		return true;
@@ -90,6 +95,7 @@ public class BaseMapActivity extends Nfc_MapActivity{
 			item.setChecked(!Global.getSonActive());	
 		}
 		if(item.getGroupId() == groupIdCredit){
+			Global.setCredit(true);
 			startActivity(intentc);
 		}
 		return false;

@@ -48,6 +48,18 @@ public class Global {
 
 	private static boolean sonActive = true;
 	
+	private static boolean credit = false;
+	
+	protected static boolean isCredit() {
+		return credit;
+	}
+
+
+	protected static void setCredit(boolean credit) {
+		Global.credit = credit;
+	}
+
+
 	protected static String getNomFichier() {
 		return nomFichier;
 	}

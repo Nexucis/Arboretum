@@ -37,6 +37,7 @@ public class Credit extends BaseActivity{
 
 	@Override
 	protected void onDestroy() {
+		Global.setCredit(false);
 		super.onDestroy();
 	}
 

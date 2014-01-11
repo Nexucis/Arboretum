@@ -38,6 +38,9 @@ public class BaseActivity extends Nfc_Activity{
 		}else{
 			menu.getItem(1).setChecked(false);
 		}
+		if(Global.isCredit()){
+			menu.getItem(2).setVisible(false);
+		}
 		return true;
 	}
 	
@@ -54,6 +57,9 @@ public class BaseActivity extends Nfc_Activity{
 			menu.getItem(1).setChecked(true);
 		}else{
 			menu.getItem(1).setChecked(false);
+		}
+		if(Global.isCredit()){
+			menu.getItem(2).setVisible(false);
 		}
 		menu.getItem(3).setVisible(false);
 
@@ -89,6 +95,7 @@ public class BaseActivity extends Nfc_Activity{
 			item.setChecked(!Global.getSonActive());	
 		}
 		if(item.getGroupId() == groupIdCredit){
+			Global.setCredit(true);
 			startActivity(intentc);
 		}
 		return false;
