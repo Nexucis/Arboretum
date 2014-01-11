@@ -34,6 +34,7 @@
         <activity android:name="HorsLigne" android:screenOrientation="portrait" android:label="@string/app_name"></activity>
         <activity android:name="DescriptionArbo" android:screenOrientation="portrait" android:label="@string/app_name"></activity>
         <activity android:name="SousMenuVisite" android:screenOrientation="portrait" android:label="@string/app_name"></activity>
+        <activity android:name="Credit" android:screenOrientation="portrait" android:label="@string/app_name"></activity>
     </application>
 
 </manifest>

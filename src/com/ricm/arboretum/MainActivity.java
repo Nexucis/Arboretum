@@ -36,6 +36,7 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 	
 	private final int groupIdPhoto = 1;
 	private final int groupIdSon = 2;
+	private final int groupIdCredit = 3;
 	
 	@Override
 	//test de mon push
@@ -65,8 +66,9 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 		getMenuInflater().inflate(R.menu.main, menu);
 		menu.add(groupIdPhoto, MENU_ITEM, Menu.NONE, "Appareil Photo");
 		menu.add(groupIdSon, MENU_ITEM, Menu.NONE, "Son desactivé");
+		menu.add(groupIdCredit, MENU_ITEM, Menu.NONE, "Crédits");
 		menu.setGroupCheckable(groupIdSon, true,false);
-		menu.getItem(2).setVisible(false);
+		menu.getItem(3).setVisible(false);
 		
 		return true;
 	}
@@ -74,6 +76,7 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 	public boolean onOptionsItemSelected(MenuItem item)
 	{
 		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+		Intent intentc = new Intent(this, Credit.class);
 		File file = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"photo",""+idPhoto+".jpg");
 		idPhoto++;
 		Uri outputFileUri = Uri.fromFile(file);
@@ -97,6 +100,9 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 			}
 			Global.setSonActive(!Global.getSonActive());
 			item.setChecked(!Global.getSonActive());	
+		}
+		if(item.getGroupId() == groupIdCredit){
+			startActivity(intentc);
 		}
 		return false;
 		
