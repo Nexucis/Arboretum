@@ -1,31 +1,21 @@
 package com.ricm.arboretum;
 import java.io.File;
 
-import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
 import org.mapsforge.android.maps.overlay.ArrayItemizedOverlay;
 import org.mapsforge.android.maps.overlay.ItemizedOverlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
-import org.mapsforge.android.maps.overlay.OverlayList;
-//import org.mapsforge.core.GeoPoint;
 import org.mapsforge.core.*;
-import org.mapsforge.map.reader.header.FileOpenResult;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,7 +25,7 @@ import android.hardware.SensorManager;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup.LayoutParams;
+
 public class Direction2 extends Nfc_MapActivity implements LocationListener, OnClickListener{
 	private MapView mapView;
 	private LocationManager locationManager;

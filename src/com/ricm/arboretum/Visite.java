@@ -2,7 +2,7 @@ package com.ricm.arboretum;
 
 import java.io.File;
 
-import org.mapsforge.android.maps.MapActivity;
+
 import org.mapsforge.android.maps.MapView;
 import org.mapsforge.android.maps.overlay.ArrayItemizedOverlay;
 import org.mapsforge.android.maps.overlay.ItemizedOverlay;
@@ -18,7 +18,6 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.widget.Toast;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -32,15 +31,11 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 	private LocationManager locationManager;
 	private SensorManager sm;
 	private Sensor my_sensor;
-	private GeoPoint arbo;
 
 	//marker de notre position
 	private OverlayItem item;
-	private OverlayItem my_item;
 	//marker des planetes
 	private OverlayItem item2;
-	//marker des plantes
-	private OverlayItem item3;
 
 	private boolean sSoleil = true;
 	private boolean sCeinture = true;
