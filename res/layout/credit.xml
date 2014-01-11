@@ -8,20 +8,20 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Crédits"
         android:gravity="center"
-        android:textSize="16pt"
-        android:textColor="#7FFF00" />
+        android:text="Crédits"
+        android:textColor="#7FFF00"
+        android:textSize="14pt" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="337dp"
+        android:layout_height="343dp"
         android:gravity="center"
         android:text="GPS, Points d&apos;intérêts et Cartes\nJérome Barbier, Rodolphe Fréby, Augustin Husson
-        \nNFC\nWilliam Bobo\n\nWebview, Text-to-Speech\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
+        \nNFC\nWilliam Bobo\n\nGestion des Menus, Text-to-speech, Téléchargement des cartes\nPaul Labat\n\nWebview\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
         android:textColor="#7FFF00"
-        android:textSize="8pt" />
+        android:textSize="7pt" />
 
     <TextView
         android:id="@+id/textView3"
