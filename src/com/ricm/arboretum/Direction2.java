@@ -135,7 +135,7 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		mapView.getOverlays().add(itemizedOverlay);
 		mapView.getOverlays().add(itemizedOverlay2);
 		//je me centre sur moi
-		mapView.setCenter(item2.getPoint());
+		mapView.setCenter(item.getPoint());
 		//puis je zoom *2
 		mapView.zoom((byte) 2, 2);
 		// Récupère le root layout
@@ -166,9 +166,6 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 	public void onLocationChanged(Location arg0) {
 		GeoPoint my_pos=new GeoPoint(arg0.getLatitude(),arg0.getLongitude());
 		item2.setPoint(my_pos);
-		//pour raffraichir en touchant l'Ã©cran
-		//mapView.refreshDrawableState();
-		//pour recentrer Ã  chaque clique
 		if(clique==1) {
 			mapView.setCenter(my_pos);
 			clique = 0;
