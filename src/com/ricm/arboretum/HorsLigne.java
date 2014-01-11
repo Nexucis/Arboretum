@@ -81,7 +81,8 @@ public class HorsLigne extends Nfc_MapActivity{
 			final Intent intent = new Intent(context2, DescriptionArbo.class);
 			if (item != null) {			
 				if(item.getPoint() == Global.getSoleil()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+				
 					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -95,7 +96,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getCeinture()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -109,7 +110,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getJupiter()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -123,7 +124,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getMercure()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -137,7 +138,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getUranus()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -151,7 +152,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getSaturne()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -165,7 +166,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getVenus()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tVenus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -179,7 +180,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getTerre()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tTerre, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -193,7 +194,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getMars()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tMars, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -221,7 +222,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getObjNeptune()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tTransNeptu, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -243,168 +244,168 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.show();
 				}
 				else if(item.getPoint() == Global.getGroupeA0()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA1()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA2()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA3()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA4()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA5()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA6()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA7()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA8()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA9()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA10()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA11()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA12()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA13()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA14()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA15()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA16()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA17()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA18()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA19()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA20()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA21()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA22()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("OK", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA23()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setIcon(android.R.drawable.ic_menu_info_details);
 					builder.setTitle(item.getTitle());
 					builder.setMessage(item.getSnippet());
