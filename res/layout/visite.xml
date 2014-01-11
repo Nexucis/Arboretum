@@ -16,11 +16,20 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="GPS, Points d'intérêts et Cartes\nJérome Barbier, Rodolphe Fréby, Augustin Husson
-        \nNFC\nWilliam Bobo\n\nWebview, Text-to-Speech\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
+        android:layout_height="337dp"
         android:gravity="center"
+        android:text="GPS, Points d&apos;intérêts et Cartes\nJérome Barbier, Rodolphe Fréby, Augustin Husson
+        \nNFC\nWilliam Bobo\n\nWebview, Text-to-Speech\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
         android:textColor="#7FFF00"
         android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Les images sont sous la propriété respective de leurs auteurs\nLes descriptions des différentes planêtes/plantes sont issues de Wikipédia"
+        android:textColor="#7FFF00"
+        android:textSize="6pt" />
 
 </LinearLayout>
