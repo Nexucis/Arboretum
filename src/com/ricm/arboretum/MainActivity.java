@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.DownloadManager;
 import android.app.DownloadManager.Request;
 import android.content.BroadcastReceiver;
@@ -25,7 +24,6 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 
 	private Button btnArboretum;
 	private Button btnLocalisation;
-	private Button btnHorsLigne;
 	//code pour le menu photo
 	private int idPhoto = 0;
 	private static final int TAKE_PICTURE=1;
@@ -36,14 +34,15 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 	long ref2;
 	BroadcastReceiver receiver;
 	
+	private final int groupIdPhoto = 1;
+	private final int groupIdSon = 2;
+	
 	@Override
 	//test de mon push
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (no_nfc) Toast.makeText(this, R.string.no_NFC, Toast.LENGTH_SHORT).show();
 		setContentView(R.layout.activity_main);
-		//Toast.makeText(this, "Oh, un toast",Toast.LENGTH_LONG).show();
-		//Toast.makeText(this, "Oh, un autre toast",Toast.LENGTH_LONG).show();
 
 		btnArboretum = (Button) findViewById(R.id.btnArboretum);
 		btnArboretum.setOnClickListener(this);
@@ -64,10 +63,10 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		super.onCreateOptionsMenu(menu);
 		getMenuInflater().inflate(R.menu.main, menu);
-		int groupId = 0;
-		int menuItemId = MENU_ITEM;
-		int menuItemOrder = Menu.NONE;
-		MenuItem menuItem = menu.add(groupId, menuItemId, menuItemOrder, "Appareil Photo");
+		menu.add(groupIdPhoto, MENU_ITEM, Menu.NONE, "Appareil Photo");
+		menu.add(groupIdSon, MENU_ITEM, Menu.NONE, "Son desactivé");
+		menu.setGroupCheckable(groupIdSon, true,false);
+		menu.getItem(2).setVisible(false);
 		
 		return true;
 	}
@@ -80,10 +79,24 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 		Uri outputFileUri = Uri.fromFile(file);
 		intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
 		
-//		item.setIntent(intent);
-		if(item.isVisible())
+		//Menu photo
+		if(item.getGroupId() == groupIdPhoto)
 		{
 			startActivityForResult(intent,TAKE_PICTURE);
+		}
+		//Menu son
+		if(item.getGroupId() == groupIdSon)
+		{
+			if(!Global.getSonActive())
+			{
+				Toast.makeText(this, "Son activé", Toast.LENGTH_SHORT).show();	
+			}
+			else
+			{
+				Toast.makeText(this, "Son désactivé", Toast.LENGTH_SHORT).show();	
+			}
+			Global.setSonActive(!Global.getSonActive());
+			item.setChecked(!Global.getSonActive());	
 		}
 		return false;
 		

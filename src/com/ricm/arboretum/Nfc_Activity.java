@@ -51,7 +51,7 @@ public class Nfc_Activity extends Activity {
 				String nfcData = new String(relayRecord.getPayload());
 
 				Log.v(TAG, "Message lu : "+nfcData);
-				//Rajouté ici le traitement associé au tag 
+				//RajoutÃ© ici le traitement associÃ© au tag 
 				//Toast.makeText(this, "Message lu :" + nfcData, Toast.LENGTH_SHORT).show();
 				
 				Intent intentWeb = new Intent(this,DescriptionArbo.class);
@@ -66,7 +66,7 @@ public class Nfc_Activity extends Activity {
 				Log.e(TAG, relayRecord.toString());
 			}
 		} else { 
-			Log.e(TAG,"Intent non traité : "+intent.getAction());
+			Log.e(TAG,"Intent non traitÃ© : "+intent.getAction());
 		}
 
 	}

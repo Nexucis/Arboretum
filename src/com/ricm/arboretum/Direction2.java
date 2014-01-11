@@ -26,6 +26,7 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.hardware.Sensor;
@@ -65,6 +66,7 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		 * @param context
 		 *            the reference to the application context.
 		 */	
+		CharSequence tArbo[] = { "Arboretum"};
 		//constructeur de l'innerclass
 		MyItemizedOverlay(Drawable defaultMarker, Context context) {
 			super(defaultMarker);
@@ -78,9 +80,21 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		protected boolean onTap(int index) {
 			OverlayItem item = createItem(index);
 			if (item != null) {
-				if(item.getPoint() == Global.getArbo()){
-					Intent v = new Intent(context, DescriptionArbo.class);
-					startActivity(v);
+				if(item.getPoint()== Global.getArbo()){
+				Builder builder = new AlertDialog.Builder(this.context, AlertDialog.THEME_HOLO_DARK);
+				
+				builder.setItems(tArbo, new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int which) {
+						if(which == 0){
+							Intent v = new Intent(context, DescriptionArbo.class);
+							startActivity(v);
+						}
+					}
+				});
+				builder.setIcon(android.R.drawable.ic_menu_info_details);
+				builder.setTitle(item.getTitle());
+				builder.setPositiveButton("Retour", null);
+				builder.show();
 				}
 			}
 			return true;
