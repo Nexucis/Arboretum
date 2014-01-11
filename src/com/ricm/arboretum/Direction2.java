@@ -1,5 +1,6 @@
 package com.ricm.arboretum;
 import java.io.File;
+
 import org.mapsforge.android.maps.MapActivity;
 import org.mapsforge.android.maps.MapView;
 import org.mapsforge.android.maps.overlay.ArrayItemizedOverlay;
@@ -42,7 +43,6 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 	private Sensor my_sensor;
 	private OverlayItem item;
 	private OverlayItem item2;
-	private OverlayItem item3;
 	private int clique=0;
 	public Button myButton;
 	//private GeoPoint test;
@@ -125,17 +125,14 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		// create a GeoPoint with the latitude and longitude coordinates
 		GeoPoint myPos = new GeoPoint(0,0);
 
-		//test = new GeoPoint(45.1938761,5.7682984);
 		// create an OverlayItem with title and description
 		item = new OverlayItem(Global.getArbo(), "Arboretum", "Localisation de l'arboretum.");
-		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item2 = new OverlayItem(myPos, "Moi", "Ma position.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		item2.setMarker(ItemizedOverlay.boundCenter(location));
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		itemizedOverlay2.addItem(item2);
-		//itemizedOverlay.addItem(item3);
 		//Le GPS
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
@@ -143,7 +140,7 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		if (sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null){
 			//success! there's a magnetometer
 		}else{
-			Toast.makeText(this,"Noob accélérometer", Toast.LENGTH_LONG).show();
+			Toast.makeText(this,"Problème d'accelerometer", Toast.LENGTH_LONG).show();
 		}
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
