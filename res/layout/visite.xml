@@ -1,13 +1,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Bienvenue dans la zone de visite de l arboretum" >
-    </TextView>
+        android:text="Crédits"
+        android:gravity="center"
+        android:textSize="16pt"
+        android:textColor="#7FFF00" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="GPS, Points d'intérêts et Cartes\nJérome Barbier, Rodolphe Fréby, Augustin Husson
+        \nNFC\nWilliam Bobo\n\nWebview, Text-to-Speech\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
+        android:gravity="center"
+        android:textColor="#7FFF00"
+        android:textSize="8pt" />
 
 </LinearLayout>
