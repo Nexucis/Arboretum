@@ -1,6 +1,5 @@
 package com.ricm.arboretum;
 
-import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.core.GeoPoint;
 
 public class Global {

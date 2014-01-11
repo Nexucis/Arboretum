@@ -2,7 +2,6 @@ package com.ricm.arboretum;
 
 import android.content.Context;
 import android.webkit.JavascriptInterface;
-import android.widget.Toast;
 
 public class WebAppInterface {
     Context mContext;

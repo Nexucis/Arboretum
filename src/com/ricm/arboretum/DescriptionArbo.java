@@ -8,7 +8,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Toast;
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.speech.tts.TextToSpeech;
 
