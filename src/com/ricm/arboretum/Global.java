@@ -43,8 +43,9 @@ public class Global {
 	private static GeoPoint groupeA21  = new GeoPoint(45.193668,5.777579);
 	private static GeoPoint groupeA22 = new GeoPoint(45.193929,5.777770);
 	private static GeoPoint groupeA23 = new GeoPoint(45.194160,5.777865);
+
 	
-	
+
 	private static boolean sonActive = true;
 	
 	protected static String getNomFichier() {

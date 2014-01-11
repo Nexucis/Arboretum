@@ -3,7 +3,7 @@ package com.ricm.arboretum;
 import android.os.Bundle;
 
 
-public class Credit extends Nfc_Activity{
+public class Credit extends BaseActivity{
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
