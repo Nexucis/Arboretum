@@ -208,7 +208,7 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getNeptune()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
