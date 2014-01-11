@@ -76,14 +76,14 @@ public class HorsLigne extends Nfc_MapActivity{
 		CharSequence tA13[] = {"Erable de montpellier", "Cade Oxycèdre", "Saule des îles Sakhalines", "Magnolia à fleur de lis", "Magnolia de soulange", "Viome de Burkwood"};
 		CharSequence tA14[] = {"Frangon piquoti", "Petit houx", "Petit houx à langues", "Ardore aux mouchoirs"};
 		CharSequence tA15[] = {"Skimmia du Japon", "Miscarthus", "Cyprès de lawson", "Tulipier de Virginie"};
-		CharSequence tA16[];
-		CharSequence tA17[];
-		CharSequence tA18[];
-		CharSequence tA19[];
-		CharSequence tA20[];
-		CharSequence tA21[];
-		CharSequence tA22[];
-		CharSequence tA23[];
+		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert"};
+		CharSequence tA17[] = {"Cyprès de lawson", "Cyprès géant", "Bananier des indiens", "Orne champêtre", "Groseiller à maqueraux", "Chalef en ombelle"};
+		CharSequence tA18[] = {"Noisetier pourpre", "Châtaignier", "Groseiller doré", "Alisier torminal", "Epine-du-christ", "Fusain d'Europe"};
+		CharSequence tA19[] = {"Houx bleu", "Viorgne à feuille ridées", "Seringat", "Osmanthe à feuille de houx"};
+		CharSequence tA20[] = {"Erable velouté", "Seringat de lewis", "Weigelia", "Cornouiller mâle", "Osmara burkwoodii", "Magnolia à grandes fleurs"};
+		CharSequence tA21[] = {"Troëne de Californie", "Troëne de Chine", "Peuplier d'Italie"};
+		CharSequence tA22[] = {"Aulne Cordé", "Marronier du Japon", "Marronier à petites fleurs"};
+		CharSequence tA23[] = {"Charme"};
 
 
 		/**
@@ -564,66 +564,228 @@ public class HorsLigne extends Nfc_MapActivity{
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA15()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA15, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("skimmia.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("miscarthus.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("cypreslawson.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("tulipiervirginie.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA16()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA16, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("kolwitzia.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("arbresoie.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("yucca.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("poncinus.html");
+								startActivity(intent);
+							}else if(which == 4){
+								Global.setNomFichier("lilasblanc.html");
+								startActivity(intent);
+							}else if(which == 5){
+								Global.setNomFichier("abelia.html");
+								startActivity(intent);
+							}else if(which == 6){
+								Global.setNomFichier("ignotier.html");
+								startActivity(intent);
+							}else if(which == 7){
+								Global.setNomFichier("forsythia.html");
+								startActivity(intent);
+							}else if(which == 8){
+								Global.setNomFichier("yeuse.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA17()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA17, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("cypreslawson.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("cypresgeant.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("bananierindiens.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("ornechampetre.html");
+								startActivity(intent);
+							}else if(which == 4){
+								Global.setNomFichier("groseillermaqueraux.html");
+								startActivity(intent);
+							}else if(which == 5){
+								Global.setNomFichier("chalefombelle.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA18()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA18, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("noisetierpourpre.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("chataignier.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("groseillerdore.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("alisiertorminal.html");
+								startActivity(intent);
+							}else if(which == 4){
+								Global.setNomFichier("epine-du-christ.html");
+								startActivity(intent);
+							}else if(which == 5){
+								Global.setNomFichier("fusaineurope.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA19()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA19, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("houxbleu.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("viorne.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("seringat.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("osmanthe.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA20()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA20, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("erableveloute.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("seringatlewis.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("weigelia.html");
+								startActivity(intent);
+							}else if(which == 3){
+								Global.setNomFichier("cornouillermale.html");
+								startActivity(intent);
+							}else if(which == 4){
+								Global.setNomFichier("osmaraburkwoodi.html");
+								startActivity(intent);
+							}else if(which == 5){
+								Global.setNomFichier("magnoliafleurs.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA21()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA21, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("troenecalifornie.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("troenechine.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("peuplieritalie.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA22()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA22, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("aulnecorde.html");
+								startActivity(intent);
+							}else if(which == 1){
+								Global.setNomFichier("marronierjapon.html");
+								startActivity(intent);
+							}else if(which == 2){
+								Global.setNomFichier("marronierfleurs.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getGroupeA23()){
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
+					builder.setItems(tA23, new DialogInterface.OnClickListener() {
+						public void onClick(DialogInterface dialog, int which) {
+							if(which == 0){
+								Global.setNomFichier("charme.html");
+								startActivity(intent);
+							}
+						}
+					});
 					builder.setIcon(R.drawable.icon_plante2);
 					builder.setTitle(item.getTitle());
-					builder.setMessage(item.getSnippet());
-					builder.setPositiveButton("OK", null);
+					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}
 
