@@ -91,7 +91,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_soleil);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -105,7 +105,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_ceinture_asteroides);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -119,7 +119,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_jupiter);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -133,7 +133,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_mercure);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -147,7 +147,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_uranus);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -161,7 +161,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_saturn);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -175,7 +175,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_venus);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -189,7 +189,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_terre);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -203,7 +203,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_mars);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -217,7 +217,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_neptune);
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
@@ -237,7 +237,7 @@ public class HorsLigne extends Nfc_MapActivity{
 							}
 						}
 					});
-					builder.setIcon(android.R.drawable.ic_menu_info_details);
+					builder.setIcon(R.drawable.icon_ceinture_kuiper);
 					builder.setTitle(item.getTitle());
 					//builder.setMessage(item.getSnippet());
 					builder.setPositiveButton("Retour", null);
