@@ -13,7 +13,7 @@ import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
-import android.widget.Toast;
+
 
 public class Nfc_Activity extends Activity {
 
