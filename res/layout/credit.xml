@@ -18,8 +18,8 @@
         android:layout_width="match_parent"
         android:layout_height="343dp"
         android:gravity="center"
-        android:text="GPS, Points d&apos;intérêts et Cartes\nJérome Barbier, Rodolphe Fréby, Augustin Husson
-        \nNFC\nWilliam Bobo\n\nGestion des Menus, Text-to-speech, Téléchargement des cartes\nPaul Labat\n\nWebview\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
+        android:text="GPS, Points d&apos;intérêts et Cartes\nJérome Barbier, Rodolphe Fréby,\nAugustin Husson
+        \nNFC\nWilliam Bobo\n\nGestion des Menus, Text-to-speech, Téléchargement des cartes\nPaul Labat\n\nWebviews\nPaul Labat,Radhoane\n\nMerci à\nDana Fréby, Didier Donsez"
         android:textColor="#7FFF00"
         android:textSize="7pt" />
 
