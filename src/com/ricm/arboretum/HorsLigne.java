@@ -21,6 +21,7 @@ public class HorsLigne extends BaseMapActivity{
 
 	private MapView mapView;
 	private OverlayItem item;
+	private OverlayItem item2;
 	private OverlayItem my_item;
 
 	/*
@@ -832,173 +833,137 @@ public class HorsLigne extends BaseMapActivity{
 
 		// create an OverlayItem with title and description
 		item = new OverlayItem(Global.getSoleil(), "Soleil", "Localisation du soleil");
-		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		item = new OverlayItem(Global.getCeinture(), "Ceinture d'asteroides", "la ceinture d'asteroides");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 
 		item = new OverlayItem(Global.getJupiter(), "Jupiter", "Localisation de Jupiter");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getSaturne(), "Saturne", "Localisation de Saturne");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getUranus(), "Uranus", "Localisation d'Uranus");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getMercure(), "Mercure", "Localisation de Mercure");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getTerre(), "Terre", "Localisation de la Terre");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getVenus(), "Venus", "Localisation de Venus");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getMars(), "Mars", "Localisation de Mars");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getNeptune(), "Neptune", "Localisation de Neptune");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getObjNeptune(), "Objet de Neptunes", "Localisation des Objets de Neptune");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		//Ajout des arbres 
-
 		//A0 : Chicot du Canada / Erable mégundo
-		item = new OverlayItem(Global.getGroupeA0(), "Premier groupe de plante", "Localisation du premier groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
-		itemizedOverlay.addItem(item);
-
+		item2 = new OverlayItem(Global.getGroupeA0(), "Premier groupe de plante", "Localisation du premier groupe de plantes");
+		item2.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
+		itemizedOverlay2.addItem(item2);
 		//A1 : Mélèze du Japon / Holodisque Discolore / Sequoia toujours vert, bois rouge
-		item = new OverlayItem(Global.getGroupeA1(), "Deuxieme groupe de plante", "Localisation du deuxieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA1(), "Deuxieme groupe de plante", "Localisation du deuxieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A2 : Cotonéastor à feuilles bullées
-		item = new OverlayItem(Global.getGroupeA2(), "Troisieme groupe de plante", "Localisation du troisieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA2(), "Troisieme groupe de plante", "Localisation du troisieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A3 : Cèdre du Liban / Erable trident / Erable champêtre / Erable / Erable de Pensylvanie
-		item = new OverlayItem(Global.getGroupeA3(), "Quatrieme groupe de plante", "Localisation du quatrieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA3(), "Quatrieme groupe de plante", "Localisation du quatrieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A4 : Epicea de Bosnie / Pin panicio / Pin de Corse / Erable à peau de serpent 
-		item = new OverlayItem(Global.getGroupeA4(), "Cinquieme groupe de plante", "Localisation du cinquieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA4(), "Cinquieme groupe de plante", "Localisation du cinquieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A5 Cèdre de l'Himalaya, Déodar / Carya cordée / Hêtre, Fau, Fayard, Platane d'orient
-		item = new OverlayItem(Global.getGroupeA5(), "Sixieme groupe de plante", "Localisation du sixieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA5(), "Sixieme groupe de plante", "Localisation du sixieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A6 Genévrier commun
-		item = new OverlayItem(Global.getGroupeA6(), "Septieme groupe de plante", "Localisation du septieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA6(), "Septieme groupe de plante", "Localisation du septieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A7 Sapin d'Algérie / Pin weymouth / Viorne velue
-		item = new OverlayItem(Global.getGroupeA7(), "Huitieme groupe de plante", "Localisation du huitieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA7(), "Huitieme groupe de plante", "Localisation du huitieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A8 Cornouiller florifère / Rosier chataîgne / Peuplier
-		item = new OverlayItem(Global.getGroupeA8(), "Neuvieme groupe de plante", "Localisation du neuvieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA8(), "Neuvieme groupe de plante", "Localisation du neuvieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A9 Ptérocarier
-		item = new OverlayItem(Global.getGroupeA9(), "Dixieme groupe de plante", "Localisation du dixieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA9(), "Dixieme groupe de plante", "Localisation du dixieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A10 Mahonia de Beal / Amélande du Canada / Noisetier de Turquie / Noisetier coudier
-		item = new OverlayItem(Global.getGroupeA10(), "Onzieme groupe de plante", "Localisation du onzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA10(), "Onzieme groupe de plante", "Localisation du onzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A11 Forsythia blanc / Alangium à feuilles de Platane / Escalonie rouge
-		item = new OverlayItem(Global.getGroupeA11(), "Douzieme groupe de plante", "Localisation du douzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA11(), "Douzieme groupe de plante", "Localisation du douzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A12 Chèvrefeuille des tatars / Noisetier tortueux / Epine-vignette de Juliana / Corête du Japon
-		item = new OverlayItem(Global.getGroupeA12(), "Treizieme groupe de plante", "Localisation du treizieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA12(), "Treizieme groupe de plante", "Localisation du treizieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A13 Erable de montpellier / Cade Oxycèdre / Saule des îles Sakhalines / Magnolia à fleur de lis 
 		//Magnolia de soulange / Viome de Burkwood
-		item = new OverlayItem(Global.getGroupeA13(), "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA13(), "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A14 Fragon Piquoti / Petit houx / Petit houx à langues / Ardore aux mouchoirs
-		item = new OverlayItem(Global.getGroupeA14(), "Quinzieme groupe de plante", "Localisation du quinzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA14(), "Quinzieme groupe de plante", "Localisation du quinzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A15 Skimmia du Japon / Miscarthus / Cyprès de lawson / Tulipier de Virginie
-		item = new OverlayItem(Global.getGroupeA15(), "Seizieme groupe de plante", "Localisation du seizieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA15(), "Seizieme groupe de plante", "Localisation du seizieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A16 Kolwitzia / Arbre de soie / Yucca / Poncinus / Lilas blanc / Abelia / Indigotier / Forsythia / Chêne vert, Yeuse
-		item = new OverlayItem(Global.getGroupeA16(), "Dix-septieme groupe de plante", "Localisation du dix-septieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA16(), "Dix-septieme groupe de plante", "Localisation du dix-septieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A17 Cyprès de lawson / Cyprès géant / Bananier des indiens / Orne champêtre / Groseiller à maqueraux / Chalef en ombelle
-		item = new OverlayItem(Global.getGroupeA17(), "Dix-huitieme groupe de plante", "Localisation du dix-huitieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA17(), "Dix-huitieme groupe de plante", "Localisation du dix-huitieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A18 Noisetier pourpre / Châtaignier / Groseiller doré / Alisier torminal / Epine-du-christ / Fusain d'Europe
-		item = new OverlayItem(Global.getGroupeA18(), "Dix-neuvieme groupe de plante", "Localisation du dix-neuvieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA18(), "Dix-neuvieme groupe de plante", "Localisation du dix-neuvieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A19 Houx bleu / Viorne à feuilles ridées / Seringat / Osmanthe à feuilles de houx
-		item = new OverlayItem(Global.getGroupeA19(), "Vingtieme groupe de plante", "Localisation du vingtieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA19(), "Vingtieme groupe de plante", "Localisation du vingtieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A20 Erable velouté / Seringat de lewis / Weigelia / Cornouiller mâle / Osmara burkwoodii / Burk & Skie / Magnolia à grandes fleurs
-		item = new OverlayItem(Global.getGroupeA20(), "Vingt et unieme groupe de plante", "Localisation du vingt et unieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA20(), "Vingt et unieme groupe de plante", "Localisation du vingt et unieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A21 Véglier du Japon / Troëne de Californie / Troëne de Chine / Peuplier d'Italie
-		item = new OverlayItem(Global.getGroupeA21(), "Vingt deuxieme groupe de plante", "Localisation du vingt deuxieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA21(), "Vingt deuxieme groupe de plante", "Localisation du vingt deuxieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A22 Aulore cordé / Marronier du Japon / Marronier à petites fleurs / non inconnue à corriger / Dardari Simon-Louis 'Jules d'Anière'
-		item = new OverlayItem(Global.getGroupeA22(), "Vingt troisieme groupe de plante", "Localisation du vingt troisieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA22(), "Vingt troisieme groupe de plante", "Localisation du vingt troisieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A23 Cyprès toujours vert / Charme 
-		item = new OverlayItem(Global.getGroupeA23(), "Vingt quatrieme groupe de plante", "Localisation du vingt quatrieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA23(), "Vingt quatrieme groupe de plante", "Localisation du vingt quatrieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
