@@ -135,7 +135,7 @@ public class Visite extends BaseMapActivity implements LocationListener {
 		CharSequence tA11[] = {"Forsythia blanc", "Alangium à feuilles de Platane", "Escalonie rouge"};
 		CharSequence tA12[] = {"Chèvrefeuille des tatars", "Noisetier tortueux", "Epine-vignette de Juliana", "Corête du Japon"};
 		CharSequence tA13[] = {"Erable de montpellier", "Cade Oxycèdre", "Saule des îles Sakhalines", "Magnolia à fleur de lis", "Magnolia de soulange", "Viome de Burkwood"};
-		CharSequence tA14[] = {"Frangon piquoti", "Petit houx", "Petit houx à langues", "Ardore aux mouchoirs"};
+		CharSequence tA14[] = {"Frangon piquoti", "Petit houx", "Petit houx à langues", "Arbre aux mouchoirs"};
 		CharSequence tA15[] = {"Skimmia du Japon", "Miscarthus", "Cyprès de lawson", "Tulipier de Virginie"};
 		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert, Yeuse"};
 		CharSequence tA17[] = {"Cyprès de lawson", "Cyprès géant", "Bananier des indiens", "Orne champêtre", "Groseiller à maqueraux", "Chalef en ombelle"};
