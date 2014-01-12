@@ -6,6 +6,7 @@ import org.mapsforge.android.maps.overlay.ArrayItemizedOverlay;
 import org.mapsforge.android.maps.overlay.ItemizedOverlay;
 import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.core.*;
+
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -20,21 +21,29 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.view.View.OnClickListener;
 
-public class Direction2 extends Nfc_MapActivity implements LocationListener, OnClickListener{
+public class Direction2 extends Nfc_MapActivity implements LocationListener, OnClickListener, SensorEventListener{
 	private MapView mapView;
 	private LocationManager locationManager;
 	private SensorManager sm;
-	private Sensor my_sensor;
 	private OverlayItem item;
 	private OverlayItem item2;
 	private int clique=0;
 	public Button myButton;
+	//private Drawable location;
+	private GradientDrawable location;
+	private Drawable defaultMarker;
+	private Orientation bousole;
+	
 	//private GeoPoint test;
 	/**
 	 * Inner Class
@@ -105,13 +114,17 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		//affichage de la map
 		setContentView(mapView);	
 		//Creation d'un marker, un objet Drawable
-		Drawable defaultMarker = getResources().getDrawable(R.drawable.letter_a); 
-		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
+		defaultMarker = getResources().getDrawable(R.drawable.letter_a); 
+		location = (GradientDrawable) getResources().getDrawable(R.drawable.location_oriented); 
+		
+
+		
 		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
 		//la simple raison qu'elle va stocker notre curseur de position
 		//dont on ne souhaite pas qu'il y ai de reaction si on tap dessus
 		ArrayItemizedOverlay itemizedOverlay = new MyItemizedOverlay(defaultMarker, this);
 		ArrayItemizedOverlay itemizedOverlay2 = new ArrayItemizedOverlay(location);
+		
 		// create a GeoPoint with the latitude and longitude coordinates
 		GeoPoint myPos = new GeoPoint(0,0);
 
@@ -126,12 +139,16 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		//Le GPS
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE); 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1, 0, this);
+		
+		
 		sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+		
 		if (sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD) != null){
 			//success! there's a magnetometer
 		}else{
 			Toast.makeText(this,"Problème d'accelerometer", Toast.LENGTH_LONG).show();
 		}
+		
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
 		mapView.getOverlays().add(itemizedOverlay2);
@@ -155,12 +172,17 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		//mise Ã  jour du GPS
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 0, this); 
 		locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 1000, 0, this); 
+		
+		sm.registerListener(this,sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),SensorManager.SENSOR_DELAY_NORMAL);
+
 	}
 	@Override
 	protected void onPause() {
 		super.onPause();
 		//pause du GPS
 		locationManager.removeUpdates(this); 
+		
+		sm.unregisterListener(this);
 	}
 
 	@Override
@@ -190,5 +212,23 @@ public class Direction2 extends Nfc_MapActivity implements LocationListener, OnC
 		if(arg0 == myButton){
 			clique = 1;
 		}
+	}
+	@Override
+	public void onAccuracyChanged(Sensor sensor, int accuracy) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void onSensorChanged(SensorEvent event) {
+		// TODO Auto-generated method stub
+				//je recupere l'orientation
+				bousole = event.values[0];
+				//je change la position du marqueur
+				
+				location.setOrientation(bousole);
+
+				
+				System.out.println("Bousole = "+bousole);
+		
 	}
 }
