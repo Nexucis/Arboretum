@@ -1,0 +1,29 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Objets épars transneptunien</title>
+	 <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body>
+
+	<script type="text/javascript">
+	function tts(text) {
+	      Android.readText(text);
+	}
+	</script>
+
+	<h2 id="titre"> Objets épars transneptunien</h2>
+	<img src="objet_epars.png" alt="objets épars"></img>
+
+<p>En astronomie, un objet épars est un objet transneptunien au-delà de la ceinture de Kuiper (à environ 48 ua) dont l'orbite est fortement excentrique.<p>
+</p>La distance d'un objet épars au Soleil varie énormément et peut atteindre une centaine d'ua et plus. Leur comportement est donc à l'inverse des cubewanos, les objets classiques de la ceinture de Kuiper, qui possèdent une orbite peu excentrique.</p>
+<br><br>
+<p>Le diagramme de droite illustre les orbites de tous les objets épars connus jusqu’à 85 ua avec les objets de la ceinture de Kuiper (en gris) et les objets résonants (en vert), pour la comparaison.
+L’excentricité des orbites est représentée par les segments rouges (du périhélie à l'aphélie) avec l’inclinaison représentée sur l’axe vertical. À noter par exemple l'orbite peu commune, presque circulaire et très inclinée, de 2004 XR190.</p>
+
+
+	<input type="button" value="Say hello" onClick="tts('Les objets épars transneptunien.')" />
+
+</body>
+</html>

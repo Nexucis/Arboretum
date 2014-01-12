@@ -100,7 +100,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("soleil.html");
+								Global.setNomFichier("planetes/soleil.html");
 								startActivity(intent);
 							}
 						}
@@ -114,7 +114,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("ceinture_asteroides.html");
+								Global.setNomFichier("planetes/ceinture_asteroides.html");
 								startActivity(intent);
 							}
 						}
@@ -128,7 +128,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("jupiter.html");
+								Global.setNomFichier("planetes/jupiter.html");
 								startActivity(intent);
 							}
 						}
@@ -142,7 +142,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("mercure.html");
+								Global.setNomFichier("planetes/mercure.html");
 								startActivity(intent);
 							}
 						}
@@ -156,7 +156,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("uranus.html");
+								Global.setNomFichier("planetes/uranus.html");
 								startActivity(intent);
 							}
 						}
@@ -170,7 +170,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("saturne.html");
+								Global.setNomFichier("planetes/saturne.html");
 								startActivity(intent);
 							}
 						}
@@ -184,7 +184,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tVenus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("venus.html");
+								Global.setNomFichier("planetes/venus.html");
 								startActivity(intent);
 							}
 						}
@@ -198,7 +198,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tTerre, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("terre.html");
+								Global.setNomFichier("planetes/terre.html");
 								startActivity(intent);
 							}
 						}
@@ -212,7 +212,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tMars, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("mars.html");
+								Global.setNomFichier("planetes/mars.html");
 								startActivity(intent);
 							}
 						}
@@ -226,7 +226,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("neptune.html");
+								Global.setNomFichier("planetes/neptune.html");
 								startActivity(intent);
 							}
 						}
@@ -240,13 +240,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tTransNeptu, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("ceinture_kuiper.html");
+								Global.setNomFichier("planetes/ceinture_kuiper.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("Objets_epars.html");
+								Global.setNomFichier("planetes/Objets_epars.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("Objets_detaches.html");
+								Global.setNomFichier("planetes/Objets_detaches.html");
 								startActivity(intent);
 							}
 						}
@@ -261,10 +261,10 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA0, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("Erablemegundo.html");
+								Global.setNomFichier("plantes/Erablemegundo.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("Chicoducanada.html");
+								Global.setNomFichier("plantes/Chicoducanada.html");
 								startActivity(intent);
 							}
 						}
@@ -278,13 +278,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA1, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("Melezedujapon.html");
+								Global.setNomFichier("plantes/Melezedujapon.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("Holodisquediscolore.html");
+								Global.setNomFichier("plantes/Holodisquediscolore.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("Sequoia.html");
+								Global.setNomFichier("plantes/Sequoia.html");
 								startActivity(intent);
 							}
 						}
@@ -298,7 +298,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA2, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("Coteneastor.html");
+								Global.setNomFichier("plantes/Coteneastor.html");
 								startActivity(intent);
 							}
 						}
@@ -312,19 +312,19 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA3, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("cedre.html");
+								Global.setNomFichier("plantes/cedre.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("erabletrident.html");
+								Global.setNomFichier("plantes/erabletrident.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("erablechampetre.html");
+								Global.setNomFichier("plantes/erablechampetre.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("erable.html");
+								Global.setNomFichier("plantes/erable.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("erabledepensylvanie.html");
+								Global.setNomFichier("plantes/erabledepensylvanie.html");
 								startActivity(intent);
 							}
 						}
@@ -338,16 +338,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA4, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("epiceadebosnie.html");
+								Global.setNomFichier("plantes/epiceadebosnie.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("pinpanacio.html");
+								Global.setNomFichier("plantes/pinpanacio.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("pindecorse.html");
+								Global.setNomFichier("plantes/pindecorse.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("erablepeau.html");
+								Global.setNomFichier("plantes/erablepeau.html");
 								startActivity(intent);
 							}
 						}
@@ -361,13 +361,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA5, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("cedrehimalaya.html");
+								Global.setNomFichier("plantes/cedrehimalaya.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("caryacordee.html");
+								Global.setNomFichier("plantes/caryacordee.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("plataneorient.html");
+								Global.setNomFichier("plantes/plataneorient.html");
 								startActivity(intent);
 							}
 						}
@@ -381,7 +381,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA6, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("genevriercommun.html");
+								Global.setNomFichier("plantes/genevriercommun.html");
 								startActivity(intent);
 							}
 						}
@@ -395,13 +395,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA7, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("sapinalgerie.html");
+								Global.setNomFichier("plantes/sapinalgerie.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("pinweymouth.html");
+								Global.setNomFichier("plantes/pinweymouth.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("viornevelue.html");
+								Global.setNomFichier("plantes/viornevelue.html");
 								startActivity(intent);
 							}
 						}
@@ -415,13 +415,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA8, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("cornouillerflorifere.html");
+								Global.setNomFichier("plantes/cornouillerflorifere.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("rosierchataigne.html");
+								Global.setNomFichier("plantes/rosierchataigne.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("peuplier.html");
+								Global.setNomFichier("plantes/peuplier.html");
 								startActivity(intent);
 							}
 						}
@@ -435,7 +435,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA9, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("pterocarier.html");
+								Global.setNomFichier("plantes/pterocarier.html");
 								startActivity(intent);
 							}
 						}
@@ -449,16 +449,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA10, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("mahoniabeal.html");
+								Global.setNomFichier("plantes/mahoniabeal.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("amelandecanada.html");
+								Global.setNomFichier("plantes/amelandecanada.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("noisetierturquie.html");
+								Global.setNomFichier("plantes/noisetierturquie.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("noisetiercoudier.html");
+								Global.setNomFichier("plantes/noisetiercoudier.html");
 								startActivity(intent);
 							}
 						}
@@ -472,13 +472,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA11, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("forsythiablanc.html");
+								Global.setNomFichier("plantes/forsythiablanc.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("alangiumplatane.html");
+								Global.setNomFichier("plantes/alangiumplatane.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("escalonierouge.html");
+								Global.setNomFichier("plantes/escalonierouge.html");
 								startActivity(intent);
 							}
 						}
@@ -492,16 +492,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA12, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("chevrefeuille.html");
+								Global.setNomFichier("plantes/chevrefeuille.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("noisetiertortueux.html");
+								Global.setNomFichier("plantes/noisetiertortueux.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("juliana.html");
+								Global.setNomFichier("plantes/juliana.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("coretejapon.html");
+								Global.setNomFichier("plantes/coretejapon.html");
 								startActivity(intent);
 							}
 						}
@@ -515,22 +515,22 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA13, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("erablemontpellier.html");
+								Global.setNomFichier("plantes/erablemontpellier.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("cadeoxycedre.html");
+								Global.setNomFichier("plantes/cadeoxycedre.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("sakhalines.html");
+								Global.setNomFichier("plantes/sakhalines.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("magnolia.html");
+								Global.setNomFichier("plantes/magnolia.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("magnoliasoulange.html");
+								Global.setNomFichier("plantes/magnoliasoulange.html");
 								startActivity(intent);
 							}else if(which == 5){
-								Global.setNomFichier("viomeburkwood.html");
+								Global.setNomFichier("plantes/viomeburkwood.html");
 								startActivity(intent);
 							}
 						}
@@ -544,16 +544,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA14, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("fragonpiquoti.html");
+								Global.setNomFichier("plantes/fragonpiquoti.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("petithoux.html");
+								Global.setNomFichier("plantes/petithoux.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("petitlangue.html");
+								Global.setNomFichier("plantes/petitlangue.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("ardoremouchoirs.html");
+								Global.setNomFichier("plantes/ardoremouchoirs.html");
 								startActivity(intent);
 							}
 						}
@@ -567,16 +567,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA15, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("skimmia.html");
+								Global.setNomFichier("plantes/skimmia.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("miscarthus.html");
+								Global.setNomFichier("plantes/miscarthus.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("cypreslawson.html");
+								Global.setNomFichier("plantes/cypreslawson.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("tulipiervirginie.html");
+								Global.setNomFichier("plantes/tulipiervirginie.html");
 								startActivity(intent);
 							}
 						}
@@ -590,31 +590,31 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA16, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("kolwitzia.html");
+								Global.setNomFichier("plantes/kolwitzia.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("arbresoie.html");
+								Global.setNomFichier("plantes/arbresoie.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("yucca.html");
+								Global.setNomFichier("plantes/yucca.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("poncinus.html");
+								Global.setNomFichier("plantes/poncinus.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("lilasblanc.html");
+								Global.setNomFichier("plantes/lilasblanc.html");
 								startActivity(intent);
 							}else if(which == 5){
-								Global.setNomFichier("abelia.html");
+								Global.setNomFichier("plantes/abelia.html");
 								startActivity(intent);
 							}else if(which == 6){
-								Global.setNomFichier("ignotier.html");
+								Global.setNomFichier("plantes/ignotier.html");
 								startActivity(intent);
 							}else if(which == 7){
-								Global.setNomFichier("forsythia.html");
+								Global.setNomFichier("plantes/forsythia.html");
 								startActivity(intent);
 							}else if(which == 8){
-								Global.setNomFichier("yeuse.html");
+								Global.setNomFichier("plantes/yeuse.html");
 								startActivity(intent);
 							}
 						}
@@ -628,22 +628,22 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA17, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("cypreslawson.html");
+								Global.setNomFichier("plantes/cypreslawson.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("cypresgeant.html");
+								Global.setNomFichier("plantes/cypresgeant.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("bananierindiens.html");
+								Global.setNomFichier("plantes/bananierindiens.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("ornechampetre.html");
+								Global.setNomFichier("plantes/ornechampetre.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("groseillermaqueraux.html");
+								Global.setNomFichier("plantes/groseillermaqueraux.html");
 								startActivity(intent);
 							}else if(which == 5){
-								Global.setNomFichier("chalefombelle.html");
+								Global.setNomFichier("plantes/chalefombelle.html");
 								startActivity(intent);
 							}
 						}
@@ -657,22 +657,22 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA18, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("noisetierpourpre.html");
+								Global.setNomFichier("plantes/noisetierpourpre.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("chataignier.html");
+								Global.setNomFichier("plantes/chataignier.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("groseillerdore.html");
+								Global.setNomFichier("plantes/groseillerdore.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("alisiertorminal.html");
+								Global.setNomFichier("plantes/alisiertorminal.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("epine-du-christ.html");
+								Global.setNomFichier("plantes/epine-du-christ.html");
 								startActivity(intent);
 							}else if(which == 5){
-								Global.setNomFichier("fusaineurope.html");
+								Global.setNomFichier("plantes/fusaineurope.html");
 								startActivity(intent);
 							}
 						}
@@ -686,16 +686,16 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA19, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("houxbleu.html");
+								Global.setNomFichier("plantes/houxbleu.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("viorne.html");
+								Global.setNomFichier("plantes/viorne.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("seringat.html");
+								Global.setNomFichier("plantes/seringat.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("osmanthe.html");
+								Global.setNomFichier("plantes/osmanthe.html");
 								startActivity(intent);
 							}
 						}
@@ -709,22 +709,22 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA20, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("erableveloute.html");
+								Global.setNomFichier("plantes/erableveloute.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("seringatlewis.html");
+								Global.setNomFichier("plantes/seringatlewis.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("weigelia.html");
+								Global.setNomFichier("plantes/weigelia.html");
 								startActivity(intent);
 							}else if(which == 3){
-								Global.setNomFichier("cornouillermale.html");
+								Global.setNomFichier("plantes/cornouillermale.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("osmaraburkwoodi.html");
+								Global.setNomFichier("plantes/osmaraburkwoodi.html");
 								startActivity(intent);
 							}else if(which == 5){
-								Global.setNomFichier("magnoliafleurs.html");
+								Global.setNomFichier("plantes/magnoliafleurs.html");
 								startActivity(intent);
 							}
 						}
@@ -738,13 +738,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA21, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("troenecalifornie.html");
+								Global.setNomFichier("plantes/troenecalifornie.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("troenechine.html");
+								Global.setNomFichier("plantes/troenechine.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("peuplieritalie.html");
+								Global.setNomFichier("plantes/peuplieritalie.html");
 								startActivity(intent);
 							}
 						}
@@ -758,13 +758,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA22, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("aulnecorde.html");
+								Global.setNomFichier("plantes/aulnecorde.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("marronierjapon.html");
+								Global.setNomFichier("plantes/marronierjapon.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("marronierfleurs.html");
+								Global.setNomFichier("plantes/marronierfleurs.html");
 								startActivity(intent);
 							}
 						}
@@ -778,7 +778,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA23, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("charme.html");
+								Global.setNomFichier("plantes/charme.html");
 								startActivity(intent);
 							}
 						}
