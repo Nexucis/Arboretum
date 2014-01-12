@@ -282,7 +282,7 @@ public class Visite extends BaseMapActivity implements LocationListener {
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getNeptune()){
-					Builder builder = new AlertDialog.Builder(this.context2);
+					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
@@ -883,7 +883,7 @@ public class Visite extends BaseMapActivity implements LocationListener {
 
 
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.planetarium); 
-		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
+		Drawable location = getResources().getDrawable(R.drawable.location_unoriented); 
 		Drawable markerPlante = getResources().getDrawable(R.drawable.plante); 
 		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
 		//la simple raison qu'elle va stocker notre curseur de position

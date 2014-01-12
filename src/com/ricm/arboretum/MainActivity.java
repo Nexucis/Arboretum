@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 			Intent intentV = new Intent(this, SousMenuVisite.class);
 			startActivity(intentV);
 		}else if(v.getId() == R.id.btnLocalisation){
-			Intent intentH = new Intent(this, Direction2.class);
+			Intent intentH = new Intent(this, Direction.class);
 			startActivity(intentH);
 		}
 	}

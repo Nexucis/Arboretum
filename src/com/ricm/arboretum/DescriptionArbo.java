@@ -48,8 +48,12 @@ public class DescriptionArbo extends BaseActivity implements TextToSpeech.OnInit
 		else
 		{ 
 			String message = intent.getStringExtra(Nfc_Activity.EXTRA_MESSAGE);
-			Log.v(TAG,"ExtraMessage trouvï¿½ : "+message);
-			webview.loadUrl("file:///android_asset/webview/" + message+".html");
+			Log.v(TAG,"ExtraMessage trouvé : "+message);
+			String html = Global.stringToHtml(message);
+			if (html == null) 
+				Toast.makeText(this, "La page correspondant au tag n'a pas été trouvé", Toast.LENGTH_SHORT).show();
+			else
+				webview.loadUrl(Global.stringToHtml(message));
 		}
 
 	}

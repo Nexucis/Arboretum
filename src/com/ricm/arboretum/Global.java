@@ -1,9 +1,17 @@
 package com.ricm.arboretum;
 
+import java.io.File;
+
 import org.mapsforge.core.GeoPoint;
+
+import android.util.Log;
+import android.widget.Toast;
 
 public class Global {
 
+	private static String TAG = "GlobalArboretum";
+	
+	
 	private static String nomFichier="arboretum.html";
 	private static GeoPoint venus = new GeoPoint(45.1942954, 5.7774607);
 	private static GeoPoint terre = new GeoPoint(45.1943019, 5.7775252);
@@ -49,6 +57,65 @@ public class Global {
 	private static boolean sonActive = true;
 	
 	private static boolean credit = false;
+	
+	
+	public static String stringToHtml(String name){
+		String planetePath = "file:///android_asset/webview/planetes/";
+		String plantesPath = "file:///android_asset/webview/plantes/";
+		Log.v(TAG,"stringToHtml : "+name);
+		//Planetes
+		if(name.equals("asteroide")){
+			return planetePath+"ceinture_asteroides.html";
+		}
+		if(name.equals("kuiper")){
+			return planetePath+"ceinture_kuiper.html";
+		}
+		if(name.equals("jupiter")){
+			return planetePath+"jupiter.html";
+		}
+		if(name.equals("mars")){
+			return planetePath+"mars.html";
+		}
+		if(name.equals("mercure")){
+			return planetePath+"mercure.html";
+		}
+		if(name.equals("neptune")){
+			return planetePath+"neptune.html";
+		}
+		if(name.equals("detaches")){
+			return planetePath+"Objets_detaches.html";
+		}
+		if(name.equals("epars")){
+			return planetePath+"Objets_epars.html";
+		}
+		if(name.equals("saturne")){
+			return planetePath+"saturne.html";
+		}
+		if(name.equals("soleil")){
+			return planetePath+"soleil.html";
+		}
+		if(name.equals("terre")){
+			return planetePath+"terre.html";
+		}
+		if(name.equals("uranus")){
+			return planetePath+"uranus.html";
+		}
+		if(name.equals("venus")){
+			return planetePath+"venus.html";
+		}
+		
+		
+		//Plantes
+		//Dans ce cas, on ne transforme pas la chaine, on renvoie juste concatener au path
+		String plante = plantesPath+name;
+		File f = new File(plante);
+		//if (f.exists())
+			return plante;
+		//else {
+			//Log.v(TAG,"stringToHtml : "+plante+" non trouvé");
+			//return null;
+		
+	}
 	
 	protected static boolean isCredit() {
 		return credit;
