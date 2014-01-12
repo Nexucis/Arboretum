@@ -13,14 +13,15 @@
 	}
 	</script>
 
-	<h2 id="titre"> Saturne</h2>
-	<img src="saturne.jpg" alt="saturne"></img>
-
+	<h2 class="titre"> Saturne</h2>
+	<img src="saturne.jpg" alt="saturne" align="center"></img>
+<div class="txt">
 	<p>Saturne est la sixième planète du Système solaire par ordre de distance au Soleil et la deuxième plus grande, aussi en taille qu'en masse, après Jupiter. Son nom est celui du dieu romain éponyme. Le symbole de Saturne, « ♄ », représente la faucille de ce dernier.</p
 <p>Saturne est une planète géante, au même titre que Jupiter, Uranus et Neptune, et plus précisément une géante gazeuse de type Jupiter froid comme Jupiter. D'un diamètre d'environ neuf fois et demi celui de la Terre, elle est majoritairement composée d'hydrogène et d'hélium. Sa masse vaut 95 fois celle de la Terre et son volume 900 fois celui de notre planète1. Sa période de révolution est d'environ 29 ans.</p>
 <p>Saturne possède un système d'anneaux, composés principalement de particules de glace et de poussière. Saturne possède de nombreux satellites, dont cinquante-trois ont été confirmés et nommés. Titan est le plus grand satellite de Saturne et la deuxième plus grande lune du Système solaire après Ganymède autour de Jupiter. Titan est plus grand que la planète Mercure et est la seule lune du Système solaire à posséder une atmosphère significative.</p>
 <p>La vitesse du vent sur Saturne peut atteindre 1 800 kilomètres par heure, une valeur supérieure à celles relevées sur Jupiter mais moindre que sur Neptune.</p>
-
+</div>
+<br>
 	<input type="button" value="Say hello" onClick="tts('La planete Saturne.')" />
 
 </body>

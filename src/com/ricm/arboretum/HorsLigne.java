@@ -21,6 +21,7 @@ public class HorsLigne extends BaseMapActivity{
 
 	private MapView mapView;
 	private OverlayItem item;
+	private OverlayItem item2;
 	private OverlayItem my_item;
 
 	/*
@@ -76,7 +77,7 @@ public class HorsLigne extends BaseMapActivity{
 		CharSequence tA13[] = {"Erable de montpellier", "Cade Oxycèdre", "Saule des îles Sakhalines", "Magnolia à fleur de lis", "Magnolia de soulange", "Viome de Burkwood"};
 		CharSequence tA14[] = {"Frangon piquoti", "Petit houx", "Petit houx à langues", "Ardore aux mouchoirs"};
 		CharSequence tA15[] = {"Skimmia du Japon", "Miscarthus", "Cyprès de lawson", "Tulipier de Virginie"};
-		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert"};
+		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert, Yeuse"};
 		CharSequence tA17[] = {"Cyprès de lawson", "Cyprès géant", "Bananier des indiens", "Orne champêtre", "Groseiller à maqueraux", "Chalef en ombelle"};
 		CharSequence tA18[] = {"Noisetier pourpre", "Châtaignier", "Groseiller doré", "Alisier torminal", "Epine-du-christ", "Fusain d'Europe"};
 		CharSequence tA19[] = {"Houx bleu", "Viorgne à feuille ridées", "Seringat", "Osmanthe à feuille de houx"};
@@ -256,15 +257,15 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}
-				else if(item.getPoint() == Global.getGroupeA0()){
+				else if(item.getPoint() == Global.getGroupeA0()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA0, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Erablemegundo.html");
+								Global.setNomFichier("plantes/erablemegundo.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/Chicoducanada.html");
+								Global.setNomFichier("plantes/chicoducanada.html");
 								startActivity(intent);
 							}
 						}
@@ -273,18 +274,18 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA1()){
+				}else if(item.getPoint() == Global.getGroupeA1()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA1, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Melezedujapon.html");
+								Global.setNomFichier("plantes/melezedujapon.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/Holodisquediscolore.html");
+								Global.setNomFichier("plantes/holodisquediscolore.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("plantes/Sequoia.html");
+								Global.setNomFichier("plantes/sequoia.html");
 								startActivity(intent);
 							}
 						}
@@ -293,12 +294,12 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA2()){
+				}else if(item.getPoint() == Global.getGroupeA2()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA2, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Coteneastor.html");
+								Global.setNomFichier("plantes/coteneastor.html");
 								startActivity(intent);
 							}
 						}
@@ -307,7 +308,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA3()){
+				}else if(item.getPoint() == Global.getGroupeA3()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA3, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -333,7 +334,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA4()){
+				}else if(item.getPoint() == Global.getGroupeA4()){//A reverifier pinpanicio
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA4, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -341,7 +342,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/epiceadebosnie.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/pinpanacio.html");
+								Global.setNomFichier("plantes/pinpanicio.html");
 								startActivity(intent);
 							}else if(which == 2){
 								Global.setNomFichier("plantes/pindecorse.html");
@@ -356,12 +357,12 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA5()){
+				}else if(item.getPoint() == Global.getGroupeA5()){//a verifier hymalaya
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA5, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/cedrehimalaya.html");
+								Global.setNomFichier("plantes/cedredehimalaya.html");
 								startActivity(intent);
 							}else if(which == 1){
 								Global.setNomFichier("plantes/caryacordee.html");
@@ -376,7 +377,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA6()){
+				}else if(item.getPoint() == Global.getGroupeA6()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA6, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -390,7 +391,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA7()){
+				}else if(item.getPoint() == Global.getGroupeA7()){//pinweymouth
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA7, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -410,7 +411,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA8()){
+				}else if(item.getPoint() == Global.getGroupeA8()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA8, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -430,7 +431,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA9()){
+				}else if(item.getPoint() == Global.getGroupeA9()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA9, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -444,7 +445,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA10()){
+				}else if(item.getPoint() == Global.getGroupeA10()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA10, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -467,7 +468,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA11()){
+				}else if(item.getPoint() == Global.getGroupeA11()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA11, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -487,7 +488,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA12()){
+				}else if(item.getPoint() == Global.getGroupeA12()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA12, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -510,7 +511,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA13()){
+				}else if(item.getPoint() == Global.getGroupeA13()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA13, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -539,7 +540,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA14()){
+				}else if(item.getPoint() == Global.getGroupeA14()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA14, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -562,7 +563,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA15()){
+				}else if(item.getPoint() == Global.getGroupeA15()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA15, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -585,7 +586,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA16()){
+				}else if(item.getPoint() == Global.getGroupeA16()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA16, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -608,7 +609,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/abelia.html");
 								startActivity(intent);
 							}else if(which == 6){
-								Global.setNomFichier("plantes/ignotier.html");
+								Global.setNomFichier("plantes/indigotier.html");
 								startActivity(intent);
 							}else if(which == 7){
 								Global.setNomFichier("plantes/forsythia.html");
@@ -623,7 +624,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA17()){
+				}else if(item.getPoint() == Global.getGroupeA17()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA17, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -652,7 +653,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA18()){
+				}else if(item.getPoint() == Global.getGroupeA18()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA18, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -681,7 +682,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA19()){
+				}else if(item.getPoint() == Global.getGroupeA19()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA19, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -704,7 +705,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA20()){
+				}else if(item.getPoint() == Global.getGroupeA20()){//osmara
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA20, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -721,7 +722,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/cornouillermale.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("plantes/osmaraburkwoodi.html");
+								Global.setNomFichier("plantes/osmaraburkwoodii.html");
 								startActivity(intent);
 							}else if(which == 5){
 								Global.setNomFichier("plantes/magnoliafleurs.html");
@@ -733,7 +734,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA21()){
+				}else if(item.getPoint() == Global.getGroupeA21()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA21, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -753,7 +754,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA22()){
+				}else if(item.getPoint() == Global.getGroupeA22()){//marronier japon
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA22, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -773,7 +774,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA23()){
+				}else if(item.getPoint() == Global.getGroupeA23()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA23, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -832,173 +833,137 @@ public class HorsLigne extends BaseMapActivity{
 
 		// create an OverlayItem with title and description
 		item = new OverlayItem(Global.getSoleil(), "Soleil", "Localisation du soleil");
-		//item3 = new OverlayItem(test, "Test", "Localisation de l'arboretum.");
 		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay.addItem(item);
 		item = new OverlayItem(Global.getCeinture(), "Ceinture d'asteroides", "la ceinture d'asteroides");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 
 		item = new OverlayItem(Global.getJupiter(), "Jupiter", "Localisation de Jupiter");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getSaturne(), "Saturne", "Localisation de Saturne");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getUranus(), "Uranus", "Localisation d'Uranus");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getMercure(), "Mercure", "Localisation de Mercure");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getTerre(), "Terre", "Localisation de la Terre");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getVenus(), "Venus", "Localisation de Venus");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getMars(), "Mars", "Localisation de Mars");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getNeptune(), "Neptune", "Localisation de Neptune");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		item = new OverlayItem(Global.getObjNeptune(), "Objet de Neptunes", "Localisation des Objets de Neptune");
-		item.setMarker(ItemizedOverlay.boundCenter(defaultMarker));
 		itemizedOverlay.addItem(item);
 
 		//Ajout des arbres 
-
 		//A0 : Chicot du Canada / Erable mégundo
-		item = new OverlayItem(Global.getGroupeA0(), "Premier groupe de plante", "Localisation du premier groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
-		itemizedOverlay.addItem(item);
-
+		item2 = new OverlayItem(Global.getGroupeA0(), "Premier groupe de plante", "Localisation du premier groupe de plantes");
+		item2.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
+		itemizedOverlay2.addItem(item2);
 		//A1 : Mélèze du Japon / Holodisque Discolore / Sequoia toujours vert, bois rouge
-		item = new OverlayItem(Global.getGroupeA1(), "Deuxieme groupe de plante", "Localisation du deuxieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(ItemizedOverlay.boundCenter(markerPlante)));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA1(), "Deuxieme groupe de plante", "Localisation du deuxieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A2 : Cotonéastor à feuilles bullées
-		item = new OverlayItem(Global.getGroupeA2(), "Troisieme groupe de plante", "Localisation du troisieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA2(), "Troisieme groupe de plante", "Localisation du troisieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A3 : Cèdre du Liban / Erable trident / Erable champêtre / Erable / Erable de Pensylvanie
-		item = new OverlayItem(Global.getGroupeA3(), "Quatrieme groupe de plante", "Localisation du quatrieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA3(), "Quatrieme groupe de plante", "Localisation du quatrieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A4 : Epicea de Bosnie / Pin panicio / Pin de Corse / Erable à peau de serpent 
-		item = new OverlayItem(Global.getGroupeA4(), "Cinquieme groupe de plante", "Localisation du cinquieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA4(), "Cinquieme groupe de plante", "Localisation du cinquieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A5 Cèdre de l'Himalaya, Déodar / Carya cordée / Hêtre, Fau, Fayard, Platane d'orient
-		item = new OverlayItem(Global.getGroupeA5(), "Sixieme groupe de plante", "Localisation du sixieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA5(), "Sixieme groupe de plante", "Localisation du sixieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A6 Genévrier commun
-		item = new OverlayItem(Global.getGroupeA6(), "Septieme groupe de plante", "Localisation du septieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA6(), "Septieme groupe de plante", "Localisation du septieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A7 Sapin d'Algérie / Pin weymouth / Viorne velue
-		item = new OverlayItem(Global.getGroupeA7(), "Huitieme groupe de plante", "Localisation du huitieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA7(), "Huitieme groupe de plante", "Localisation du huitieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A8 Cornouiller florifère / Rosier chataîgne / Peuplier
-		item = new OverlayItem(Global.getGroupeA8(), "Neuvieme groupe de plante", "Localisation du neuvieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA8(), "Neuvieme groupe de plante", "Localisation du neuvieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A9 Ptérocarier
-		item = new OverlayItem(Global.getGroupeA9(), "Dixieme groupe de plante", "Localisation du dixieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA9(), "Dixieme groupe de plante", "Localisation du dixieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A10 Mahonia de Beal / Amélande du Canada / Noisetier de Turquie / Noisetier coudier
-		item = new OverlayItem(Global.getGroupeA10(), "Onzieme groupe de plante", "Localisation du onzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA10(), "Onzieme groupe de plante", "Localisation du onzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A11 Forsythia blanc / Alangium à feuilles de Platane / Escalonie rouge
-		item = new OverlayItem(Global.getGroupeA11(), "Douzieme groupe de plante", "Localisation du douzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA11(), "Douzieme groupe de plante", "Localisation du douzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A12 Chèvrefeuille des tatars / Noisetier tortueux / Epine-vignette de Juliana / Corête du Japon
-		item = new OverlayItem(Global.getGroupeA12(), "Treizieme groupe de plante", "Localisation du treizieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA12(), "Treizieme groupe de plante", "Localisation du treizieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A13 Erable de montpellier / Cade Oxycèdre / Saule des îles Sakhalines / Magnolia à fleur de lis 
 		//Magnolia de soulange / Viome de Burkwood
-		item = new OverlayItem(Global.getGroupeA13(), "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA13(), "Quatorzieme groupe de plante", "Localisation du quatorzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A14 Fragon Piquoti / Petit houx / Petit houx à langues / Ardore aux mouchoirs
-		item = new OverlayItem(Global.getGroupeA14(), "Quinzieme groupe de plante", "Localisation du quinzieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA14(), "Quinzieme groupe de plante", "Localisation du quinzieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A15 Skimmia du Japon / Miscarthus / Cyprès de lawson / Tulipier de Virginie
-		item = new OverlayItem(Global.getGroupeA15(), "Seizieme groupe de plante", "Localisation du seizieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA15(), "Seizieme groupe de plante", "Localisation du seizieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A16 Kolwitzia / Arbre de soie / Yucca / Poncinus / Lilas blanc / Abelia / Indigotier / Forsythia / Chêne vert, Yeuse
-		item = new OverlayItem(Global.getGroupeA16(), "Dix-septieme groupe de plante", "Localisation du dix-septieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA16(), "Dix-septieme groupe de plante", "Localisation du dix-septieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A17 Cyprès de lawson / Cyprès géant / Bananier des indiens / Orne champêtre / Groseiller à maqueraux / Chalef en ombelle
-		item = new OverlayItem(Global.getGroupeA17(), "Dix-huitieme groupe de plante", "Localisation du dix-huitieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA17(), "Dix-huitieme groupe de plante", "Localisation du dix-huitieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A18 Noisetier pourpre / Châtaignier / Groseiller doré / Alisier torminal / Epine-du-christ / Fusain d'Europe
-		item = new OverlayItem(Global.getGroupeA18(), "Dix-neuvieme groupe de plante", "Localisation du dix-neuvieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA18(), "Dix-neuvieme groupe de plante", "Localisation du dix-neuvieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A19 Houx bleu / Viorne à feuilles ridées / Seringat / Osmanthe à feuilles de houx
-		item = new OverlayItem(Global.getGroupeA19(), "Vingtieme groupe de plante", "Localisation du vingtieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA19(), "Vingtieme groupe de plante", "Localisation du vingtieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A20 Erable velouté / Seringat de lewis / Weigelia / Cornouiller mâle / Osmara burkwoodii / Burk & Skie / Magnolia à grandes fleurs
-		item = new OverlayItem(Global.getGroupeA20(), "Vingt et unieme groupe de plante", "Localisation du vingt et unieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA20(), "Vingt et unieme groupe de plante", "Localisation du vingt et unieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A21 Véglier du Japon / Troëne de Californie / Troëne de Chine / Peuplier d'Italie
-		item = new OverlayItem(Global.getGroupeA21(), "Vingt deuxieme groupe de plante", "Localisation du vingt deuxieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA21(), "Vingt deuxieme groupe de plante", "Localisation du vingt deuxieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A22 Aulore cordé / Marronier du Japon / Marronier à petites fleurs / non inconnue à corriger / Dardari Simon-Louis 'Jules d'Anière'
-		item = new OverlayItem(Global.getGroupeA22(), "Vingt troisieme groupe de plante", "Localisation du vingt troisieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA22(), "Vingt troisieme groupe de plante", "Localisation du vingt troisieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		//A23 Cyprès toujours vert / Charme 
-		item = new OverlayItem(Global.getGroupeA23(), "Vingt quatrieme groupe de plante", "Localisation du vingt quatrieme groupe de plantes");
-		item.setMarker(ItemizedOverlay.boundCenter(markerPlante));
-		itemizedOverlay.addItem(item);
+		item2 = new OverlayItem(Global.getGroupeA23(), "Vingt quatrieme groupe de plante", "Localisation du vingt quatrieme groupe de plantes");
+		itemizedOverlay2.addItem(item2);
 
 		// add the ArrayItemizedOverlay to the MapView
 		mapView.getOverlays().add(itemizedOverlay);
