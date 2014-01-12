@@ -732,8 +732,8 @@ public class Visite extends BaseMapActivity implements LocationListener {
 	public boolean estDansZone(GeoPoint ptsInt, GeoPoint pos){
 
 		// +- 0.00005 zone de 0.5 metres, je verifie donc si notre position se situe dans une zone de 2 metres autour de nous.
-		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.00005) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.00005) 
-				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.00005) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.00005) ){
+		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.00015) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.00015) 
+				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.00015) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.00015) ){
 			return true;
 		}else{
 			return false;
