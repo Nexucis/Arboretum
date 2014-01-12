@@ -14,7 +14,7 @@
 	</script>
 
 	<h2 class="titre"> Soleil</h2>
-	<img src="soleil.jpg" alt="soleil" align="center"></img>
+<div class="titre">	<img src="soleil.jpg" alt="soleil" align="center"></img></div>
 <div class="txt">
 	<p>Le Soleil (Sol en latin, Helios ou Ἥλιος en grec) est l’étoile du Système solaire. Dans la classification astronomique, c’est une étoile de type naine jaune, composée d’hydrogène (74 % de la masse ou 92,1 % du volume) et d’hélium (24 % de la masse ou 7,8 % du volume). Autour de lui gravitent la Terre, et sept autres planètes, au moins cinq planètes naines, de très nombreux astéroïdes et comètes et une bande de poussière. Le Soleil représente à lui seul 99,86 % de la masse du Système solaire ainsi constitué, Jupiter représentant plus des deux tiers de tout le reste.</p>
 <p>L’énergie solaire transmise par rayonnement rend possible la vie sur Terre par apport d'énergie lumineuse (lumière) et d'énergie thermique (chaleur), permettant la présence d’eau à l’état liquide et la photosynthèse des végétaux. La polarisation naturelle de la lumière solaire, après diffusion ou réflexion, par la Lune ou par des matériaux tels que l’eau ou les cuticules végétales est utilisée par de nombreuses espèces pour s’orienter dans l’espace.</p>
