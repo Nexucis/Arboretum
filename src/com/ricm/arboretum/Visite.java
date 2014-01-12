@@ -25,7 +25,7 @@ import android.content.Intent;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 
-public class Visite extends Nfc_MapActivity implements LocationListener {
+public class Visite extends BaseMapActivity implements LocationListener {
 
 	private MapView mapView;
 	private LocationManager locationManager;
@@ -132,7 +132,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tSoleil, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("soleil.html");
+								Global.setNomFichier("/planetes/soleil.html");
 								startActivity(intent);
 							}
 						}
@@ -146,7 +146,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tCeinture, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("ceinture_asteroides.html");
+								Global.setNomFichier("/planetes/ceinture_asteroides.html");
 								startActivity(intent);
 							}
 						}
@@ -160,7 +160,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tJupiter, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("jupiter.html");
+								Global.setNomFichier("/planetes/jupiter.html");
 								startActivity(intent);
 							}
 						}
@@ -174,7 +174,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tMercure, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("mercure.html");
+								Global.setNomFichier("/planetes/mercure.html");
 								startActivity(intent);
 							}
 						}
@@ -188,7 +188,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tUranus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("uranus.html");
+								Global.setNomFichier("/planetes/uranus.html");
 								startActivity(intent);
 							}
 						}
@@ -202,7 +202,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tSaturne, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("saturne.html");
+								Global.setNomFichier("/planetes/saturne.html");
 								startActivity(intent);
 							}
 						}
@@ -216,7 +216,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tVenus, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("venus.html");
+								Global.setNomFichier("/planetes/venus.html");
 								startActivity(intent);
 							}
 						}
@@ -230,7 +230,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tTerre, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("terre.html");
+								Global.setNomFichier("/planetes/terre.html");
 								startActivity(intent);
 							}
 						}
@@ -244,7 +244,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tMars, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("mars.html");
+								Global.setNomFichier("/planetes/mars.html");
 								startActivity(intent);
 							}
 						}
@@ -258,7 +258,7 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tNeptune, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("neptune.html");
+								Global.setNomFichier("/planetes/neptune.html");
 								startActivity(intent);
 							}
 						}
@@ -272,13 +272,13 @@ public class Visite extends Nfc_MapActivity implements LocationListener {
 					builder.setItems(tTransNeptu, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("ceinture_kuiper.html");
+								Global.setNomFichier("/planetes/ceinture_kuiper.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("Objets_epars.html");
+								Global.setNomFichier("/planetes/Objets_epars.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("Objets_detaches.html");
+								Global.setNomFichier("/planetes/Objets_detaches.html");
 								startActivity(intent);
 							}
 						}

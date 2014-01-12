@@ -1,17 +1,13 @@
 package com.ricm.arboretum;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class SousMenuVisite extends Nfc_Activity implements OnClickListener {
+
+public class SousMenuVisite extends BaseActivity implements OnClickListener {
 
 	private Button btnOnline;
 	private Button btnOffline;
@@ -28,12 +24,7 @@ public class SousMenuVisite extends Nfc_Activity implements OnClickListener {
 		btnOffline = (Button) findViewById(R.id.btnOffline);
 		btnOffline.setOnClickListener(this);
 	}
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
+	
 	@Override
 	protected void onRestart() {
 		super.onRestart();

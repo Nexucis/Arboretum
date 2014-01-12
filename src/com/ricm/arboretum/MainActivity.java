@@ -20,22 +20,15 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends Nfc_Activity implements OnClickListener {
+public class MainActivity extends BaseActivity implements OnClickListener {
 
 	private Button btnArboretum;
 	private Button btnLocalisation;
-	//code pour le menu photo
-	private int idPhoto = 0;
-	private static final int TAKE_PICTURE=1;
-	ActionBar actionBar;
-	static final private int MENU_ITEM = Menu.FIRST;
 	//code du download manager
 	long ref1;
 	long ref2;
 	BroadcastReceiver receiver;
-	
-	private final int groupIdPhoto = 1;
-	private final int groupIdSon = 2;
+
 	
 	@Override
 	//test de mon push
@@ -49,56 +42,9 @@ public class MainActivity extends Nfc_Activity implements OnClickListener {
 		btnLocalisation = (Button) findViewById(R.id.btnLocalisation);
 		btnLocalisation.setOnClickListener(this);
 		
-		//Gestion de la barre d'action
-		actionBar = getActionBar();
-		actionBar.show();
-		actionBar.setTitle("Arboricom");
+
 		
 		initAppli();
-		
-	}
-	//rajoute un menu
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		super.onCreateOptionsMenu(menu);
-		getMenuInflater().inflate(R.menu.main, menu);
-		menu.add(groupIdPhoto, MENU_ITEM, Menu.NONE, "Appareil Photo");
-		menu.add(groupIdSon, MENU_ITEM, Menu.NONE, "Son desactivé");
-		menu.setGroupCheckable(groupIdSon, true,false);
-		menu.getItem(2).setVisible(false);
-		
-		return true;
-	}
-	//Ajout d'un menu qui permet de lancer l'appareil photo
-	public boolean onOptionsItemSelected(MenuItem item)
-	{
-		Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-		File file = new File(Environment.getExternalStorageDirectory()+File.separator+"Arboretum"+File.separator+"photo",""+idPhoto+".jpg");
-		idPhoto++;
-		Uri outputFileUri = Uri.fromFile(file);
-		intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
-		
-		//Menu photo
-		if(item.getGroupId() == groupIdPhoto)
-		{
-			startActivityForResult(intent,TAKE_PICTURE);
-		}
-		//Menu son
-		if(item.getGroupId() == groupIdSon)
-		{
-			if(!Global.getSonActive())
-			{
-				Toast.makeText(this, "Son activé", Toast.LENGTH_SHORT).show();	
-			}
-			else
-			{
-				Toast.makeText(this, "Son désactivé", Toast.LENGTH_SHORT).show();	
-			}
-			Global.setSonActive(!Global.getSonActive());
-			item.setChecked(!Global.getSonActive());	
-		}
-		return false;
 		
 	}
 	

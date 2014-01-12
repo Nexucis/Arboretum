@@ -31,7 +31,11 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.view.View.OnClickListener;
 
+<<<<<<< HEAD
 public class Direction2 extends Nfc_MapActivity implements LocationListener, OnClickListener, SensorEventListener{
+=======
+public class Direction2 extends BaseMapActivity implements LocationListener, OnClickListener{
+>>>>>>> 52ef6df35f1200b9780ee0732064795e0fb48022
 	private MapView mapView;
 	private LocationManager locationManager;
 	private SensorManager sm;

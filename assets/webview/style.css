@@ -1,4 +1,4 @@
-#titre
+.titre
 {
 	text-align:center;
 	font-weight:bold;
@@ -7,4 +7,17 @@
 body
 {
 	background-color:white;
+	background-image:url('Vert.jpg');
+}
+.txt
+{
+	width: 1280px;
+	word-wrap: break-word;
+	margin-bottom: -19px;
+
+}
+img
+{
+	width:500px;
+	height:500px;
 }

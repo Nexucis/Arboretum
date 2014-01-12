@@ -6,8 +6,7 @@
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bienvenue dans la zone de visite de l arboretum" >
+        android:layout_height="wrap_content" >
     </TextView>
 
 </LinearLayout>

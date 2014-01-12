@@ -32,7 +32,7 @@ public class Global {
 	private static GeoPoint groupeA10 = new GeoPoint(45.193777,5.779327);
 	private static GeoPoint groupeA11 = new GeoPoint(45.193743,5.779282);
 	private static GeoPoint groupeA12 = new GeoPoint(45.193413,5.779194);
-	private static GeoPoint groupeA13 = new GeoPoint(45.193271,5.776999);
+	private static GeoPoint groupeA13 = new GeoPoint(45.193271,5.777400);
 	private static GeoPoint groupeA14 = new GeoPoint(45.193239,5.778808);
 	private static GeoPoint groupeA15 = new GeoPoint(45.193181,5.778490);
 	private static GeoPoint groupeA16 = new GeoPoint(45.193152,5.778128);
@@ -43,10 +43,23 @@ public class Global {
 	private static GeoPoint groupeA21  = new GeoPoint(45.193668,5.777579);
 	private static GeoPoint groupeA22 = new GeoPoint(45.193929,5.777770);
 	private static GeoPoint groupeA23 = new GeoPoint(45.194160,5.777865);
+
 	
-	
+
 	private static boolean sonActive = true;
 	
+	private static boolean credit = false;
+	
+	protected static boolean isCredit() {
+		return credit;
+	}
+
+
+	protected static void setCredit(boolean credit) {
+		Global.credit = credit;
+	}
+
+
 	protected static String getNomFichier() {
 		return nomFichier;
 	}
