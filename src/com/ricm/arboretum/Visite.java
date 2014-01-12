@@ -10,6 +10,7 @@ import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.core.GeoPoint;
 
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.RotateDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
@@ -495,7 +496,6 @@ public class Visite extends BaseMapActivity implements LocationListener {
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.planetarium); 
 		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
 		Drawable markerPlante = getResources().getDrawable(R.drawable.plante); 
-
 		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
 		//la simple raison qu'elle va stocker notre curseur de position
 		//dont on ne souhaite pas qu'il y ai de reaction si on tap dessus
@@ -516,7 +516,6 @@ public class Visite extends BaseMapActivity implements LocationListener {
 
 		// add the OverlayItem to the ArrayItemizedOverlay
 		itemizedOverlay2.addItem(item2);
-
 		//je me centre sur moi
 		mapView.setCenter(item2.getPoint());
 		//puis je zoom *2
@@ -731,7 +730,7 @@ public class Visite extends BaseMapActivity implements LocationListener {
 
 	public boolean estDansZone(GeoPoint ptsInt, GeoPoint pos){
 
-		// +- 0.00005 zone de 0.5 metres, je verifie donc si notre position se situe dans une zone de 2 metres autour de nous.
+		// +- 0.00015 zone de 1.5 metres, je verifie donc si notre position se situe dans une zone de 1.5 metres autour de nous.
 		if(pos.getLatitude() >= (ptsInt.getLatitude() - 0.00015) && pos.getLatitude() <= (ptsInt.getLatitude() + 0.00015) 
 				&& pos.getLongitude() >= (ptsInt.getLongitude() - 0.00015) && pos.getLongitude() <= (ptsInt.getLongitude() + 0.00015) ){
 			return true;
