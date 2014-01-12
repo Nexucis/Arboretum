@@ -192,6 +192,8 @@ public class HorsLigne extends BaseMapActivity{
 					});
 					builder.setIcon(R.drawable.icon_venus);
 					builder.setTitle(item.getTitle());
+					
+					
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}else if(item.getPoint() == Global.getTerre()){
