@@ -7,17 +7,16 @@
 body
 {
 	background-color:white;
-	background-image:url('Vert.jpg');
+	background-image:url('fond1.jpg');
 }
 .txt
 {
-	width: 1280px;
-	word-wrap: break-word;
-	margin-bottom: -19px;
+	text-align:justify;
 
 }
 img
 {
 	width:500px;
 	height:500px;
+	box-shadow: 8px 8px 12px #555;
 }
