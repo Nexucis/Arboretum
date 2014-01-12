@@ -883,7 +883,7 @@ public class Visite extends BaseMapActivity implements LocationListener {
 
 
 		Drawable defaultMarker = getResources().getDrawable(R.drawable.planetarium); 
-		Drawable location = getResources().getDrawable(R.drawable.location_oriented); 
+		Drawable location = getResources().getDrawable(R.drawable.location_unoriented); 
 		Drawable markerPlante = getResources().getDrawable(R.drawable.plante); 
 		//ici on les stock. La deuxieme liste n'est pas MyItemizdOverlay pour
 		//la simple raison qu'elle va stocker notre curseur de position
