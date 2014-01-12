@@ -261,10 +261,10 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA0, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Erablemegundo.html");
+								Global.setNomFichier("plantes/erablemegundo.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/Chicoducanada.html");
+								Global.setNomFichier("plantes/chicoducanada.html");
 								startActivity(intent);
 							}
 						}
@@ -278,13 +278,13 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA1, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Melezedujapon.html");
+								Global.setNomFichier("plantes/melezedujapon.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/Holodisquediscolore.html");
+								Global.setNomFichier("plantes/holodisquediscolore.html");
 								startActivity(intent);
 							}else if(which == 2){
-								Global.setNomFichier("plantes/Sequoia.html");
+								Global.setNomFichier("plantes/sequoia.html");
 								startActivity(intent);
 							}
 						}
@@ -298,7 +298,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setItems(tA2, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/Coteneastor.html");
+								Global.setNomFichier("plantes/coteneastor.html");
 								startActivity(intent);
 							}
 						}
@@ -608,7 +608,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/abelia.html");
 								startActivity(intent);
 							}else if(which == 6){
-								Global.setNomFichier("plantes/ignotier.html");
+								Global.setNomFichier("plantes/indigotier.html");
 								startActivity(intent);
 							}else if(which == 7){
 								Global.setNomFichier("plantes/forsythia.html");
