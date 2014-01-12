@@ -76,7 +76,7 @@ public class HorsLigne extends BaseMapActivity{
 		CharSequence tA13[] = {"Erable de montpellier", "Cade Oxycèdre", "Saule des îles Sakhalines", "Magnolia à fleur de lis", "Magnolia de soulange", "Viome de Burkwood"};
 		CharSequence tA14[] = {"Frangon piquoti", "Petit houx", "Petit houx à langues", "Ardore aux mouchoirs"};
 		CharSequence tA15[] = {"Skimmia du Japon", "Miscarthus", "Cyprès de lawson", "Tulipier de Virginie"};
-		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert"};
+		CharSequence tA16[] = {"Kolowitzia", "Arbre de soie", "Yucca", "Poncinus", "Lilas blanc", "Abelia", "Indigotier", "Forsythia", "Chêne vert, Yeuse"};
 		CharSequence tA17[] = {"Cyprès de lawson", "Cyprès géant", "Bananier des indiens", "Orne champêtre", "Groseiller à maqueraux", "Chalef en ombelle"};
 		CharSequence tA18[] = {"Noisetier pourpre", "Châtaignier", "Groseiller doré", "Alisier torminal", "Epine-du-christ", "Fusain d'Europe"};
 		CharSequence tA19[] = {"Houx bleu", "Viorgne à feuille ridées", "Seringat", "Osmanthe à feuille de houx"};
@@ -256,7 +256,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setPositiveButton("Retour", null);
 					builder.show();
 				}
-				else if(item.getPoint() == Global.getGroupeA0()){
+				else if(item.getPoint() == Global.getGroupeA0()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA0, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -273,7 +273,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA1()){
+				}else if(item.getPoint() == Global.getGroupeA1()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA1, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -293,7 +293,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA2()){
+				}else if(item.getPoint() == Global.getGroupeA2()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA2, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -307,7 +307,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA3()){
+				}else if(item.getPoint() == Global.getGroupeA3()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA3, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -333,7 +333,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA4()){
+				}else if(item.getPoint() == Global.getGroupeA4()){//A reverifier pinpanicio
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA4, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -341,7 +341,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/epiceadebosnie.html");
 								startActivity(intent);
 							}else if(which == 1){
-								Global.setNomFichier("plantes/pinpanacio.html");
+								Global.setNomFichier("plantes/pinpanicio.html");
 								startActivity(intent);
 							}else if(which == 2){
 								Global.setNomFichier("plantes/pindecorse.html");
@@ -356,12 +356,12 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA5()){
+				}else if(item.getPoint() == Global.getGroupeA5()){//a verifier hymalaya
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA5, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
 							if(which == 0){
-								Global.setNomFichier("plantes/cedrehimalaya.html");
+								Global.setNomFichier("plantes/cedredehimalaya.html");
 								startActivity(intent);
 							}else if(which == 1){
 								Global.setNomFichier("plantes/caryacordee.html");
@@ -376,7 +376,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA6()){
+				}else if(item.getPoint() == Global.getGroupeA6()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA6, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -390,7 +390,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA7()){
+				}else if(item.getPoint() == Global.getGroupeA7()){//pinweymouth
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA7, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -410,7 +410,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA8()){
+				}else if(item.getPoint() == Global.getGroupeA8()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA8, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -430,7 +430,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA9()){
+				}else if(item.getPoint() == Global.getGroupeA9()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA9, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -444,7 +444,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA10()){
+				}else if(item.getPoint() == Global.getGroupeA10()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA10, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -467,7 +467,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA11()){
+				}else if(item.getPoint() == Global.getGroupeA11()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA11, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -487,7 +487,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA12()){
+				}else if(item.getPoint() == Global.getGroupeA12()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA12, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -510,7 +510,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA13()){
+				}else if(item.getPoint() == Global.getGroupeA13()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA13, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -539,7 +539,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA14()){
+				}else if(item.getPoint() == Global.getGroupeA14()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA14, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -562,7 +562,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA15()){
+				}else if(item.getPoint() == Global.getGroupeA15()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA15, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -585,7 +585,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA16()){
+				}else if(item.getPoint() == Global.getGroupeA16()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA16, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -623,7 +623,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA17()){
+				}else if(item.getPoint() == Global.getGroupeA17()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA17, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -652,7 +652,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA18()){
+				}else if(item.getPoint() == Global.getGroupeA18()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA18, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -681,7 +681,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA19()){
+				}else if(item.getPoint() == Global.getGroupeA19()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA19, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -704,7 +704,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA20()){
+				}else if(item.getPoint() == Global.getGroupeA20()){//osmara
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA20, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -721,7 +721,7 @@ public class HorsLigne extends BaseMapActivity{
 								Global.setNomFichier("plantes/cornouillermale.html");
 								startActivity(intent);
 							}else if(which == 4){
-								Global.setNomFichier("plantes/osmaraburkwoodi.html");
+								Global.setNomFichier("plantes/osmaraburkwoodii.html");
 								startActivity(intent);
 							}else if(which == 5){
 								Global.setNomFichier("plantes/magnoliafleurs.html");
@@ -733,7 +733,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA21()){
+				}else if(item.getPoint() == Global.getGroupeA21()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA21, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -753,7 +753,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA22()){
+				}else if(item.getPoint() == Global.getGroupeA22()){//marronier japon
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA22, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {
@@ -773,7 +773,7 @@ public class HorsLigne extends BaseMapActivity{
 					builder.setTitle(item.getTitle());
 					builder.setPositiveButton("Retour", null);
 					builder.show();
-				}else if(item.getPoint() == Global.getGroupeA23()){
+				}else if(item.getPoint() == Global.getGroupeA23()){//valider
 					Builder builder = new AlertDialog.Builder(this.context2, AlertDialog.THEME_HOLO_DARK);
 					builder.setItems(tA23, new DialogInterface.OnClickListener() {
 						public void onClick(DialogInterface dialog, int which) {

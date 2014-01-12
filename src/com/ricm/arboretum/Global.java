@@ -41,7 +41,7 @@ public class Global {
 	private static GeoPoint groupeA19 = new GeoPoint(45.193037,5.777539);
 	private static GeoPoint groupeA20 = new GeoPoint(45.193320,5.777560);
 	private static GeoPoint groupeA21  = new GeoPoint(45.193668,5.777579);
-	private static GeoPoint groupeA22 = new GeoPoint(45.193929,5.777770);
+	private static GeoPoint groupeA22 = new GeoPoint(45.193429,5.777770);
 	private static GeoPoint groupeA23 = new GeoPoint(45.194160,5.777865);
 
 	
