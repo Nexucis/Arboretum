@@ -1,3 +1,6 @@
 /bin
 /gen
 /.classpath
+/rapport/.aux
+/rapport/.toc
+/rapport/.log
