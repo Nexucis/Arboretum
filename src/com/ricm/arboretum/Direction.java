@@ -26,7 +26,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.view.View.OnClickListener;
 
-public class Direction2 extends BaseMapActivity implements LocationListener, OnClickListener{
+public class Direction extends BaseMapActivity implements LocationListener, OnClickListener{
         private MapView mapView;
         private LocationManager locationManager;
         private SensorManager sm;
