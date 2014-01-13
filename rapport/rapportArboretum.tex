@@ -115,6 +115,13 @@ Rapport}
 		il est possible de gérer la pression du doigt sur l'écran sur un marqueur, et d'entrainer ainsi une action associée, 
 		chose beaucoup plus difficilement réalisable avec un objet marker. 
 		Les points d'intérêts sont gérés par des GeoPoints représentant des coordonnées GPS gérés de manière statique dans la classe global, pour être accessible de partout.
+		
+		 \begin{figure}[H]
+     \begin{center}
+      \includegraphics{listemarker.jpg}
+      \caption{La liste des marqueurs choisis, de gauche à droite : pour les plantes, la position de l'arboretum, les informations, les planètes, la position de l'utilisateur}
+     \end{center}
+    \end{figure}
 			
 			Ci dessous, vous pouvez observer les différents choix de marqueurs qui ont été effectués : %screen des différents markers
     \begin{figure}[H]
@@ -143,8 +150,15 @@ Rapport}
 		
 		Une particularité important d'android à connaître réside dans le système de rotation de l'écran. Une rotation entraine l'utilisation de la méthode onDestroy(), et donc de la méthode onCreate(), réinitialisant l'activité. Nous avons donc décidé de bloquer la rotation de l'écran pour palier à ce problème. Une autre solution aurait été d'utiliser des méthodes d'android permettant de sauvegarder différentes variables afin de les restaurer, mais plus compliquer à mettre en place et non important selon nous.
 		
+		 \begin{figure}[H]
+     \begin{center}
+      \includegraphics[width=7cm,height=9cm]{cyclerotation.jpg}
+      \caption{Cycles de vie d'une application android}
+     \end{center}
+    \end{figure}
+		
 		\section{La gestion des Webviews et du Text-to-Speech}
-		Les webviews utilisées dans notre application permettent d'afficher le contenu concernant les plantes/arbres et planètes. A chaque fois qu'un utilisateur clique sur un point d'intérêt, la webview correspondante est affichée à l'écran et est chargée dans une activity dédiée. Cela permet de revenir à la carte. Sans cela, les webviews seraient chargées dans la même activity que la carte, et lorsque l'utilisateur appuierai sur le bouton \emph{retour}, il ne reviendrait pas à la carte mais au menu de choix.
+		Les webviews utilisées dans notre application permettent d'afficher le contenu concernant les plantes/arbres et planètes. A chaque fois qu'un utilisateur clique sur un point d'intérêt, la webview correspondante est affichée à l'écran et est chargée dans une \emph{activity} dédiée. Cela permet de revenir à la carte. Sans cela, les webviews seraient chargées dans la même activity que la carte, et lorsque l'utilisateur appuierai sur le bouton \emph{retour}, il ne reviendrait pas à la carte mais au menu de choix.
 		
 		De plus, le étant autorisé dans les webviews, un bouton est implémenté dans chacune des page web. Cela permet d'appeler une fonction JavaScript qui va à sont tour appeler une fonction java. Cette dernière permet de lancer le \emph{Text to speech} qui énoncera un texte.
 		Le \emph{Text to speech} est chargé au démarrage de l’application et est initialisé au lancement de la webview. La classe \emph{WebAppInterface} sert d'interface pour utiliser la fonction java \emph{Speakout} qui permet l'énonciation du texte. Lorsqu'un utilisateur quitte la webview, le TTS est arrêté (même s'il est en train d'être utilisé). Cela libère de la mémoire RAM.
