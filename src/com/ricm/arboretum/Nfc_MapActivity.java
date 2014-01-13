@@ -87,7 +87,7 @@ public class Nfc_MapActivity extends MapActivity {
 	                                       You should specify only the ones that you need. */
 			}
 			catch (MalformedMimeTypeException e) {
-				throw new RuntimeException("fail", e);
+				throw new RuntimeException("Le type MIME proposé n'a pas la bonne syntaxe", e);
 			}
 
 			IntentFilter[] filters = {ndef,};
