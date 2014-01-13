@@ -145,7 +145,7 @@ Rapport}
       \caption{Exemple d'une boîte de dialogue pour le choix de la Webview}
      \end{center}
     \end{figure}
-			Cette boite de dialogue possède une icône représentant le type d'objet pour lequel la personne aurait besoin d'avoir plus d'informations. La personne peut au travers de cette boîte de dialogue choisir d'obtenir des informations supplémentaires sur le point d'intérêt.
+			Cette boîte de dialogue possède une icône représentant le type d'objet pour lequel la personne aurait besoin d'avoir plus d'informations. La personne peut au travers de cette boîte de dialogue choisir d'obtenir des informations supplémentaires sur le point d'intérêt.
 		
 		Pour le bon fonctionnement des cartes avec l’affichage de la position de l'utilisateur, le GPS est l'une des composantes principales de notre application. Le GPS est utilisé à deux moments précis. Lors de la visite en ligne de l'Arboretum, et pour se rendre à celui-ci. Le GPS est complété par les services de localisation. Ils ne sont activés que lorsque leur utilisation est nécessaire. Ils sont également désactivés lors de la mise en veille de l'écran par appel de la méthode onPause(), et remis en état de marche par OnResume(). Ses services sont utilisés pour représenter la personne sur une carte.
 		
@@ -214,22 +214,22 @@ Rapport}
 		
 		Plusieurs tests ont pus être effectués afin de valider le bon fonctionnement de l'application. En premier lieu, l'application a été utilisé par différents utilisateurs non informaticiens et informaticiens afin de voir leur réaction par rapport à l'application.
 
-		Nous avons ensuite testé l'application sur des personnes de sachant pas très bien utilisé les appareils de type android	et elles ont trouvés notre application ainsi que nos webviews simple d'utilisation et claire.
+		Nous avons ensuite testé l'application sur des personnes de sachant pas très bien utilisé les appareils de type android et elles ont trouvés notre application ainsi que nos webviews simple d'utilisation et claire.
 
-		En ce qui concerne notre précision au niveau du GPS, nous avons effectué plusieurs test en direct de l'arboretum afin de déterminer quel précision nous correspondaient le mieux pour le lancement des détections sonores. Nous avons commencé avec un carré autour de notre	position de 4m de diamètre. Cela était en réalité beaucoup trop grand et causait des soucis de sons multiples. C'est également lors du premier test grandeur nature que nous nous sommes rendu compte du problème de rotation de l'écran qui redémarrait l'activité. Suite à ce premier test, nous avons donc bloqué la rotation de l'écran en format portrait, puis nous avons ajusté la zone de détection à un carré d'un mètre de côté. D'autres tests ont par la suite eu lieu entre nous, afin de corriger cette zone, pour arrivé à un carré de 3 mètres de côtés. Un autre facteur important des tests a été la résolution d'une question grandissante, comment afficher au mieux les plantes de l'arboretum, celui-ci comptant un très grand nombre d'espèce. Nous avons donc décider de créer des groupes de plantes par zone, et de recenser en majorité les plantes bordant les allées. 
+		En ce qui concerne notre précision au niveau du GPS, nous avons effectué plusieurs tests en direct de l'arboretum afin de déterminer quelle précision nous correspondait le mieux pour le lancement des détections sonores. Nous avons commencé avec un carré autour de notre position de 4m de diamètre. Cela était en réalité beaucoup trop grand et causait des soucis de son multiple. C'est également lors du premier test grandeur nature que nous nous sommes rendu compte du problème de rotation de l'écran qui redémarrait l'activité. Suite à ce premier test, nous avons donc bloqué la rotation de l'écran en format portrait, puis nous avons ajusté la zone de détection à un carré d'un mètre de côté. D'autres tests ont par la suite eu lieu entre nous, afin de corriger cette zone, pour arriver à un carré de 3 mètres de côtés. Un autre facteur important des tests a été la résolution d'une question grandissante, comment afficher au mieux les plantes de l'arboretum, celui-ci comptant un très grand nombre d'espèces. Nous avons donc décidé de créer des groupes de plantes par zone, et de recenser en majorité les plantes bordant les allées. 
 		
-		Un autre facteur du choix de la zone de détection pour les notifications ainsi que pour le groupement des plantes vient des erreurs GPS sur la zone, en moyenne de 3 à 5 mètres, mais allant dans certaines zones jusqu'à 8 mètre, voir 12, ce qui est une marge d'erreur non négligeable. Enfin, ce dernier test nous a permis de vérifier le bon fonctionnement de l'activation, désactivation du son. Le test a mit en évidence que l'activation du son lors de la visite ``en ligne'' de l'arboretum conduisait à un arrêt de l'application, si la personne se retrouve dans une zone de détection pour notification.
+		Un autre facteur du choix de la zone de détection pour les notifications ainsi que pour le groupement des plantes vient des erreurs GPS sur la zone, en moyenne de 3 à 5 mètres, mais allant dans certaines zones jusqu'à 8 mètres, voir 12, ce qui est une marge d'erreur non négligeable. Enfin, ce dernier test nous a permis de vérifier le bon fonctionnement de l'activation, désactivation du son. Le test a mis en évidence que l'activation du son lors de la visite ``en ligne'' de l'arboretum conduisait à un arrêt de l'application, si la personne se retrouve dans une zone de détection pour notification.
 		
-		La dernière série de test a servi à l'implémentation du Text-to-Speech (\emph{tts}) de façon optimale. Nous avons remarqué que le \emph{tts} en français limite la lecture à 450 caractères environ, une limite que nous n'avons pas encore réussi à franchir. Un autre soucis du \emph{tts} provient de la prononciation parfois difficile pour certains mots. Par exemple, afin d'obtenir une bonne prononciation du mot Mars, nous somme obligé de l'écrire Marsse (nous jouons sur la phonétique française). Néanmoins, il s'est avéré que le \emph{tts} est une technologie efficace, à la synthèse vocale et l’élocution plus que correct.
+		La dernière série de tests a servi à l'implémentation du Text-to-Speech (\emph{tts}) de façon optimale. Nous avons remarqué que le \emph{tts} en français limite la lecture à 450 caractères environ, une limite que nous n'avons pas encore réussi à franchir. Un autre souci du \emph{tts} provient de la prononciation parfois difficile pour certains mots. Par exemple, afin d'obtenir une bonne prononciation du mot Mars, nous somme obligé de l'écrire Marsse (nous jouons sur la phonétique française). Néanmoins, il s'est avéré que le \emph{tts} est une technologie efficace, à la synthèse vocale et l’élocution plus que correcte.
 		
 		Pourquoi notre application ne peut pas être mise en ligne sur Android Market : 
-En ce qui concerne notre application, celle-ci est fonctionnelle, mais nous devons la présenter à des professionnelles en développement android afin de savoir si notre application ne consomme pas trop de batterie, vérifier les droits d'auteurs pour plusieurs images, etc... Il reste également la question de l'arrêt causé par une erreur lors de l'utilisation de l'application dans le cas de la réactivation du son lors de la visite ``en ligne''.
+En ce qui concerne notre application, celle-ci est fonctionnelle, mais nous devons la présenter à des professionnelles en développement android afin de savoir si notre application ne consomme pas trop de batterie, vérifier les droits d'auteurs pour plusieurs images, etc. Il reste également la question de l'arrêt causé par une erreur lors de l'utilisation de l'application dans le cas de la réactivation du son lors de la visite ``en ligne''.
 
 De plus, nous devrions passer une semaine avec un spécialiste des plantes et/ou du directeur de l'arboretum afin de finaliser, changer, argumenter nos descriptions de nos plantes et planètes, et rajouter celles qui manquent à l'appel.
 
-Nous pourrions ensuite mettre notre application aux mains d'une autre équipe qui pourraient l’intégrer dans une application de plus vaste envergure à savoir une visite guidé de Grenoble par exemple. Nous pourrions également prendre un main la gestion de cette application et nous en occuper personnellement.
+Nous pourrions ensuite mettre notre application aux mains d'une autre équipe qui pourraient l’intégrer dans une application de plus vaste envergure à savoir une visite guidée de Grenoble par exemple. Nous pourrions également prendre une main la gestion de cette application et nous en occuper personnellement.
 		
-		Un dernier problème qui pourrait être pointé du doigt est un soucis d'affichage des \emph{Webviews}. Pour le moment, celles-ci se s'adaptent pas aux différents dispositifs, par exemple sur les tablettes Nexus 7, aucun problème n'est à noté, en revanche un Galaxy S3 ou un Xperia U fournissent des affichages moins agréables à la lecture.
+		Un dernier problème qui pourrait être pointé du doigt est un souci d'affichage des \emph{Webviews}. Pour le moment, celles-ci se s'adaptent pas aux différents dispositifs, par exemple sur les tablettes Nexus 7, aucun problème n'est à noté, en revanche un Galaxy S3 ou un Xperia U fournissent des affichages moins agréables à la lecture.
 		
     \section{Crédits}
 		
@@ -240,10 +240,10 @@ Nous pourrions ensuite mettre notre application aux mains d'une autre équipe qu
     \section{Remerciements}
     À Dana Fréby:
     \begin{itemize}
-     \item Pour avoir éffectué les relevés GPS nécessaires au positionnement des points d'interêts du parc.
+     \item Pour avoir effectué les relevés GPS nécessaires au positionnement des points d'intérêts du parc.
      \item Pour avoir testé le GPS par temps couvert et dégagé. 
      \item Pour avoir testé le son de l'application
     \end{itemize}
     
-  À Didier Donzet, pour nous avoir gracieusement donné des tag NFC.
+  À Didier Donzet, pour nous avoir gracieusement donné des tags NFC.
 \end{document}
