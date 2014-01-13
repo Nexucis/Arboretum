@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.12)  12 JAN 2014 21:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.1.12)  12 JAN 2014 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -806,7 +806,7 @@ Package pdftex.def Info: marronier.png used on input line 176.
 Here is how much of TeX's memory you used:
  6114 strings out of 495002
  82178 string characters out of 6180262
- 147841 words of memory out of 5000000
+ 147834 words of memory out of 5000000
  9201 multiletter control sequences out of 15000+600000
  17260 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -818,9 +818,9 @@ onts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </tmp/texfonts/pk/ljfour/jknappen/ec
 /ecbx1095.600pk> </tmp/texfonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </tmp/tex
 fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </tmp/texfonts/pk/ljfour/jknappen/e
 c/ecrm1728.600pk>
-Output written on manuel_utilisateur.pdf (8 pages, 6585642 bytes).
+Output written on manuel_utilisateur.pdf (8 pages, 6584613 bytes).
 PDF statistics:
- 352 PDF objects out of 1000 (max. 8388607)
+ 349 PDF objects out of 1000 (max. 8388607)
  52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
