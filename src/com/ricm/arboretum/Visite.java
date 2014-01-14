@@ -10,7 +10,6 @@ import org.mapsforge.android.maps.overlay.OverlayItem;
 import org.mapsforge.core.GeoPoint;
 
 import android.graphics.drawable.Drawable;
-import android.graphics.drawable.RotateDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.location.Location;
@@ -31,7 +30,6 @@ public class Visite extends BaseMapActivity implements LocationListener {
 	private MapView mapView;
 	private LocationManager locationManager;
 	private SensorManager sm;
-	private Sensor my_sensor;
 
 	//marker des planetes
 	private OverlayItem item;

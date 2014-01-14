@@ -1,11 +1,9 @@
 package com.ricm.arboretum;
 
-import java.io.File;
 
 import org.mapsforge.core.GeoPoint;
 
 import android.util.Log;
-import android.widget.Toast;
 
 public class Global {
 
@@ -108,7 +106,7 @@ public class Global {
 		//Plantes
 		//Dans ce cas, on ne transforme pas la chaine, on renvoie juste concatener au path
 		String plante = plantesPath+name;
-		File f = new File(plante);
+		//File f = new File(plante);
 		//if (f.exists())
 			return plante;
 		//else {

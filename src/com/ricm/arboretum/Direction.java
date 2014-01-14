@@ -30,7 +30,6 @@ public class Direction extends BaseMapActivity implements LocationListener, OnCl
         private MapView mapView;
         private LocationManager locationManager;
         private SensorManager sm;
-        private Sensor my_sensor;
         private OverlayItem item;
         private OverlayItem item2;
         private int clique=0;
